@@ -16,9 +16,6 @@
     "url": "https://github.com/sjschukin/ozdorovlenie/issues"
   },
   "homepage": "https://github.com/sjschukin/ozdorovlenie#readme",
-  "dependencies": {
-    "bootstrap": "^5.3.3"
-  },
   "devDependencies": {
     "browser-sync": "^3.0.3",
     "gulp": "^5.0.0",

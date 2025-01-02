@@ -2,3 +2,9 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+aos:
+  css:
+    theme:
+      libraries/aos/dist/aos.css: {}
+  js:
+    libraries/aos/dist/aos.js: {}
