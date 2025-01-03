@@ -12352,29 +12352,29 @@ a > .ck-content code {
   visibility: hidden;
   overflow: hidden;
 }
-@media (max-width: 1199.98px) {
-  .ck-content .navmenu {
+@media (min-width: 1200px) {
+  .ck-content .menu--main {
     padding: 0;
   }
-  .ck-content .navmenu ul {
+  .ck-content .menu--main ul {
     margin: 0;
     padding: 0;
     display: flex;
     list-style: none;
     align-items: center;
   }
-  .ck-content .navmenu li {
+  .ck-content .menu--main li {
     position: relative;
   }
-  .ck-content .navmenu > ul > li {
+  .ck-content .menu--main > ul > li {
     white-space: nowrap;
     padding: 15px 14px;
   }
-  .ck-content .navmenu > ul > li:last-child {
+  .ck-content .menu--main > ul > li:last-child {
     padding-right: 0;
   }
-  .ck-content .navmenu a,
-  .ck-content .navmenu a:focus {
+  .ck-content .menu--main a,
+  .ck-content .menu--main a:focus {
     color: var(--nav-color);
     font-size: 15px;
     padding: 0 2px;
@@ -12387,14 +12387,14 @@ a > .ck-content code {
     transition: 0.3s;
     position: relative;
   }
-  .ck-content .navmenu a i,
-  .ck-content .navmenu a:focus i {
+  .ck-content .menu--main a i,
+  .ck-content .menu--main a:focus i {
     font-size: 12px;
     line-height: 0;
     margin-left: 5px;
     transition: 0.3s;
   }
-  .ck-content .navmenu > ul > li > a:before {
+  .ck-content .menu--main > ul > li > a:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -12406,22 +12406,22 @@ a > .ck-content code {
     width: 0px;
     transition: all 0.3s ease-in-out 0s;
   }
-  .ck-content .navmenu a:hover:before,
-  .ck-content .navmenu li:hover > a:before,
-  .ck-content .navmenu .active:before,
-  .ck-content .navmenu .media-library-view--widget .view-header a.is-active:before,
-  .ck-content .media-library-view--widget .view-header .navmenu a.is-active:before {
+  .ck-content .menu--main a:hover:before,
+  .ck-content .menu--main li:hover > a:before,
+  .ck-content .menu--main .active:before,
+  .ck-content .menu--main .media-library-view--widget .view-header a.is-active:before,
+  .ck-content .media-library-view--widget .view-header .menu--main a.is-active:before {
     visibility: visible;
     width: 100%;
   }
-  .ck-content .navmenu li:hover > a,
-  .ck-content .navmenu .active,
-  .ck-content .navmenu .media-library-view--widget .view-header a.is-active,
-  .ck-content .media-library-view--widget .view-header .navmenu a.is-active,
-  .ck-content .navmenu .active:focus {
+  .ck-content .menu--main li:hover > a,
+  .ck-content .menu--main .active,
+  .ck-content .menu--main .media-library-view--widget .view-header a.is-active,
+  .ck-content .media-library-view--widget .view-header .menu--main a.is-active,
+  .ck-content .menu--main .active:focus {
     color: var(--nav-hover-color);
   }
-  .ck-content .navmenu .dropdown ul {
+  .ck-content .menu--main .dropdown ul {
     margin: 0;
     padding: 10px 0;
     background: var(--nav-dropdown-background-color);
@@ -12436,34 +12436,34 @@ a > .ck-content code {
     z-index: 99;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
   }
-  .ck-content .navmenu .dropdown ul li {
+  .ck-content .menu--main .dropdown ul li {
     min-width: 200px;
   }
-  .ck-content .navmenu .dropdown ul a {
+  .ck-content .menu--main .dropdown ul a {
     padding: 10px 20px;
     font-size: 15px;
     text-transform: none;
     color: var(--nav-dropdown-color);
   }
-  .ck-content .navmenu .dropdown ul a i {
+  .ck-content .menu--main .dropdown ul a i {
     font-size: 12px;
   }
-  .ck-content .navmenu .dropdown ul a:hover,
-  .ck-content .navmenu .dropdown ul .active:hover,
-  .ck-content .navmenu .dropdown ul li:hover > a {
+  .ck-content .menu--main .dropdown ul a:hover,
+  .ck-content .menu--main .dropdown ul .active:hover,
+  .ck-content .menu--main .dropdown ul li:hover > a {
     color: var(--nav-dropdown-hover-color);
   }
-  .ck-content .navmenu .dropdown:hover > ul {
+  .ck-content .menu--main .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
   }
-  .ck-content .navmenu .dropdown .dropdown ul {
+  .ck-content .menu--main .dropdown .dropdown ul {
     top: 0;
     left: -90%;
     visibility: hidden;
   }
-  .ck-content .navmenu .dropdown .dropdown:hover > ul {
+  .ck-content .menu--main .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
     left: -100%;

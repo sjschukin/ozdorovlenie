@@ -8,3 +8,7 @@ aos:
       libraries/aos/dist/aos.css: {}
   js:
     libraries/aos/dist/aos.js: {}
+bootstrap-icons:
+  css:
+    theme:
+      libraries/bootstrap-icons/font/bootstrap-icons.min.css: {}

@@ -219,8 +219,8 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Desktop Navigation */
-@include media-breakpoint-down(xl) {
-  .navmenu {
+@include media-breakpoint-up(xl) {
+  .menu--main {
     padding: 0;
 
     ul {
@@ -286,7 +286,7 @@ h6 {
     }
 
     a:hover:before,
-    li:hover>a:before,
+    li:hover > a:before,
     .active:before {
       visibility: visible;
       width: 100%;
