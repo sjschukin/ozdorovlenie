@@ -100,7 +100,7 @@ h6 {
 .header {
   color: var(--default-color);
   transition: all 0.5s;
-  z-index: 997;
+  z-index: 500;
   background-color: var(--background-color);
 
   .topbar {
@@ -479,7 +479,7 @@ h6 {
       background: rgba(33, 37, 41, 0.8);
       transition: 0.3s;
 
-      > ul {
+      .menu--main > ul {
         display: block;
       }
     }
