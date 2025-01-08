@@ -14,3 +14,10 @@ bootstrap-icons:
   css:
     theme:
       libraries/bootstrap-icons/font/bootstrap-icons.min.css: {}
+glightbox:
+  css:
+    theme:
+      libraries/glightbox/dist/css/glightbox.css: {}
+  js:
+    libraries/glightbox/dist/js/glightbox.min.js: {}
+    js/details.js: {}
