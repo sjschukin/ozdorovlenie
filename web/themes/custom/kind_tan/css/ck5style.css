@@ -73,7 +73,7 @@
   # Departments Section
   --------------------------------------------------------------*/
   /*--------------------------------------------------------------
-  # Doctors Section
+  # Camps Section
   --------------------------------------------------------------*/
   /*--------------------------------------------------------------
   # Faq Section
@@ -13067,7 +13067,7 @@ a > .ck-content code {
     background: var(--accent-color);
   }
 }
-.ck-content .doctors .team-member {
+.ck-content .camps .camp-item {
   background-color: var(--surface-color);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -13076,34 +13076,34 @@ a > .ck-content code {
   padding: 30px;
   height: 100%;
 }
-.ck-content .doctors .team-member .pic {
+.ck-content .camps .camp-item .pic {
   overflow: hidden;
   width: 150px;
   border-radius: 50%;
   flex-shrink: 0;
 }
-.ck-content .doctors .team-member .pic img {
+.ck-content .camps .camp-item .pic img {
   transition: ease-in-out 0.3s;
 }
-.ck-content .doctors .team-member:hover {
+.ck-content .camps .camp-item:hover {
   transform: translateY(-10px);
 }
-.ck-content .doctors .team-member .member-info {
+.ck-content .camps .camp-item .member-info {
   padding-left: 30px;
 }
-.ck-content .doctors .team-member h4, .ck-content .doctors .team-member .h4 {
+.ck-content .camps .camp-item h4, .ck-content .camps .camp-item .h4 {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 20px;
 }
-.ck-content .doctors .team-member span {
+.ck-content .camps .camp-item span {
   display: block;
   font-size: 15px;
   padding-bottom: 10px;
   position: relative;
   font-weight: 500;
 }
-.ck-content .doctors .team-member span::after {
+.ck-content .camps .camp-item span::after {
   content: "";
   position: absolute;
   display: block;
@@ -13113,18 +13113,32 @@ a > .ck-content code {
   bottom: 0;
   left: 0;
 }
-.ck-content .doctors .team-member p {
+.ck-content .camps .camp-item p {
   margin: 10px 0 0 0;
   font-size: 14px;
 }
-.ck-content .doctors .team-member .social {
+.ck-content .camps .camp-item .details-btn {
+  background: var(--accent-color);
+  border: 0;
+  padding: 10px 35px;
+  color: var(--contrast-color);
+  transition: 0.4s;
+  border-radius: 50px;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+.ck-content .camps .camp-item .details-btn:hover {
+  background: color-mix(in srgb, var(--accent-color) 90%, white 15%);
+}
+.ck-content .camps .camp-item .social {
   margin-top: 12px;
   display: flex;
   align-items: center;
   justify-content: start;
   width: 100%;
 }
-.ck-content .doctors .team-member .social a {
+.ck-content .camps .camp-item .social a {
   background: color-mix(in srgb, var(--default-color), transparent 94%);
   transition: ease-in-out 0.3s;
   display: flex;
@@ -13134,34 +13148,34 @@ a > .ck-content code {
   width: 36px;
   height: 36px;
 }
-.ck-content .doctors .team-member .social a i {
+.ck-content .camps .camp-item .social a i {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   font-size: 16px;
   margin: 0 2px;
 }
-.ck-content .doctors .team-member .social a:hover {
+.ck-content .camps .camp-item .social a:hover {
   background: var(--accent-color);
 }
-.ck-content .doctors .team-member .social a:hover i {
+.ck-content .camps .camp-item .social a:hover i {
   color: var(--contrast-color);
 }
-.ck-content .doctors .team-member .social a + a {
+.ck-content .camps .camp-item .social a + a {
   margin-left: 8px;
 }
 @media (max-width: 575.98px) {
-  .ck-content .doctors .team-member {
+  .ck-content .camps .camp-item {
     flex-direction: column;
     justify-content: center !important;
     align-items: center !important;
   }
-  .ck-content .doctors .team-member .member-info {
+  .ck-content .camps .camp-item .member-info {
     padding: 30px 0 0 0;
     text-align: center;
   }
-  .ck-content .doctors .team-member span::after {
+  .ck-content .camps .camp-item span::after {
     left: calc(50% - 25px);
   }
-  .ck-content .doctors .team-member .social {
+  .ck-content .camps .camp-item .social {
     justify-content: center;
   }
 }

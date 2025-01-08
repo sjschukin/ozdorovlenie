@@ -14045,9 +14045,9 @@ section,
   }
 }
 /*--------------------------------------------------------------
-# Doctors Section
+# Camps Section
 --------------------------------------------------------------*/
-.doctors .team-member {
+.camps .camp-item {
   background-color: var(--surface-color);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -14056,34 +14056,34 @@ section,
   padding: 30px;
   height: 100%;
 }
-.doctors .team-member .pic {
+.camps .camp-item .pic {
   overflow: hidden;
   width: 150px;
   border-radius: 50%;
   flex-shrink: 0;
 }
-.doctors .team-member .pic img {
+.camps .camp-item .pic img {
   transition: ease-in-out 0.3s;
 }
-.doctors .team-member:hover {
+.camps .camp-item:hover {
   transform: translateY(-10px);
 }
-.doctors .team-member .member-info {
+.camps .camp-item .member-info {
   padding-left: 30px;
 }
-.doctors .team-member h4, .doctors .team-member .h4 {
+.camps .camp-item h4, .camps .camp-item .h4 {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 20px;
 }
-.doctors .team-member span {
+.camps .camp-item span {
   display: block;
   font-size: 15px;
   padding-bottom: 10px;
   position: relative;
   font-weight: 500;
 }
-.doctors .team-member span::after {
+.camps .camp-item span::after {
   content: "";
   position: absolute;
   display: block;
@@ -14093,18 +14093,32 @@ section,
   bottom: 0;
   left: 0;
 }
-.doctors .team-member p {
+.camps .camp-item p {
   margin: 10px 0 0 0;
   font-size: 14px;
 }
-.doctors .team-member .social {
+.camps .camp-item .details-btn {
+  background: var(--accent-color);
+  border: 0;
+  padding: 10px 35px;
+  color: var(--contrast-color);
+  transition: 0.4s;
+  border-radius: 50px;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+.camps .camp-item .details-btn:hover {
+  background: color-mix(in srgb, var(--accent-color) 90%, white 15%);
+}
+.camps .camp-item .social {
   margin-top: 12px;
   display: flex;
   align-items: center;
   justify-content: start;
   width: 100%;
 }
-.doctors .team-member .social a {
+.camps .camp-item .social a {
   background: color-mix(in srgb, var(--default-color), transparent 94%);
   transition: ease-in-out 0.3s;
   display: flex;
@@ -14114,35 +14128,35 @@ section,
   width: 36px;
   height: 36px;
 }
-.doctors .team-member .social a i {
+.camps .camp-item .social a i {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   font-size: 16px;
   margin: 0 2px;
 }
-.doctors .team-member .social a:hover {
+.camps .camp-item .social a:hover {
   background: var(--accent-color);
 }
-.doctors .team-member .social a:hover i {
+.camps .camp-item .social a:hover i {
   color: var(--contrast-color);
 }
-.doctors .team-member .social a + a {
+.camps .camp-item .social a + a {
   margin-left: 8px;
 }
 
 @media (max-width: 575.98px) {
-  .doctors .team-member {
+  .camps .camp-item {
     flex-direction: column;
     justify-content: center !important;
     align-items: center !important;
   }
-  .doctors .team-member .member-info {
+  .camps .camp-item .member-info {
     padding: 30px 0 0 0;
     text-align: center;
   }
-  .doctors .team-member span::after {
+  .camps .camp-item span::after {
     left: calc(50% - 25px);
   }
-  .doctors .team-member .social {
+  .camps .camp-item .social {
     justify-content: center;
   }
 }

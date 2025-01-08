@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4d6cb29bdf116fea93fe9f808c60ebe9",
+    "content-hash": "00984a042dd8fde7862a63ac72c467ab",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1225,6 +1225,55 @@
             }
         },
         {
+            "name": "drupal/block_token",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/block_token.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/block_token-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "f40c3e3d82862ef38167d042e79aa1b96e531b33"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10 || ^11",
+                "drupal/token": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1715892298",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "gpl-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "i-trokhanenko",
+                    "homepage": "https://www.drupal.org/user/3546872"
+                },
+                {
+                    "name": "skullhole",
+                    "homepage": "https://www.drupal.org/user/2257896"
+                }
+            ],
+            "description": "The Block Token module allows you to create the tokens for blocks on site. ",
+            "homepage": "https://www.drupal.org/project/block_token",
+            "support": {
+                "source": "https://git.drupalcode.org/project/block_token"
+            }
+        },
+        {
             "name": "drupal/bootstrap5",
             "version": "4.0.3",
             "source": {
@@ -1833,6 +1882,66 @@
             "homepage": "https://www.drupal.org/project/token",
             "support": {
                 "source": "https://git.drupalcode.org/project/token"
+            }
+        },
+        {
+            "name": "drupal/views_bootstrap",
+            "version": "5.5.0-rc3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_bootstrap.git",
+                "reference": "5.5.0-rc3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_bootstrap-5.5.0-rc3.zip",
+                "reference": "5.5.0-rc3",
+                "shasum": "c50177c4b8ec56640ed99d0533774233d0583518"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "5.5.0-rc3",
+                    "datestamp": "1728259899",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "aburrows",
+                    "homepage": "https://www.drupal.org/user/577844"
+                },
+                {
+                    "name": "ericpugh",
+                    "homepage": "https://www.drupal.org/user/130084"
+                },
+                {
+                    "name": "ikeigenwijs",
+                    "homepage": "https://www.drupal.org/user/583238"
+                },
+                {
+                    "name": "mrded",
+                    "homepage": "https://www.drupal.org/user/556088"
+                },
+                {
+                    "name": "shelane",
+                    "homepage": "https://www.drupal.org/user/2674989"
+                }
+            ],
+            "description": "Allows for different styles to be used in views to work with Bootstrap 5 components.",
+            "homepage": "https://www.drupal.org/project/views_bootstrap",
+            "support": {
+                "source": "https://git.drupalcode.org/project/views_bootstrap"
             }
         },
         {
@@ -6559,7 +6668,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "drupal/views_bootstrap": 5
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
