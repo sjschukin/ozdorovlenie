@@ -13647,6 +13647,38 @@ h6,
 }
 
 /*--------------------------------------------------------------
+# Go Back Button
+--------------------------------------------------------------*/
+.go-back {
+  visibility: hidden;
+  position: fixed;
+  opacity: 0;
+  left: 15px;
+  top: 115px;
+  z-index: 99999;
+  background-color: var(--accent-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.4s;
+}
+.go-back i {
+  font-size: 36px;
+  color: var(--contrast-color);
+  line-height: 0;
+}
+.go-back:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: var(--contrast-color);
+}
+
+@media (min-width: 992px) {
+  .go-back {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+/*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
@@ -14161,10 +14193,25 @@ section,
   }
 }
 /*--------------------------------------------------------------
-# Faq Section
+# Camp Info Section
 --------------------------------------------------------------*/
-.faq .faq-container .faq-item {
-  background-color: var(--surface-color);
+.camp-info .more-btn {
+  background: var(--accent-color);
+  border: 0;
+  padding: 10px 35px;
+  color: var(--contrast-color);
+  transition: 0.4s;
+  border-radius: 50px;
+}
+.camp-info .more-btn:hover {
+  background: color-mix(in srgb, var(--accent-color) 90%, white 15%);
+}
+
+/*--------------------------------------------------------------
+# Camp Shift Section
+--------------------------------------------------------------*/
+.camp-shift .camp-shift-container .camp-shift-item {
+  background-color: var(--background-color);
   position: relative;
   padding: 20px;
   margin-bottom: 15px;
@@ -14172,10 +14219,7 @@ section,
   border-radius: 5px;
   overflow: hidden;
 }
-.faq .faq-container .faq-item:last-child {
-  margin-bottom: 0;
-}
-.faq .faq-container .faq-item h3, .faq .faq-container .faq-item .h3 {
+.camp-shift .camp-shift-container .camp-shift-item h3, .camp-shift .camp-shift-container .camp-shift-item .h3 {
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
@@ -14185,25 +14229,25 @@ section,
   display: flex;
   align-items: center;
 }
-.faq .faq-container .faq-item h3 .num, .faq .faq-container .faq-item .h3 .num {
+.camp-shift .camp-shift-container .camp-shift-item h3 .num, .camp-shift .camp-shift-container .camp-shift-item .h3 .num {
   color: var(--accent-color);
   padding-right: 5px;
 }
-.faq .faq-container .faq-item h3:hover, .faq .faq-container .faq-item .h3:hover {
+.camp-shift .camp-shift-container .camp-shift-item h3:hover, .camp-shift .camp-shift-container .camp-shift-item .h3:hover {
   color: var(--accent-color);
 }
-.faq .faq-container .faq-item .faq-content {
+.camp-shift .camp-shift-container .camp-shift-item .camp-shift-content {
   display: grid;
   grid-template-rows: 0fr;
   transition: 0.3s ease-in-out;
   visibility: hidden;
   opacity: 0;
 }
-.faq .faq-container .faq-item .faq-content p {
+.camp-shift .camp-shift-container .camp-shift-item .camp-shift-content .camp-shift-body {
   margin-bottom: 0;
   overflow: hidden;
 }
-.faq .faq-container .faq-item .faq-toggle {
+.camp-shift .camp-shift-container .camp-shift-item .camp-shift-toggle {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -14212,29 +14256,45 @@ section,
   transition: 0.3s;
   cursor: pointer;
 }
-.faq .faq-container .faq-item .faq-toggle:hover {
+.camp-shift .camp-shift-container .camp-shift-item .camp-shift-toggle:hover {
   color: var(--accent-color);
 }
-.faq .faq-container .faq-active {
+.camp-shift .camp-shift-container .camp-shift-active {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
   color: var(--contrast-color);
 }
-.faq .faq-container .faq-active h3, .faq .faq-container .faq-active .h3 {
+.camp-shift .camp-shift-container .camp-shift-active h3, .camp-shift .camp-shift-container .camp-shift-active .h3 {
   color: var(--contrast-color);
 }
-.faq .faq-container .faq-active h3:hover, .faq .faq-container .faq-active .h3:hover {
-  color: var(--contrast-color);
+.camp-shift .camp-shift-container .camp-shift-active h3:hover, .camp-shift .camp-shift-container .camp-shift-active .h3:hover {
+  color: var(--heading-color);
 }
-.faq .faq-container .faq-active .faq-content {
+.camp-shift .camp-shift-container .camp-shift-active .camp-shift-content {
   grid-template-rows: 1fr;
   visibility: visible;
   opacity: 1;
   padding-top: 10px;
 }
-.faq .faq-container .faq-active .faq-toggle {
+.camp-shift .camp-shift-container .camp-shift-active .camp-shift-toggle {
   transform: rotate(90deg);
+  color: var(--contrast-color);
+}
+.camp-shift .camp-shift-container .camp-shift-active .camp-shift-toggle:hover {
+  color: var(--heading-color);
+}
+.camp-shift .camp-shift-container .camp-shift-btn {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-size: 14px;
+  padding: 8px 25px;
+  border: 3px solid var(--contrast-color);
+  border-radius: 50px;
+  transition: 0.3s;
+}
+.camp-shift .camp-shift-container .camp-shift-btn:hover {
   color: var(--accent-color);
+  background: var(--contrast-color);
 }
 
 /*--------------------------------------------------------------

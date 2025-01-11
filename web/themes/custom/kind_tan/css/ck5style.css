@@ -46,6 +46,9 @@
   # Scroll Top Button
   --------------------------------------------------------------*/
   /*--------------------------------------------------------------
+  # Go Back Button
+  --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
   # Disable aos animation delay on mobile devices
   --------------------------------------------------------------*/
   /*--------------------------------------------------------------
@@ -76,7 +79,10 @@
   # Camps Section
   --------------------------------------------------------------*/
   /*--------------------------------------------------------------
-  # Faq Section
+  # Camp Info Section
+  --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+  # Camp Shift Section
   --------------------------------------------------------------*/
   /*--------------------------------------------------------------
   # Testimonials Section
@@ -12704,6 +12710,34 @@ a > .ck-content code {
   visibility: visible;
   opacity: 1;
 }
+.ck-content .go-back {
+  visibility: hidden;
+  position: fixed;
+  opacity: 0;
+  left: 15px;
+  top: 115px;
+  z-index: 99999;
+  background-color: var(--accent-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.4s;
+}
+.ck-content .go-back i {
+  font-size: 36px;
+  color: var(--contrast-color);
+  line-height: 0;
+}
+.ck-content .go-back:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: var(--contrast-color);
+}
+@media (min-width: 992px) {
+  .ck-content .go-back {
+    visibility: visible;
+    opacity: 1;
+  }
+}
 @media screen and (max-width: 768px) {
   .ck-content [data-aos-delay] {
     transition-delay: 0 !important;
@@ -13179,8 +13213,19 @@ a > .ck-content code {
     justify-content: center;
   }
 }
-.ck-content .faq .faq-container .faq-item {
-  background-color: var(--surface-color);
+.ck-content .camp-info .more-btn {
+  background: var(--accent-color);
+  border: 0;
+  padding: 10px 35px;
+  color: var(--contrast-color);
+  transition: 0.4s;
+  border-radius: 50px;
+}
+.ck-content .camp-info .more-btn:hover {
+  background: color-mix(in srgb, var(--accent-color) 90%, white 15%);
+}
+.ck-content .camp-shift .camp-shift-container .camp-shift-item {
+  background-color: var(--background-color);
   position: relative;
   padding: 20px;
   margin-bottom: 15px;
@@ -13188,10 +13233,7 @@ a > .ck-content code {
   border-radius: 5px;
   overflow: hidden;
 }
-.ck-content .faq .faq-container .faq-item:last-child {
-  margin-bottom: 0;
-}
-.ck-content .faq .faq-container .faq-item h3, .ck-content .faq .faq-container .faq-item .h3 {
+.ck-content .camp-shift .camp-shift-container .camp-shift-item h3, .ck-content .camp-shift .camp-shift-container .camp-shift-item .h3 {
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
@@ -13201,25 +13243,25 @@ a > .ck-content code {
   display: flex;
   align-items: center;
 }
-.ck-content .faq .faq-container .faq-item h3 .num, .ck-content .faq .faq-container .faq-item .h3 .num {
+.ck-content .camp-shift .camp-shift-container .camp-shift-item h3 .num, .ck-content .camp-shift .camp-shift-container .camp-shift-item .h3 .num {
   color: var(--accent-color);
   padding-right: 5px;
 }
-.ck-content .faq .faq-container .faq-item h3:hover, .ck-content .faq .faq-container .faq-item .h3:hover {
+.ck-content .camp-shift .camp-shift-container .camp-shift-item h3:hover, .ck-content .camp-shift .camp-shift-container .camp-shift-item .h3:hover {
   color: var(--accent-color);
 }
-.ck-content .faq .faq-container .faq-item .faq-content {
+.ck-content .camp-shift .camp-shift-container .camp-shift-item .camp-shift-content {
   display: grid;
   grid-template-rows: 0fr;
   transition: 0.3s ease-in-out;
   visibility: hidden;
   opacity: 0;
 }
-.ck-content .faq .faq-container .faq-item .faq-content p {
+.ck-content .camp-shift .camp-shift-container .camp-shift-item .camp-shift-content .camp-shift-body {
   margin-bottom: 0;
   overflow: hidden;
 }
-.ck-content .faq .faq-container .faq-item .faq-toggle {
+.ck-content .camp-shift .camp-shift-container .camp-shift-item .camp-shift-toggle {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -13228,29 +13270,45 @@ a > .ck-content code {
   transition: 0.3s;
   cursor: pointer;
 }
-.ck-content .faq .faq-container .faq-item .faq-toggle:hover {
+.ck-content .camp-shift .camp-shift-container .camp-shift-item .camp-shift-toggle:hover {
   color: var(--accent-color);
 }
-.ck-content .faq .faq-container .faq-active {
+.ck-content .camp-shift .camp-shift-container .camp-shift-active {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
   color: var(--contrast-color);
 }
-.ck-content .faq .faq-container .faq-active h3, .ck-content .faq .faq-container .faq-active .h3 {
+.ck-content .camp-shift .camp-shift-container .camp-shift-active h3, .ck-content .camp-shift .camp-shift-container .camp-shift-active .h3 {
   color: var(--contrast-color);
 }
-.ck-content .faq .faq-container .faq-active h3:hover, .ck-content .faq .faq-container .faq-active .h3:hover {
-  color: var(--contrast-color);
+.ck-content .camp-shift .camp-shift-container .camp-shift-active h3:hover, .ck-content .camp-shift .camp-shift-container .camp-shift-active .h3:hover {
+  color: var(--heading-color);
 }
-.ck-content .faq .faq-container .faq-active .faq-content {
+.ck-content .camp-shift .camp-shift-container .camp-shift-active .camp-shift-content {
   grid-template-rows: 1fr;
   visibility: visible;
   opacity: 1;
   padding-top: 10px;
 }
-.ck-content .faq .faq-container .faq-active .faq-toggle {
+.ck-content .camp-shift .camp-shift-container .camp-shift-active .camp-shift-toggle {
   transform: rotate(90deg);
+  color: var(--contrast-color);
+}
+.ck-content .camp-shift .camp-shift-container .camp-shift-active .camp-shift-toggle:hover {
+  color: var(--heading-color);
+}
+.ck-content .camp-shift .camp-shift-container .camp-shift-btn {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-size: 14px;
+  padding: 8px 25px;
+  border: 3px solid var(--contrast-color);
+  border-radius: 50px;
+  transition: 0.3s;
+}
+.ck-content .camp-shift .camp-shift-container .camp-shift-btn:hover {
   color: var(--accent-color);
+  background: var(--contrast-color);
 }
 .ck-content .testimonials .info h3, .ck-content .testimonials .info .h3 {
   font-weight: 700;

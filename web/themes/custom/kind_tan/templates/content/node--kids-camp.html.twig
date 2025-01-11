@@ -82,7 +82,7 @@
 {{ attach_library('kind_tan/glightbox')}}
 
 <article{{ attributes.addClass(classes) }}>
-  <section id="info" class="info section">
+  <section id="camp-info" class="camp-info section">
     <div class="row gy-4 gx-5">
       <div class="col-lg-5">
         <div class="container-fluid gallery" data-aos="fade-up" data-aos-delay="100">
@@ -112,6 +112,13 @@
           {{ node.field_description.value|t }}
         {% endif %}
 
+        <p>
+          <a href="#camp-shift" class="more-btn">
+            <span>Смотреть смены</span>
+            <i class="bi bi-chevron-right"></i>
+          </a>
+        </p>
+
         {% if node.field_phone_number is not empty or node.field_email is not empty or node.field_website is not empty %}
         <h5 class="mt-4">Контакты</h5>
         <p>
@@ -133,10 +140,11 @@
   </section>
 
   {% if node.field_map is not empty %}
-  <section id="map" class="map section">
+  <section id="camp-map" class="camp-map section">
     <div class="section-title" data-aos="fade-up">
       <h2>Карта</h2>
     </div>
+
     <div class="row" data-aos="fade-up" data-aos-delay="200">
       <div class="col-12">
         {{ node.field_map.value|t }}
