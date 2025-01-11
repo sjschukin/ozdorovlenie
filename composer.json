@@ -24,6 +24,7 @@
         "drupal/core-recommended": "^10.4",
         "drupal/pathauto": "^1.13",
         "drupal/views_bootstrap": "^5.5@RC",
+        "drupal/webform": "^6.2",
         "drush/drush": "^13"
     },
     "conflict": {
