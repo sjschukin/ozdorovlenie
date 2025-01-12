@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ca806279f7de5841dfae65ba7a945090",
+    "content-hash": "c4cd9576f26f8e6de7cff66247cf3312",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1225,55 +1225,6 @@
             }
         },
         {
-            "name": "drupal/block_token",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/block_token.git",
-                "reference": "8.x-1.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/block_token-8.x-1.1.zip",
-                "reference": "8.x-1.1",
-                "shasum": "f40c3e3d82862ef38167d042e79aa1b96e531b33"
-            },
-            "require": {
-                "drupal/core": "^8.8 || ^9 || ^10 || ^11",
-                "drupal/token": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.1",
-                    "datestamp": "1715892298",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "gpl-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "i-trokhanenko",
-                    "homepage": "https://www.drupal.org/user/3546872"
-                },
-                {
-                    "name": "skullhole",
-                    "homepage": "https://www.drupal.org/user/2257896"
-                }
-            ],
-            "description": "The Block Token module allows you to create the tokens for blocks on site. ",
-            "homepage": "https://www.drupal.org/project/block_token",
-            "support": {
-                "source": "https://git.drupalcode.org/project/block_token"
-            }
-        },
-        {
             "name": "drupal/bootstrap5",
             "version": "4.0.3",
             "source": {
@@ -1882,6 +1833,51 @@
             "homepage": "https://www.drupal.org/project/token",
             "support": {
                 "source": "https://git.drupalcode.org/project/token"
+            }
+        },
+        {
+            "name": "drupal/token_block",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/token_block.git",
+                "reference": "2.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/token_block-2.0.2.zip",
+                "reference": "2.0.2",
+                "shasum": "f154afd91fce42669af42b5467bff2c9d802975c"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10 || ^11",
+                "drupal/token": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.2",
+                    "datestamp": "1721472811",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Elavarasan R",
+                    "homepage": "https://www.drupal.org/user/1902634"
+                }
+            ],
+            "description": "It provides one custom block named as \"Token Block\" for creating dynamic content using token value.",
+            "homepage": "https://www.drupal.org/project/token_block",
+            "support": {
+                "source": "https://git.drupalcode.org/project/token_block"
             }
         },
         {
