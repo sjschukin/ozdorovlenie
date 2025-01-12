@@ -13625,7 +13625,7 @@ h6,
   opacity: 0;
   right: 15px;
   bottom: 15px;
-  z-index: 99999;
+  z-index: 5;
   background-color: var(--accent-color);
   width: 40px;
   height: 40px;
@@ -13655,7 +13655,7 @@ h6,
   opacity: 0;
   left: 15px;
   top: 115px;
-  z-index: 99999;
+  z-index: 5;
   background-color: var(--accent-color);
   width: 40px;
   height: 40px;
@@ -14295,6 +14295,53 @@ section,
 .camp-shift .camp-shift-container .camp-shift-btn:hover {
   color: var(--accent-color);
   background: var(--contrast-color);
+}
+
+/*--------------------------------------------------------------
+# Voucher Request Form
+--------------------------------------------------------------*/
+.webform-submission-voucher-request-form-form input[type=text],
+.webform-submission-voucher-request-form-form input[type=email],
+.webform-submission-voucher-request-form-form textarea,
+.webform-submission-voucher-request-form-form select {
+  color: var(--default-color);
+  background-color: transparent;
+  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  padding: 10px;
+}
+.webform-submission-voucher-request-form-form input[type=text]:focus,
+.webform-submission-voucher-request-form-form input[type=email]:focus,
+.webform-submission-voucher-request-form-form textarea:focus,
+.webform-submission-voucher-request-form-form select:focus {
+  border-color: var(--accent-color);
+}
+.webform-submission-voucher-request-form-form input[type=text]::placeholder,
+.webform-submission-voucher-request-form-form input[type=email]::placeholder,
+.webform-submission-voucher-request-form-form textarea::placeholder,
+.webform-submission-voucher-request-form-form select::placeholder {
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+}
+.webform-submission-voucher-request-form-form input[type=text],
+.webform-submission-voucher-request-form-form input[type=email],
+.webform-submission-voucher-request-form-form select {
+  height: 44px;
+}
+.webform-submission-voucher-request-form-form textarea {
+  padding: 10px 12px;
+}
+.webform-submission-voucher-request-form-form input[type=submit] {
+  background: var(--accent-color);
+  border: 0;
+  padding: 10px 35px;
+  color: var(--contrast-color);
+  transition: 0.4s;
+  border-radius: 50px;
+}
+.webform-submission-voucher-request-form-form input[type=submit]:hover {
+  background: color-mix(in srgb, var(--accent-color) 90%, white 15%);
 }
 
 /*--------------------------------------------------------------

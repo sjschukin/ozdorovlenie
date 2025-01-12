@@ -618,7 +618,7 @@ h6 {
   opacity: 0;
   right: 15px;
   bottom: 15px;
-  z-index: 99999;
+  z-index: 5;
   background-color: var(--accent-color);
   width: 40px;
   height: 40px;
@@ -651,7 +651,7 @@ h6 {
   opacity: 0;
   left: 15px;
   top: 115px;
-  z-index: 99999;
+  z-index: 5;
   background-color: var(--accent-color);
   width: 40px;
   height: 40px;
@@ -1405,6 +1405,56 @@ section,
         color: var(--accent-color);
         background: var(--contrast-color);
       }
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+# Voucher Request Form
+--------------------------------------------------------------*/
+
+.webform-submission-voucher-request-form-form {
+  input[type=text],
+  input[type=email],
+  textarea,
+  select {
+    color: var(--default-color);
+    background-color: transparent;
+    border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    padding: 10px;
+
+    &:focus {
+      border-color: var(--accent-color);
+    }
+
+    &::placeholder {
+      color: color-mix(in srgb, var(--default-color), transparent 50%);
+    }
+  }
+
+  input[type=text],
+  input[type=email],
+  select {
+    height: 44px;
+  }
+
+  textarea {
+    padding: 10px 12px;
+  }
+
+  input[type=submit] {
+    background: var(--accent-color);
+    border: 0;
+    padding: 10px 35px;
+    color: var(--contrast-color);
+    transition: 0.4s;
+    border-radius: 50px;
+
+    &:hover {
+      background: color-mix(in srgb, var(--accent-color) 90%, white 15%);
     }
   }
 }

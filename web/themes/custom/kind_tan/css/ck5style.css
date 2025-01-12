@@ -85,6 +85,9 @@
   # Camp Shift Section
   --------------------------------------------------------------*/
   /*--------------------------------------------------------------
+  # Voucher Request Form
+  --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
   # Testimonials Section
   --------------------------------------------------------------*/
   /*--------------------------------------------------------------
@@ -12690,7 +12693,7 @@ a > .ck-content code {
   opacity: 0;
   right: 15px;
   bottom: 15px;
-  z-index: 99999;
+  z-index: 5;
   background-color: var(--accent-color);
   width: 40px;
   height: 40px;
@@ -12716,7 +12719,7 @@ a > .ck-content code {
   opacity: 0;
   left: 15px;
   top: 115px;
-  z-index: 99999;
+  z-index: 5;
   background-color: var(--accent-color);
   width: 40px;
   height: 40px;
@@ -13309,6 +13312,49 @@ a > .ck-content code {
 .ck-content .camp-shift .camp-shift-container .camp-shift-btn:hover {
   color: var(--accent-color);
   background: var(--contrast-color);
+}
+.ck-content .webform-submission-voucher-request-form-form input[type=text],
+.ck-content .webform-submission-voucher-request-form-form input[type=email],
+.ck-content .webform-submission-voucher-request-form-form textarea,
+.ck-content .webform-submission-voucher-request-form-form select {
+  color: var(--default-color);
+  background-color: transparent;
+  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  padding: 10px;
+}
+.ck-content .webform-submission-voucher-request-form-form input[type=text]:focus,
+.ck-content .webform-submission-voucher-request-form-form input[type=email]:focus,
+.ck-content .webform-submission-voucher-request-form-form textarea:focus,
+.ck-content .webform-submission-voucher-request-form-form select:focus {
+  border-color: var(--accent-color);
+}
+.ck-content .webform-submission-voucher-request-form-form input[type=text]::placeholder,
+.ck-content .webform-submission-voucher-request-form-form input[type=email]::placeholder,
+.ck-content .webform-submission-voucher-request-form-form textarea::placeholder,
+.ck-content .webform-submission-voucher-request-form-form select::placeholder {
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+}
+.ck-content .webform-submission-voucher-request-form-form input[type=text],
+.ck-content .webform-submission-voucher-request-form-form input[type=email],
+.ck-content .webform-submission-voucher-request-form-form select {
+  height: 44px;
+}
+.ck-content .webform-submission-voucher-request-form-form textarea {
+  padding: 10px 12px;
+}
+.ck-content .webform-submission-voucher-request-form-form input[type=submit] {
+  background: var(--accent-color);
+  border: 0;
+  padding: 10px 35px;
+  color: var(--contrast-color);
+  transition: 0.4s;
+  border-radius: 50px;
+}
+.ck-content .webform-submission-voucher-request-form-form input[type=submit]:hover {
+  background: color-mix(in srgb, var(--accent-color) 90%, white 15%);
 }
 .ck-content .testimonials .info h3, .ck-content .testimonials .info .h3 {
   font-weight: 700;
