@@ -1,0 +1,20 @@
+uuid: 9065f794-7c48-453b-a6cb-4bef70ad0287
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_free_places_number
+field_name: field_free_places_number
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

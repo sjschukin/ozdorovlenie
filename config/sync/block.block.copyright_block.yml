@@ -1,0 +1,23 @@
+uuid: 722269b1-d622-4b20-9596-c0ad738bfbb7
+langcode: ru
+status: true
+dependencies:
+  module:
+    - token_block
+  theme:
+    - kind_tan
+id: copyright_block
+theme: kind_tan
+region: footer
+weight: 0
+provider: null
+plugin: token_block
+settings:
+  id: token_block
+  label: Copyright
+  label_display: '0'
+  provider: token_block
+  body:
+    value: '<p class="text-center">Отдых и оздоровление детей Рязанской области, [current-date:html_year]</p>'
+    format: full_html
+visibility: {  }

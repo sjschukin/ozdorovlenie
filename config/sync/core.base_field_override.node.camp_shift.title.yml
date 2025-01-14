@@ -1,0 +1,18 @@
+uuid: 1bee32a8-8a8e-4f7c-b532-5dfb5d8dc601
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.camp_shift
+id: node.camp_shift.title
+field_name: title
+entity_type: node
+bundle: camp_shift
+label: Наименование
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,21 @@
+uuid: f5755b34-9c1d-4cde-bee0-ea424c3c6603
+langcode: ru
+status: true
+dependencies: {  }
+name: square_300
+label: 'Квадрат (300×300)'
+effects:
+  d52da07b-0c8b-497f-b3c6-ac2ac76e2f69:
+    uuid: d52da07b-0c8b-497f-b3c6-ac2ac76e2f69
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 300
+      anchor: center-center
+  0bf95078-6224-48ad-aa58-a84f52a2f2c6:
+    uuid: 0bf95078-6224-48ad-aa58-a84f52a2f2c6
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

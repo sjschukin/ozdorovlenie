@@ -1,0 +1,27 @@
+uuid: 253f3821-84e8-445e-9a19-a99af262966a
+langcode: ru
+status: false
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - kind_tan
+_core:
+  default_config_hash: oKgcu60Lh_Z5baIDZDBvPkbrWUjjfxkNrtv9vWWL6nQ
+id: kind_tan_account_menu
+theme: kind_tan
+region: nav_additional
+weight: -7
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'Меню учётной записи пользователя'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

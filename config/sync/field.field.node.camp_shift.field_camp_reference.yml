@@ -1,0 +1,29 @@
+uuid: e95366d7-e583-4584-b363-6e27504095d8
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_camp_reference
+    - node.type.camp_shift
+    - node.type.kids_camp
+id: node.camp_shift.field_camp_reference
+field_name: field_camp_reference
+entity_type: node
+bundle: camp_shift
+label: Лагерь
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      kids_camp: kids_camp
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

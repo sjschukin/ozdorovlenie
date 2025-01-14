@@ -1,0 +1,22 @@
+uuid: 31a63824-dfa2-4612-ab50-6d87716ab30f
+langcode: ru
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - kind_tan
+_core:
+  default_config_hash: zK9AIft5QpUdEjt4ZFDohBDHdY8StooaCVk73Kn_cPs
+id: kind_tan_help
+theme: kind_tan
+region: content
+weight: -5
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Справка
+  label_display: '0'
+  provider: help
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: b2e961c4-63ff-482c-9f3d-ec157f8f59eb
+langcode: ru
+status: true
+dependencies:
+  theme:
+    - bootstrap5
+_core:
+  default_config_hash: yX9o6NcntZnXRDfbJoHY1pJwuXlumW44m5AMs347NN4
+id: bootstrap5_local_tasks
+theme: bootstrap5
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Вкладки
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

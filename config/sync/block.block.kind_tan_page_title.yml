@@ -1,0 +1,26 @@
+uuid: 01373a04-a280-43f1-9940-3b483a2506d0
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kind_tan
+_core:
+  default_config_hash: 2OI4KHx2_0TXLg-dhrGvnFYOQ8ojuPnwkha3vv8R-Ok
+id: kind_tan_page_title
+theme: kind_tan
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Заголовок страницы'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "<front>\r\n/camps/*"

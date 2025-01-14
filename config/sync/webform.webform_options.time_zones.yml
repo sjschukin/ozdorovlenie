@@ -1,0 +1,14 @@
+uuid: 334e5e23-2d5d-490c-9619-4e2e51539275
+langcode: ru
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: 8rVcRXLnTAEoWs7zl8du-7RIUnayqUcGYnvb3JT21-o
+id: time_zones
+label: 'Часовые пояса'
+category: 'Дата и время'
+likert: false
+options: ''

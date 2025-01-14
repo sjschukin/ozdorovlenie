@@ -1,0 +1,22 @@
+uuid: ce6431c5-7df6-417e-8fd4-2945a22e2b65
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bootstrap5
+_core:
+  default_config_hash: 9LdMj38y4GDi23GrIUtIZIV1bJEn1C47N19jrswvcLc
+id: bootstrap5_messages
+theme: bootstrap5
+region: content
+weight: -7
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Сообщения
+  label_display: '0'
+  provider: system
+visibility: {  }

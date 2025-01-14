@@ -1,0 +1,26 @@
+uuid: a154414c-e877-407b-bfcb-37ed540b1a06
+langcode: ru
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: pZJnuQkh9afNML5IcMuKTUC__vmHMFn66Qr5IWtedZ4
+id: months
+label: Месяцы
+category: 'Дата и время'
+likert: false
+options: |
+  January: January
+  February: February
+  March: March
+  April: April
+  May: May
+  June: June
+  July: July
+  August: August
+  September: September
+  October: October
+  November: November
+  December: December

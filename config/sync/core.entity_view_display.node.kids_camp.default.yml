@@ -1,0 +1,109 @@
+uuid: 29170596-15e8-4d43-9062-98a90810e4e9
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.kids_camp.field_address
+    - field.field.node.kids_camp.field_description
+    - field.field.node.kids_camp.field_email
+    - field.field.node.kids_camp.field_logo
+    - field.field.node.kids_camp.field_map
+    - field.field.node.kids_camp.field_phone_number
+    - field.field.node.kids_camp.field_photo
+    - field.field.node.kids_camp.field_sort
+    - field.field.node.kids_camp.field_website
+    - node.type.kids_camp
+  module:
+    - image
+    - link
+    - text
+    - user
+id: node.kids_camp.default
+targetEntityType: node
+bundle: kids_camp
+mode: default
+content:
+  field_address:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_logo:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_map:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_phone_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_photo:
+    type: image_url
+    label: above
+    settings:
+      image_style: thumbnail_800_600
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_sort:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_website:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

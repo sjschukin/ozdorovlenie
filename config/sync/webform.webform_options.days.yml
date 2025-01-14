@@ -1,0 +1,21 @@
+uuid: a1cd779e-067c-4c73-8c44-1b0273e5425d
+langcode: ru
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: YNrKbYrWWjeubUUM8AsQ19KnX7cU1elACR14CZJHmdg
+id: days
+label: Дни
+category: 'Дата и время'
+likert: false
+options: |
+  Sunday: Sunday
+  Monday: Monday
+  Tuesday: Tuesday
+  Wednesday: Wednesday
+  Thursday: Thursday
+  Friday: Friday
+  Saturday: Saturday

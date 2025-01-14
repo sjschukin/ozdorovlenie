@@ -1,0 +1,27 @@
+uuid: 26b91335-28f0-4f65-839a-c2636ff2d83a
+langcode: ru
+status: false
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - kind_tan
+_core:
+  default_config_hash: _-rNSyB6AlBXj0F6LYSRUc6xWHHa4nmSVc0l_xtoJNs
+id: kind_tan_footer
+theme: kind_tan
+region: footer
+weight: -6
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Подвал
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,15 @@
+uuid: 3bbea1fc-1827-48c0-8ca3-22e713e69631
+langcode: ru
+status: true
+dependencies: {  }
+name: thumbnail_800_600
+label: 'Миниатюра (800×600)'
+effects:
+  21b5820b-dae8-415e-b01d-209e0446ff90:
+    uuid: 21b5820b-dae8-415e-b01d-209e0446ff90
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 800
+      height: 600
+      anchor: center-center

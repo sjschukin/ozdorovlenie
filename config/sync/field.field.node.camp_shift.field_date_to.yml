@@ -1,0 +1,21 @@
+uuid: e4070f42-778e-48db-ae2c-e64136484f84
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_to
+    - node.type.camp_shift
+  module:
+    - datetime
+id: node.camp_shift.field_date_to
+field_name: field_date_to
+entity_type: node
+bundle: camp_shift
+label: 'Дата окончания смены'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

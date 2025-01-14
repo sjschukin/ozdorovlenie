@@ -1,0 +1,9 @@
+uuid: fddca498-ca7d-4335-b524-30d406054a8e
+langcode: ru
+status: true
+dependencies: {  }
+name: 'Муниципальные образования'
+vid: municipalities
+description: null
+weight: 0
+new_revision: false

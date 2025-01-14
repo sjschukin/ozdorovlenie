@@ -1,0 +1,22 @@
+uuid: 354fb1bb-5056-4518-963c-d3f76f397982
+langcode: ru
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - kind_tan
+_core:
+  default_config_hash: INHMsCko7KgpusaLeUnSkJiZlaD17W_TeDoRU76sMQc
+id: kind_tan_breadcrumbs
+theme: kind_tan
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Строка навигации'
+  label_display: '0'
+  provider: system
+visibility: {  }

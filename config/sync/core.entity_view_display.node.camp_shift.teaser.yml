@@ -1,0 +1,33 @@
+uuid: e328c121-1d2f-4951-8458-88e853068beb
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.camp_shift.field_camp_reference
+    - field.field.node.camp_shift.field_cost
+    - field.field.node.camp_shift.field_date_from
+    - field.field.node.camp_shift.field_date_to
+    - field.field.node.camp_shift.field_description
+    - field.field.node.camp_shift.field_free_places_number
+    - node.type.camp_shift
+  module:
+    - user
+id: node.camp_shift.teaser
+targetEntityType: node
+bundle: camp_shift
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_camp_reference: true
+  field_cost: true
+  field_date_from: true
+  field_date_to: true
+  field_description: true
+  field_free_places_number: true
+  langcode: true

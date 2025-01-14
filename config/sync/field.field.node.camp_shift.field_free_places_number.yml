@@ -1,0 +1,23 @@
+uuid: 993b1089-8c7a-416c-9c6c-20d50fb423bc
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_free_places_number
+    - node.type.camp_shift
+id: node.camp_shift.field_free_places_number
+field_name: field_free_places_number
+entity_type: node
+bundle: camp_shift
+label: 'Число свободных мест'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

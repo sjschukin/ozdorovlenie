@@ -1,0 +1,22 @@
+uuid: e347be5a-8d90-4d74-97b9-52fd9f9de8d3
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kind_tan
+_core:
+  default_config_hash: 29makG9oDpnoq3boN023jAiLVAttLhn8452lGNrvTSY
+id: kind_tan_messages
+theme: kind_tan
+region: content
+weight: -8
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Сообщения
+  label_display: '0'
+  provider: system
+visibility: {  }

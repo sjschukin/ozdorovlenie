@@ -1,0 +1,9 @@
+uuid: 75ecf5fb-d886-4407-859b-6b35c8d1ef6e
+langcode: ru
+status: true
+dependencies: {  }
+id: ru
+label: Russian
+direction: ltr
+weight: 0
+locked: false

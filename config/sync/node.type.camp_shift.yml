@@ -1,0 +1,17 @@
+uuid: 00db2154-f1a8-4b34-a9fa-d0b4596e1489
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Лагерная смена'
+type: camp_shift
+description: 'Содержит информацию о лагерной смене: интервал, описание, стоимость.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

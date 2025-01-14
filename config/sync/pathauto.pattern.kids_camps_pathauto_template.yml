@@ -1,0 +1,22 @@
+uuid: dade7f4c-c093-4222-bac0-2609295e2ed6
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+id: kids_camps_pathauto_template
+label: kids_camps_pathauto_template
+type: 'canonical_entities:node'
+pattern: '/camps/[node:nid]'
+selection_criteria:
+  02894201-7a01-4188-b33b-2e49d1dda46e:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 02894201-7a01-4188-b33b-2e49d1dda46e
+    context_mapping:
+      node: node
+    bundles:
+      kids_camp: kids_camp
+selection_logic: and
+weight: -5
+relationships: {  }

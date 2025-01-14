@@ -1,0 +1,17 @@
+uuid: f857ebe8-af68-46a1-bb23-b41f249911c5
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Детский лагерь'
+type: kids_camp
+description: 'Элемент, содержащий сведения о детском лагере (наименование, описание, контактные данные и т.д.)'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

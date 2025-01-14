@@ -1,0 +1,18 @@
+uuid: b717618f-ee42-488f-8569-b381c39dd7c3
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.kids_camp
+id: node.kids_camp.title
+field_name: title
+entity_type: node
+bundle: kids_camp
+label: Наименование
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

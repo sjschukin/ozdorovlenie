@@ -1,0 +1,11 @@
+uuid: 91d4c12f-db2e-4e46-89d7-25073daf7b27
+langcode: ru
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.municipalities
+id: taxonomy_term.municipalities
+target_entity_type_id: taxonomy_term
+target_bundle: municipalities
+default_langcode: site_default
+language_alterable: false

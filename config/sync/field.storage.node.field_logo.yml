@@ -1,0 +1,30 @@
+uuid: f74ed7e7-97d7-44a3-91a5-ef375e02b227
+langcode: ru
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - node
+id: node.field_logo
+field_name: field_logo
+entity_type: node
+type: image
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  default_image:
+    uuid: 8cceef32-144a-461d-8a86-d7d2cc4207cf
+    alt: ''
+    title: ''
+    width: 800
+    height: 800
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,25 @@
+uuid: 63c9d3f6-b82f-4ef3-a623-f9d5f332330a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sort
+    - node.type.kids_camp
+id: node.kids_camp.field_sort
+field_name: field_sort
+entity_type: node
+bundle: kids_camp
+label: Сортировка
+description: 'Значение, используемое для сортировки. Чем меньше, тем выше элемент будет в списке'
+required: false
+translatable: false
+default_value:
+  -
+    value: 100
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

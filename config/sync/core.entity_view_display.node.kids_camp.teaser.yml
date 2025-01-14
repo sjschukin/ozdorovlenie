@@ -1,0 +1,39 @@
+uuid: e9b2d797-24f6-4e7e-b7b7-4dd546b5ea02
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.kids_camp.field_address
+    - field.field.node.kids_camp.field_description
+    - field.field.node.kids_camp.field_email
+    - field.field.node.kids_camp.field_logo
+    - field.field.node.kids_camp.field_map
+    - field.field.node.kids_camp.field_phone_number
+    - field.field.node.kids_camp.field_photo
+    - field.field.node.kids_camp.field_sort
+    - field.field.node.kids_camp.field_website
+    - node.type.kids_camp
+  module:
+    - user
+id: node.kids_camp.teaser
+targetEntityType: node
+bundle: kids_camp
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_address: true
+  field_description: true
+  field_email: true
+  field_logo: true
+  field_map: true
+  field_phone_number: true
+  field_photo: true
+  field_sort: true
+  field_website: true
+  langcode: true

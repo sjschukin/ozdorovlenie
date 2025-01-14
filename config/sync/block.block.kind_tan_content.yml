@@ -1,0 +1,26 @@
+uuid: 296299bc-8af5-4a16-84d1-7ece06013619
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kind_tan
+_core:
+  default_config_hash: WnBD5A94e8QDheNydMkLg21zXiXgpkoEGwH2RUsSvZw
+id: kind_tan_content
+theme: kind_tan
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Содержимое страницы'
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

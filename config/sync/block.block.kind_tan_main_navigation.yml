@@ -1,0 +1,27 @@
+uuid: de56e0b5-a54b-4679-9af1-2cff6c4ece56
+langcode: ru
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - kind_tan
+_core:
+  default_config_hash: 4l0AxhVGGtmhEsEUtD2fRqd01rRdF5LtyhZOF43W_qw
+id: kind_tan_main_navigation
+theme: kind_tan
+region: nav_main
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Основная навигация'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

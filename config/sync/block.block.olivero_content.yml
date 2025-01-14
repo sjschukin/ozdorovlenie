@@ -1,0 +1,22 @@
+uuid: d62053aa-5322-4d42-9e65-5e9f694f8edf
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - olivero
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: olivero_content
+theme: olivero
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Содержимое страницы'
+  label_display: '0'
+  provider: system
+visibility: {  }

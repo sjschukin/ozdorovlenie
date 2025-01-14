@@ -1,0 +1,11 @@
+uuid: 8abf6ee4-2fd5-44ec-9fbc-b1afa2638ae6
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.kids_camp
+id: node.kids_camp
+target_entity_type_id: node
+target_bundle: kids_camp
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,25 @@
+uuid: f040d05e-ee87-47b0-8755-c5ecb897948c
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kind_tan
+_core:
+  default_config_hash: iaypoSMFqN2SaoDuyygwpKRLFFJJJfinGdwEGGNWXZ0
+id: kind_tan_branding
+theme: kind_tan
+region: nav_branding
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Брендинг сайта'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

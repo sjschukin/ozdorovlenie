@@ -1,0 +1,20 @@
+uuid: 07af4f09-b8a3-4400-86a6-a336f2500563
+langcode: ru
+status: true
+dependencies:
+  theme:
+    - kind_tan
+_core:
+  default_config_hash: dQ7OifBD9PM0KmRtNIvBfVHYk7XNGcAs11Uo2BiPCY8
+id: kind_tan_local_actions
+theme: kind_tan
+region: content
+weight: -4
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Основные действия администратора'
+  label_display: '0'
+  provider: core
+visibility: {  }

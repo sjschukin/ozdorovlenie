@@ -1,0 +1,31 @@
+uuid: 3a81ce5c-4d2f-4dd1-b8e5-0c540a76f3a8
+langcode: ru
+status: true
+dependencies:
+  config:
+    - webform.webform.voucher_request_form
+  module:
+    - system
+    - webform
+  theme:
+    - kind_tan
+id: voucher_request_form_block
+theme: kind_tan
+region: content
+weight: 1
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'Оформление заявки'
+  label_display: visible
+  provider: webform
+  webform_id: voucher_request_form
+  default_data: ''
+  redirect: false
+  lazy: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/camps/*'

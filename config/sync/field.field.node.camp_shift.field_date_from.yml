@@ -1,0 +1,21 @@
+uuid: f4e2419b-b1cd-4e7a-bbaa-3edc3664d4d6
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_from
+    - node.type.camp_shift
+  module:
+    - datetime
+id: node.camp_shift.field_date_from
+field_name: field_date_from
+entity_type: node
+bundle: camp_shift
+label: 'Дата начала смены'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

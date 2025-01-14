@@ -1,0 +1,22 @@
+uuid: 9f8f38cd-ed21-4d5c-af45-ca18db2889ad
+langcode: ru
+status: true
+dependencies:
+  theme:
+    - kind_tan
+_core:
+  default_config_hash: HBqASw3sWx6MW8-7o5qvYRNDStIdTogP9Vie2OcXcsI
+id: kind_tan_local_tasks
+theme: kind_tan
+region: content
+weight: -6
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Вкладки
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

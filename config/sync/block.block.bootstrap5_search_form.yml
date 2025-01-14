@@ -1,0 +1,23 @@
+uuid: 2e944242-a0fa-42cf-a7c8-58132729b809
+langcode: ru
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - bootstrap5
+_core:
+  default_config_hash: HZJ8894mYbX0pdeltUdfnQjONb-BnkflWDqEm_x13m4
+id: bootstrap5_search_form
+theme: bootstrap5
+region: nav_additional
+weight: 0
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Форма поиска'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

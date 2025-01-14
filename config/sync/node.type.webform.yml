@@ -1,0 +1,16 @@
+uuid: c77d75ed-ffbf-4190-97d7-fae7d5a75962
+langcode: ru
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform_node
+_core:
+  default_config_hash: BuY_3PjmYtRTSuvyFORJZUe0-TQiNXEE6yYQ_dkjxW8
+name: Веб-форма
+type: webform
+description: 'Страница с прикреплённой веб-формой.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,29 @@
+uuid: 5b991929-c6f6-4fa0-b674-75b0b6f0cb0a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.kids_camps
+  module:
+    - system
+    - views
+  theme:
+    - kind_tan
+id: kids_camps_block
+theme: kind_tan
+region: content
+weight: -2
+provider: null
+plugin: 'views_block:kids_camps-block_1'
+settings:
+  id: 'views_block:kids_camps-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

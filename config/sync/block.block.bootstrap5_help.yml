@@ -1,0 +1,22 @@
+uuid: b274bd5e-3349-4205-a5cc-cc35eedb382a
+langcode: ru
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - bootstrap5
+_core:
+  default_config_hash: S0Y16qIQfKiOEzWlddOGk3u_BKwAruAheA8VVFfGbLc
+id: bootstrap5_help
+theme: bootstrap5
+region: content
+weight: -3
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Справка
+  label_display: '0'
+  provider: help
+visibility: {  }

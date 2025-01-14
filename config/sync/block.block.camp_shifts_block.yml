@@ -1,0 +1,33 @@
+uuid: cc8969fb-390e-49a7-b7a7-0d7b6f92d498
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.camp_shifts
+  module:
+    - node
+    - views
+  theme:
+    - kind_tan
+id: camp_shifts_block
+theme: kind_tan
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:camp_shifts-block_1'
+settings:
+  id: 'views_block:camp_shifts-block_1'
+  label: Cмены
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: Cмены
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      kids_camp: kids_camp

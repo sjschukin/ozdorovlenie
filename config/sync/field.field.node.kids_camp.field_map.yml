@@ -1,0 +1,24 @@
+uuid: a01338ae-6dba-4b09-9f13-4feb30ed3429
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_map
+    - filter.format.full_html
+    - node.type.kids_camp
+  module:
+    - text
+id: node.kids_camp.field_map
+field_name: field_map
+entity_type: node
+bundle: kids_camp
+label: Карта
+description: 'Html-код карты'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

@@ -1,0 +1,23 @@
+uuid: a6dc6dd5-cbd9-4352-a8cc-1104a67fbe69
+langcode: ru
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - kind_tan
+_core:
+  default_config_hash: 92-LfCwnF_Yob2TyvfoYJWw98uH9o2G7NS5mWxZ7EZM
+id: kind_tan_search_form
+theme: kind_tan
+region: nav_additional
+weight: 0
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Форма поиска'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }
