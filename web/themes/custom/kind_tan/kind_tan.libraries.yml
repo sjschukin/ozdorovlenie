@@ -14,10 +14,16 @@ bootstrap-icons:
   css:
     theme:
       libraries/bootstrap-icons/font/bootstrap-icons.min.css: {}
-glightbox:
+camp-details:
   css:
     theme:
       libraries/glightbox/dist/css/glightbox.css: {}
   js:
     libraries/glightbox/dist/js/glightbox.min.js: {}
     js/details.js: {}
+request-webform:
+  js:
+    js/request_webform.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
