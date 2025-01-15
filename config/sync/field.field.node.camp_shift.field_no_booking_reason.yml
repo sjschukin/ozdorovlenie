@@ -1,0 +1,19 @@
+uuid: 94b91b99-6c70-4139-a1dc-69b0050d34f9
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_no_booking_reason
+    - node.type.camp_shift
+id: node.camp_shift.field_no_booking_reason
+field_name: field_no_booking_reason
+entity_type: node
+bundle: camp_shift
+label: 'Причина недоступности бронирования'
+description: 'Заполняется если установлен флаг <em>Бронирование недоступно</em>.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

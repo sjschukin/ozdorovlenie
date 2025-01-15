@@ -3,12 +3,14 @@ langcode: ru
 status: true
 dependencies:
   config:
+    - field.field.node.camp_shift.field_booking_not_available
     - field.field.node.camp_shift.field_camp_reference
     - field.field.node.camp_shift.field_cost
     - field.field.node.camp_shift.field_date_from
     - field.field.node.camp_shift.field_date_to
     - field.field.node.camp_shift.field_description
     - field.field.node.camp_shift.field_free_places_number
+    - field.field.node.camp_shift.field_no_booking_reason
     - node.type.camp_shift
   module:
     - datetime
@@ -18,6 +20,13 @@ targetEntityType: node
 bundle: camp_shift
 mode: default
 content:
+  field_booking_not_available:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_camp_reference:
     type: options_select
     weight: 1
@@ -58,9 +67,17 @@ content:
     settings:
       placeholder: ''
     third_party_settings: {  }
+  field_no_booking_reason:
+    type: string_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 7
+    weight: 9
     region: content
     settings:
       display_label: true

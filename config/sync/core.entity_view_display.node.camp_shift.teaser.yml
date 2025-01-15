@@ -4,12 +4,14 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.camp_shift.field_booking_not_available
     - field.field.node.camp_shift.field_camp_reference
     - field.field.node.camp_shift.field_cost
     - field.field.node.camp_shift.field_date_from
     - field.field.node.camp_shift.field_date_to
     - field.field.node.camp_shift.field_description
     - field.field.node.camp_shift.field_free_places_number
+    - field.field.node.camp_shift.field_no_booking_reason
     - node.type.camp_shift
   module:
     - user
@@ -24,10 +26,12 @@ content:
     weight: 100
     region: content
 hidden:
+  field_booking_not_available: true
   field_camp_reference: true
   field_cost: true
   field_date_from: true
   field_date_to: true
   field_description: true
   field_free_places_number: true
+  field_no_booking_reason: true
   langcode: true

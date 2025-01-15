@@ -1,0 +1,21 @@
+uuid: 17b0e4dc-9c46-47d6-8236-3866b45504b7
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_booking_not_available
+    - node.type.camp_shift
+id: node.camp_shift.field_booking_not_available
+field_name: field_booking_not_available
+entity_type: node
+bundle: camp_shift
+label: 'Бронирование недоступно'
+description: 'Если флаг установлен, то не будет отображаться <em>Число свободных мест</em> и <em>Стоимость путёвки</em>.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Вкл
+  off_label: Выкл
+field_type: boolean

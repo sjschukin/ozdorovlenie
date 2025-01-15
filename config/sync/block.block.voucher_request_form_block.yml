@@ -12,7 +12,7 @@ dependencies:
 id: voucher_request_form_block
 theme: kind_tan
 region: content
-weight: 1
+weight: 0
 provider: null
 plugin: webform_block
 settings:
