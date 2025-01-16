@@ -663,7 +663,7 @@ display:
             operator_list: {  }
             identifier: camp_title
             required: false
-            remember: false
+            remember: true
             multiple: false
             remember_roles:
               authenticated: authenticated
@@ -834,7 +834,18 @@ display:
           admin_label: 'field_camp_reference: Содержимое'
           plugin_id: standard
           required: false
-      header: {  }
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text_custom
+          empty: true
+          content: '<a href="/node/add/camp_shift" class="button button--action button--primary" data-drupal-link-system-path="/node/add/camp_shift">Добавить смену</a>'
+          tokenize: false
       footer: {  }
       display_extenders: {  }
     cache_metadata:
