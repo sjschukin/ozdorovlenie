@@ -3,5 +3,6 @@ _core:
 mode: simple
 ignored_config_entities:
   - 'contact.form.feedback:recipients'
+  - system.performance
   - system.site
   - views.settings
