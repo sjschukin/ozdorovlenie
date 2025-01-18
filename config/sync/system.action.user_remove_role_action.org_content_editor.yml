@@ -1,0 +1,14 @@
+uuid: a54f03ef-458e-42ae-a2ed-974aae158d99
+langcode: ru
+status: true
+dependencies:
+  config:
+    - user.role.org_content_editor
+  module:
+    - user
+id: user_remove_role_action.org_content_editor
+label: 'Удалить роль Пользователь организации из выбранных пользователей'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: org_content_editor

@@ -1,0 +1,14 @@
+uuid: 1ae58960-360c-4fe7-9cfa-5c5790a0963b
+langcode: ru
+status: true
+dependencies:
+  config:
+    - user.role.org_content_editor
+  module:
+    - user
+id: user_add_role_action.org_content_editor
+label: 'Добавьте роль Пользователь организации выбранным пользователям'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: org_content_editor

@@ -52,6 +52,29 @@ elements: |-
     '#placeholder': 'Дата рождения ребенка'
     '#required': true
     '#required_error': 'Поле обязательно для заполнения'
+  snils:
+    '#type': textfield
+    '#title': 'СНИЛС ребенка'
+    '#title_display': none
+    '#placeholder': 'СНИЛС ребенка'
+    '#input_mask': '999-999-999 99'
+    '#required': true
+    '#required_error': 'Поле обязательно для заполнения'
+  category:
+    '#type': webform_entity_select
+    '#title': 'Категория ребенка'
+    '#title_display': none
+    '#empty_option': 'Укажите категорию ребенка'
+    '#required': true
+    '#required_error': 'Поле обязательно для заполнения'
+    '#target_type': taxonomy_term
+    '#selection_handler': 'default:taxonomy_term'
+    '#selection_settings':
+      target_bundles:
+        child_categories: child_categories
+      sort:
+        field: name
+        direction: asc
   municipality:
     '#type': webform_entity_select
     '#title': 'Муниципалитет, где расположена школа ребенка'
@@ -236,15 +259,24 @@ access:
     users: {  }
     permissions: {  }
   view_any:
-    roles: {  }
+    roles:
+      - org_content_editor
+      - content_editor
+      - administrator
     users: {  }
     permissions: {  }
   update_any:
-    roles: {  }
+    roles:
+      - org_content_editor
+      - content_editor
+      - administrator
     users: {  }
     permissions: {  }
   delete_any:
-    roles: {  }
+    roles:
+      - org_content_editor
+      - content_editor
+      - administrator
     users: {  }
     permissions: {  }
   purge_any:

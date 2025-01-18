@@ -1,0 +1,9 @@
+uuid: 55eb073d-a11b-48a5-8ff5-8cc71d1ee035
+langcode: ru
+status: true
+dependencies: {  }
+name: 'Категории детей'
+vid: child_categories
+description: null
+weight: 0
+new_revision: false
