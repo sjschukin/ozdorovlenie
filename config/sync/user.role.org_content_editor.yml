@@ -1,37 +1,27 @@
-uuid: d5a200c1-d768-4ff9-b3d8-0b91c27fd437
+uuid: 0c54df0e-fdd9-417e-8397-e1542351a88f
 langcode: ru
 status: true
 dependencies:
   config:
     - node.type.camp_shift
-    - node.type.kids_camp
   module:
     - contextual
-    - file
     - node
     - system
     - toolbar
-_core:
-  default_config_hash: e_wG1u7SrGaJbY2-Szgbgl-c8T3kdirU3uTNq2c_QJQ
-id: content_editor
-label: 'Редактор контента'
-weight: -7
-is_admin: false
+id: org_content_editor
+label: 'Редактор организации'
+weight: -8
+is_admin: null
 permissions:
   - 'access administration pages'
   - 'access content overview'
   - 'access contextual links'
   - 'access toolbar'
   - 'create camp_shift content'
-  - 'create kids_camp content'
   - 'delete any camp_shift content'
-  - 'delete any kids_camp content'
   - 'delete own camp_shift content'
-  - 'delete own files'
-  - 'delete own kids_camp content'
   - 'edit any camp_shift content'
-  - 'edit any kids_camp content'
   - 'edit own camp_shift content'
-  - 'edit own kids_camp content'
   - 'view own unpublished content'
   - 'view the administration theme'
