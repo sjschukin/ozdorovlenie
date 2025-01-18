@@ -5,4 +5,4 @@ dependencies: {  }
 id: short_date_without_time
 label: 'Короткая дата без времени'
 locked: false
-pattern: m.d.Y
+pattern: d.m.Y
