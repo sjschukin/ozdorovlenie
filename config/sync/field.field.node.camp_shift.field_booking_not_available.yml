@@ -13,9 +13,11 @@ label: 'Бронирование недоступно'
 description: 'Если флаг установлен, то поля <em>Число свободных мест</em> и <em>Стоимость путёвки</em> не будут отображаться.'
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: 0
 default_value_callback: ''
 settings:
-  on_label: Вкл
-  off_label: Выкл
+  on_label: '1'
+  off_label: '0'
 field_type: boolean
