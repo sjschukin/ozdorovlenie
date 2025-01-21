@@ -307,5 +307,43 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  email:
+    id: email
+    handler_id: email
+    label: Email
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: '[webform_submission:node:field_camp_reference:entity:field_email]'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: _default
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Отправлена заявка от [webform_submission:values:parent_name:raw]'
+      body: '<p>Отправлено [webform_submission:created]</p><p>Отправитель: [webform_submission:values:parent_name:raw]</p><p><strong>Отправленная информация:</strong></p><p>[webform_submission:values]</p>'
+      excluded_elements:
+        camp_id: camp_id
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
 variants: {  }
