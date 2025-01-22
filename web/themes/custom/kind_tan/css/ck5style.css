@@ -13127,6 +13127,7 @@ a > .ck-content code {
 }
 .ck-content .camps .camp-item .member-info {
   padding-left: 30px;
+  margin-bottom: 60px;
 }
 .ck-content .camps .camp-item h4, .ck-content .camps .camp-item .h4 {
   font-weight: 700;
