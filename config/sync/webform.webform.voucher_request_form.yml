@@ -29,6 +29,10 @@ elements: |-
     '#type': hidden
     '#title': Лагерь
     '#default_value': '[webform_submission:node:title]'
+  camp_notification_email:
+    '#type': hidden
+    '#title': 'Email для уведомлений'
+    '#default_value': '[webform_submission:node:field_notification_email]'
   camp_shift:
     '#type': hidden
     '#title': Смена
@@ -98,7 +102,7 @@ elements: |-
     '#placeholder': 'Телефон родителя'
     '#required': true
     '#required_error': 'Поле обязательно для заполнения'
-  adres_elektronnoy_pochty:
+  email:
     '#type': email
     '#title': 'Адрес электронной почты'
     '#title_display': none
@@ -319,11 +323,11 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: '[webform_submission:node:field_camp_reference:entity:field_email]'
+      to_mail: '[webform_submission:values:camp_notification_email:raw]'
       to_options: {  }
       bcc_mail: ''
       bcc_options: {  }
-      cc_mail: _default
+      cc_mail: s.j.schukin@yandex.ru
       cc_options: {  }
       from_mail: _default
       from_options: {  }
@@ -336,6 +340,7 @@ handlers:
       body: '<p>Отправлено [webform_submission:created]</p><p>Отправитель: [webform_submission:values:parent_name:raw]</p><p><strong>Отправленная информация:</strong></p><p>[webform_submission:values]</p>'
       excluded_elements:
         camp_id: camp_id
+        camp_notification_email: camp_notification_email
       ignore_access: false
       exclude_empty: true
       exclude_empty_checkbox: false

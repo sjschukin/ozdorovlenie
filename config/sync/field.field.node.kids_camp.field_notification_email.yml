@@ -1,0 +1,19 @@
+uuid: 7b8bbeb5-7aa3-46d6-8911-8c13551ca368
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_notification_email
+    - node.type.kids_camp
+id: node.kids_camp.field_notification_email
+field_name: field_notification_email
+entity_type: node
+bundle: kids_camp
+label: 'Email для уведомлений'
+description: 'Адрес электронной почты организации, куда будут приходить уведомления о поступлении новой заявки.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email
