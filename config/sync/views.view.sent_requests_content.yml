@@ -1057,7 +1057,18 @@ display:
           entity_field: entity_id
           plugin_id: standard
           required: true
-      header: {  }
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text_custom
+          empty: true
+          content: '<a href="/admin/structure/webform/manage/voucher_request_form/results/download" class="button button--primary" data-drupal-link-system-path="/admin/structure/webform/manage/voucher_request_form/results/download">Экспорт</a>'
+          tokenize: false
       footer: {  }
       display_extenders: {  }
     cache_metadata:

@@ -30,6 +30,7 @@
         "drupal/views_bootstrap": "^5.5@RC",
         "drupal/webform": "^6.2",
         "drupal/webform_views": "^5.5",
+        "drupal/webform_xlsx_export": "^1.5",
         "drush/drush": "^13"
     },
     "conflict": {

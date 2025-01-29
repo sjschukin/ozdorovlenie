@@ -9,6 +9,7 @@ dependencies:
     - node
     - system
     - toolbar
+    - webform
 id: org_content_editor
 label: 'Редактор организации'
 weight: -8
@@ -18,6 +19,7 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access toolbar'
+  - 'access webform submission user'
   - 'create camp_shift content'
   - 'delete any camp_shift content'
   - 'delete own camp_shift content'
