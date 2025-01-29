@@ -327,17 +327,17 @@ handlers:
       to_options: {  }
       bcc_mail: ''
       bcc_options: {  }
-      cc_mail: s.j.schukin@yandex.ru
+      cc_mail: ''
       cc_options: {  }
       from_mail: _default
       from_options: {  }
       from_name: _default
-      reply_to: ''
+      reply_to: '[site:mail]'
       return_path: ''
       sender_mail: ''
       sender_name: ''
       subject: 'Отправлена заявка от [webform_submission:values:parent_name:raw]'
-      body: '<p>Отправлено [webform_submission:created]</p><p>Отправитель: [webform_submission:values:parent_name:raw]</p><p><strong>Отправленная информация:</strong></p><p>[webform_submission:values]</p>'
+      body: "Отправлено [webform_submission:created]\r\nОтправитель: [webform_submission:user]\r\n\r\nОтправленная информация:\r\n[webform_submission:values]\r\n"
       excluded_elements:
         camp_id: camp_id
         camp_notification_email: camp_notification_email
@@ -345,7 +345,7 @@ handlers:
       exclude_empty: true
       exclude_empty_checkbox: false
       exclude_attachments: false
-      html: true
+      html: false
       attachments: false
       twig: false
       theme_name: ''
