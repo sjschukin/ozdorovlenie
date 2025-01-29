@@ -126,7 +126,7 @@ form:
   filter_state: ''
 element:
   machine_name_pattern: a-z0-9_
-  empty_message: '{Empty}'
+  empty_message: '{Пусто}'
   allowed_tags: admin
   wrapper_classes: |
     container-inline clearfix
