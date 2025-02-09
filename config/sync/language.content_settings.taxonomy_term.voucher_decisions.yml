@@ -1,0 +1,11 @@
+uuid: 863c87be-fbbd-4c6c-a463-5526eb5c0adc
+langcode: ru
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.voucher_decisions
+id: taxonomy_term.voucher_decisions
+target_entity_type_id: taxonomy_term
+target_bundle: voucher_decisions
+default_langcode: site_default
+language_alterable: false

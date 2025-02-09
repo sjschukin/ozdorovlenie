@@ -608,17 +608,15 @@ display:
           webform_multiple_value: true
           webform_multiple_delta: 0
           webform_check_access: 1
-        notes:
-          id: notes
-          table: webform_submission
-          field: notes
+        webform_submission_value_5:
+          id: webform_submission_value_5
+          table: webform_submission_field_voucher_request_form_decision
+          field: webform_submission_value
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: webform_submission
-          entity_field: notes
-          plugin_id: field
-          label: Примечания
+          plugin_id: webform_submission_field
+          label: Решение
           exclude: false
           alter:
             alter_text: false
@@ -659,19 +657,10 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: basic_string
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
+          webform_element_format: label
+          webform_multiple_value: true
+          webform_multiple_delta: 0
+          webform_check_access: 1
         operations:
           id: operations
           table: webform_submission

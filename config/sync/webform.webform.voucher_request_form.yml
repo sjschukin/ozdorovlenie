@@ -113,6 +113,24 @@ elements: |-
     '#description': '<p>В соответствии со ст. 9 Федерального закона от 27.07.2006г. №152-ФЗ «О защите персональных данных» даю согласие на обработку своих персональных данных. Также даю согласие на обработку персональных данных моего ребенка (несовершеннолетнего, чьим законным представителем я являюсь)</p>'
     '#required': true
     '#required_error': 'Отметьте это поле, если хотите продолжить'
+  decision:
+    '#type': webform_term_select
+    '#title': Решение
+    '#format': value
+    '#access_create_roles': {  }
+    '#access_update_roles':
+      - authenticated
+    '#access_view_roles':
+      - authenticated
+    '#vocabulary': voucher_decisions
+  decision_notes:
+    '#type': textarea
+    '#title': 'Заметки по решению'
+    '#access_create_roles': {  }
+    '#access_update_roles':
+      - authenticated
+    '#access_view_roles':
+      - authenticated
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
@@ -341,6 +359,8 @@ handlers:
       excluded_elements:
         camp_id: camp_id
         camp_notification_email: camp_notification_email
+        decision: decision
+        decision_notes: decision_notes
       ignore_access: false
       exclude_empty: true
       exclude_empty_checkbox: false

@@ -1,0 +1,9 @@
+uuid: 887e05ba-ddb0-4671-b684-de38c0290f69
+langcode: ru
+status: true
+dependencies: {  }
+name: 'Решения по заявке'
+vid: voucher_decisions
+description: null
+weight: 0
+new_revision: false
