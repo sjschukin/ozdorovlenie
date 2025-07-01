@@ -1641,3 +1641,49 @@ section,
     }
   }
 }
+
+/*--------------------------------------------------------------
+# Events Map Section
+--------------------------------------------------------------*/
+.events-map {
+  #svg-map {
+    width: 100%;
+    height: auto;
+
+    path {
+      stroke: var(--heading-color);
+      stroke-width: 0.5;
+      fill: var(--background-color);
+      transition-duration: 200ms;
+      cursor: pointer;
+
+      &.active {
+        fill: var(--accent-color);
+      }
+    }
+
+    text {
+      fill: var(--heading-color);
+      cursor: pointer;
+      font-family: var(--default-font);
+
+      &.active {
+        fill: var(--contrast-color);
+      }
+    }
+  }
+
+  .container-events-map {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .events-map {
+    .container-events-map {
+      padding-right: 6rem;
+      padding-left: 6rem;
+    }
+  }
+}
