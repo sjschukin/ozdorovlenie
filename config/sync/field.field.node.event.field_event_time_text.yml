@@ -1,0 +1,19 @@
+uuid: b5811871-cdda-4fac-ba29-cc716fa9d3f9
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_time_text
+    - node.type.event
+id: node.event.field_event_time_text
+field_name: field_event_time_text
+entity_type: node
+bundle: event
+label: 'Время проведения'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

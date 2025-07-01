@@ -1,0 +1,20 @@
+uuid: cd40a0f1-3661-45a8-ba66-97c48bbdbb04
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_contacts
+field_name: field_contacts
+entity_type: node
+type: text
+settings:
+  max_length: 1024
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - node.type.camp_shift
+    - node.type.event
     - node.type.kids_camp
+    - node.type.page
   module:
     - contextual
     - file
@@ -23,15 +25,25 @@ permissions:
   - 'access contextual links'
   - 'access toolbar'
   - 'create camp_shift content'
+  - 'create event content'
   - 'create kids_camp content'
   - 'delete any camp_shift content'
+  - 'delete any event content'
   - 'delete any kids_camp content'
+  - 'delete event revisions'
   - 'delete own camp_shift content'
+  - 'delete own event content'
   - 'delete own files'
   - 'delete own kids_camp content'
   - 'edit any camp_shift content'
+  - 'edit any event content'
   - 'edit any kids_camp content'
+  - 'edit any page content'
   - 'edit own camp_shift content'
+  - 'edit own event content'
   - 'edit own kids_camp content'
+  - 'edit own page content'
+  - 'revert event revisions'
+  - 'view event revisions'
   - 'view own unpublished content'
   - 'view the administration theme'

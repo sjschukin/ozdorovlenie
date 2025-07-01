@@ -1,0 +1,25 @@
+uuid: bc90bc6a-2270-4247-8d72-5e1bf3978296
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d528e704-7dce-4fe6-ac1d-bdebae687efa'
+  module:
+    - block_content
+  theme:
+    - kind_tan
+id: header_block
+theme: kind_tan
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:d528e704-7dce-4fe6-ac1d-bdebae687efa'
+settings:
+  id: 'block_content:d528e704-7dce-4fe6-ac1d-bdebae687efa'
+  label: 'Header block'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

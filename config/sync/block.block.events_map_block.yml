@@ -1,24 +1,24 @@
-uuid: 9e35de2b-91ed-4cad-9959-fd7d304cc902
+uuid: e0f07744-e18a-446d-a1ea-cf3b6fd20365
 langcode: ru
 status: true
 dependencies:
   content:
-    - 'block_content:basic:670d53a1-b491-4cc4-909b-75c75db00c65'
+    - 'block_content:basic:056228a8-ceb2-4e94-ac89-a123d3552cc6'
   module:
     - block_content
     - system
   theme:
     - kind_tan
-id: hero_block
+id: events_map_block
 theme: kind_tan
 region: content
-weight: -2
+weight: 0
 provider: null
-plugin: 'block_content:670d53a1-b491-4cc4-909b-75c75db00c65'
+plugin: 'block_content:056228a8-ceb2-4e94-ac89-a123d3552cc6'
 settings:
-  id: 'block_content:670d53a1-b491-4cc4-909b-75c75db00c65'
-  label: 'Hero block'
-  label_display: '0'
+  id: 'block_content:056228a8-ceb2-4e94-ac89-a123d3552cc6'
+  label: 'Карта мероприятий'
+  label_display: visible
   provider: block_content
   status: true
   info: ''

@@ -12,7 +12,7 @@ dependencies:
 id: kids_camps_block
 theme: kind_tan
 region: content
-weight: -2
+weight: -1
 provider: null
 plugin: 'views_block:kids_camps-block_1'
 settings:

@@ -1,0 +1,31 @@
+uuid: 1ba9c30e-1f04-43a3-8385-597264f67a4c
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.event.field_contacts
+    - field.field.node.event.field_display_date_before
+    - field.field.node.event.field_district
+    - field.field.node.event.field_event_time_text
+    - field.field.node.event.field_location_text
+    - node.type.event
+  module:
+    - user
+id: node.event.teaser
+targetEntityType: node
+bundle: event
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_contacts: true
+  field_display_date_before: true
+  field_district: true
+  field_event_time_text: true
+  field_location_text: true
+  langcode: true

@@ -1,0 +1,19 @@
+uuid: 94d244f5-cdef-4cd1-85f2-001939ad4ef2
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location_text
+    - node.type.event
+id: node.event.field_location_text
+field_name: field_location_text
+entity_type: node
+bundle: event
+label: "Место проведения\t"
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
