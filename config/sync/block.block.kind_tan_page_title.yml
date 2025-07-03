@@ -11,7 +11,7 @@ _core:
 id: kind_tan_page_title
 theme: kind_tan
 region: content
-weight: -7
+weight: -8
 provider: null
 plugin: page_title_block
 settings:

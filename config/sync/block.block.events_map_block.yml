@@ -1,12 +1,13 @@
-uuid: e0f07744-e18a-446d-a1ea-cf3b6fd20365
+uuid: 2d09efe6-dcff-4c85-84d8-d833cf9e4226
 langcode: ru
 status: true
 dependencies:
   content:
-    - 'block_content:basic:056228a8-ceb2-4e94-ac89-a123d3552cc6'
+    - 'block_content:basic:bfee789d-e39e-44f5-ae13-6010753a8d51'
   module:
     - block_content
     - system
+    - user
   theme:
     - kind_tan
 id: events_map_block
@@ -14,9 +15,9 @@ theme: kind_tan
 region: content
 weight: 0
 provider: null
-plugin: 'block_content:056228a8-ceb2-4e94-ac89-a123d3552cc6'
+plugin: 'block_content:bfee789d-e39e-44f5-ae13-6010753a8d51'
 settings:
-  id: 'block_content:056228a8-ceb2-4e94-ac89-a123d3552cc6'
+  id: 'block_content:bfee789d-e39e-44f5-ae13-6010753a8d51'
   label: 'Карта мероприятий'
   label_display: visible
   provider: block_content
@@ -28,3 +29,10 @@ visibility:
     id: request_path
     negate: false
     pages: '<front>'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator

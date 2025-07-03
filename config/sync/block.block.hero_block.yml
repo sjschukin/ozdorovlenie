@@ -12,7 +12,7 @@ dependencies:
 id: hero_block
 theme: kind_tan
 region: content
-weight: -2
+weight: -3
 provider: null
 plugin: 'block_content:670d53a1-b491-4cc4-909b-75c75db00c65'
 settings:

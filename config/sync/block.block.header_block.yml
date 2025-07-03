@@ -1,9 +1,9 @@
-uuid: bc90bc6a-2270-4247-8d72-5e1bf3978296
+uuid: 53b0ebf2-0f8e-4e84-be9d-d0eb927055d2
 langcode: ru
 status: true
 dependencies:
   content:
-    - 'block_content:basic:d528e704-7dce-4fe6-ac1d-bdebae687efa'
+    - 'block_content:basic:013e180d-c9a0-42fe-8ebd-e5a7e12d81b7'
   module:
     - block_content
   theme:
@@ -13,9 +13,9 @@ theme: kind_tan
 region: header
 weight: 0
 provider: null
-plugin: 'block_content:d528e704-7dce-4fe6-ac1d-bdebae687efa'
+plugin: 'block_content:013e180d-c9a0-42fe-8ebd-e5a7e12d81b7'
 settings:
-  id: 'block_content:d528e704-7dce-4fe6-ac1d-bdebae687efa'
+  id: 'block_content:013e180d-c9a0-42fe-8ebd-e5a7e12d81b7'
   label: 'Header block'
   label_display: '0'
   provider: block_content

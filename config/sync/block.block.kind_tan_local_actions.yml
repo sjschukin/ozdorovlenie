@@ -9,7 +9,7 @@ _core:
 id: kind_tan_local_actions
 theme: kind_tan
 region: content
-weight: -4
+weight: -5
 provider: null
 plugin: local_actions_block
 settings:

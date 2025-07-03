@@ -1,9 +1,9 @@
-uuid: c8f77929-d99e-4cfa-9ad7-23136f57fce8
+uuid: 57c69403-a25d-4328-9215-ee1abd5798f3
 langcode: ru
 status: true
 dependencies:
   content:
-    - 'block_content:basic:d38e3291-2f7f-40e3-9680-0ef209da28de'
+    - 'block_content:basic:eaf2df0c-172a-4b82-84bc-3cf7b2f041bb'
   module:
     - block_content
     - system
@@ -12,11 +12,11 @@ dependencies:
 id: banner_block
 theme: kind_tan
 region: content
-weight: -3
+weight: -4
 provider: null
-plugin: 'block_content:d38e3291-2f7f-40e3-9680-0ef209da28de'
+plugin: 'block_content:eaf2df0c-172a-4b82-84bc-3cf7b2f041bb'
 settings:
-  id: 'block_content:d38e3291-2f7f-40e3-9680-0ef209da28de'
+  id: 'block_content:eaf2df0c-172a-4b82-84bc-3cf7b2f041bb'
   label: 'Banner block'
   label_display: '0'
   provider: block_content
