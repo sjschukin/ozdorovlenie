@@ -458,7 +458,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: text_custom
-          empty: false
+          empty: true
           content: '<a href="/node/add/kids_camp" class="button button--action button--primary" data-drupal-link-system-path="/node/add/kids_camp">Добавить лагерь</a>'
           tokenize: false
       footer: {  }
