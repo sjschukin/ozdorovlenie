@@ -1,15 +1,17 @@
-uuid: 11041afc-953d-4c57-af43-51273f797eb7
+uuid: 5ce2655c-ce5d-4157-9ce7-defb40d37412
 langcode: ru
 status: true
 dependencies:
   module:
     - node
-id: node.field_location_text
-field_name: field_location_text
+id: node.field_organizer
+field_name: field_organizer
 entity_type: node
-type: string_long
+type: string
 settings:
+  max_length: 255
   case_sensitive: false
+  is_ascii: false
 module: core
 locked: false
 cardinality: 1

@@ -1,0 +1,19 @@
+uuid: 2b3ed366-54da-4412-bf75-1b83d7ba4b7a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_number_of_places
+    - node.type.event
+id: node.event.field_number_of_places
+field_name: field_number_of_places
+entity_type: node
+bundle: event
+label: 'Количество мест участников'
+description: 'Количество мест участников, возрастная аудитория'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

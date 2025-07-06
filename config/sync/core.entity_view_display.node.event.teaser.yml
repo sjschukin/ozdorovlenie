@@ -8,7 +8,8 @@ dependencies:
     - field.field.node.event.field_display_date_before
     - field.field.node.event.field_district
     - field.field.node.event.field_event_time_text
-    - field.field.node.event.field_location_text
+    - field.field.node.event.field_number_of_places
+    - field.field.node.event.field_organizer
     - node.type.event
   module:
     - user
@@ -27,5 +28,6 @@ hidden:
   field_display_date_before: true
   field_district: true
   field_event_time_text: true
-  field_location_text: true
+  field_number_of_places: true
+  field_organizer: true
   langcode: true

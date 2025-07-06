@@ -7,7 +7,6 @@ dependencies:
   module:
     - block_content
     - system
-    - user
   theme:
     - kind_tan
 id: events_map_block
@@ -29,10 +28,3 @@ visibility:
     id: request_path
     negate: false
     pages: '<front>'
-  user_role:
-    id: user_role
-    negate: false
-    context_mapping:
-      user: '@user.current_user_context:current_user'
-    roles:
-      administrator: administrator

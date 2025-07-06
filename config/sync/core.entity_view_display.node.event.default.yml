@@ -7,7 +7,8 @@ dependencies:
     - field.field.node.event.field_display_date_before
     - field.field.node.event.field_district
     - field.field.node.event.field_event_time_text
-    - field.field.node.event.field_location_text
+    - field.field.node.event.field_number_of_places
+    - field.field.node.event.field_organizer
     - node.type.event
   module:
     - datetime
@@ -23,7 +24,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 4
+    weight: 3
     region: content
   field_display_date_before:
     type: datetime_default
@@ -32,7 +33,7 @@ content:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 5
+    weight: 6
     region: content
   field_district:
     type: entity_reference_label
@@ -48,14 +49,22 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 2
+    weight: 4
     region: content
-  field_location_text:
+  field_number_of_places:
     type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 5
+    region: content
+  field_organizer:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
     region: content
   links:
     settings: {  }
