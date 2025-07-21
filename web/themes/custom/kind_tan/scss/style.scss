@@ -1469,6 +1469,10 @@ section,
       background: color-mix(in srgb, var(--accent-color) 90%, white 15%);
     }
   }
+
+  .form-required::after {
+    display: none;
+  }
 }
 
 /*--------------------------------------------------------------

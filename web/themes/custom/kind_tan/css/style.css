@@ -14360,6 +14360,9 @@ section,
 .webform-submission-voucher-request-form-form input[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color) 90%, white 15%);
 }
+.webform-submission-voucher-request-form-form .form-required::after {
+  display: none;
+}
 
 /*--------------------------------------------------------------
 # Testimonials Section

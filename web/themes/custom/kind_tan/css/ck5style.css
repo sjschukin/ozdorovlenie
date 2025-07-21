@@ -13373,6 +13373,9 @@ a > .ck-content code {
 .ck-content .webform-submission-voucher-request-form-form input[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color) 90%, white 15%);
 }
+.ck-content .webform-submission-voucher-request-form-form .form-required::after {
+  display: none;
+}
 .ck-content .testimonials .info h3, .ck-content .testimonials .info .h3 {
   font-weight: 700;
   font-size: 32px;
