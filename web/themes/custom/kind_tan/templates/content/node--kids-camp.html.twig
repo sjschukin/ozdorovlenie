@@ -126,7 +126,6 @@
             {% set phone_number = item.value %}
             <i class="bi bi-telephone"></i>
             <a href="tel:{{ phone_number|replace({' ': '', '-': '', '(': '', ')': ''}) }}">{{ node.field_phone_number[key].value }}</a><br>
-            {% if not loop.last %}, {% endif %}
           {% endfor %}
 
           {% if node.field_email is not empty %}
