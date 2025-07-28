@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .ck-content {
   /*!
-   * Bootstrap  v5.3.6 (https://getbootstrap.com/)
+   * Bootstrap  v5.3.7 (https://getbootstrap.com/)
    * Copyright 2011-2025 The Bootstrap Authors
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    */
@@ -59,9 +59,6 @@
   --------------------------------------------------------------*/
   /*--------------------------------------------------------------
   # Global Section Titles
-  --------------------------------------------------------------*/
-  /*--------------------------------------------------------------
-  # Banner Section
   --------------------------------------------------------------*/
   /*--------------------------------------------------------------
   # Hero Section
@@ -4192,7 +4189,7 @@ a > .ck-content code {
 .ck-content [data-bs-theme=dark] .navbar-toggler-icon {
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
-.ck-content .card, .ck-content .media-library-selection .media-library-item.media-library-item--grid, .ck-content .view-media-library .media-library-views-form .media-library-item--grid .views-field-rendered-entity {
+.ck-content .card, .ck-content .media-library-selection .media-library-item.media-library-item--grid, .ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .views-field-rendered-entity {
   --bs-card-spacer-y: 1rem;
   --bs-card-spacer-x: 1rem;
   --bs-card-title-spacer-y: 0.5rem;
@@ -4224,36 +4221,32 @@ a > .ck-content code {
   border: var(--bs-card-border-width) solid var(--bs-card-border-color);
   border-radius: var(--bs-card-border-radius);
 }
-.ck-content .card > hr, .ck-content .media-library-selection .media-library-item.media-library-item--grid > hr, .ck-content .view-media-library .media-library-views-form .media-library-item--grid .views-field-rendered-entity > hr {
+.ck-content .card > hr, .ck-content .media-library-selection .media-library-item.media-library-item--grid > hr, .ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .views-field-rendered-entity > hr {
   margin-right: 0;
   margin-left: 0;
 }
-.ck-content .card > .list-group, .ck-content .media-library-selection .media-library-item.media-library-item--grid > .list-group, .ck-content .view-media-library .media-library-views-form .media-library-item--grid .views-field-rendered-entity > .list-group {
+.ck-content .card > .list-group, .ck-content .media-library-selection .media-library-item.media-library-item--grid > .list-group, .ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .views-field-rendered-entity > .list-group {
   border-top: inherit;
   border-bottom: inherit;
 }
-.ck-content .card > .list-group:first-child, .ck-content .media-library-selection .media-library-item.media-library-item--grid > .list-group:first-child, .ck-content .view-media-library .media-library-views-form .media-library-item--grid .views-field-rendered-entity > .list-group:first-child {
+.ck-content .card > .list-group:first-child, .ck-content .media-library-selection .media-library-item.media-library-item--grid > .list-group:first-child, .ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .views-field-rendered-entity > .list-group:first-child {
   border-top-width: 0;
   border-top-left-radius: var(--bs-card-inner-border-radius);
   border-top-right-radius: var(--bs-card-inner-border-radius);
 }
-.ck-content .card > .list-group:last-child, .ck-content .media-library-selection .media-library-item.media-library-item--grid > .list-group:last-child, .ck-content .view-media-library .media-library-views-form .media-library-item--grid .views-field-rendered-entity > .list-group:last-child {
+.ck-content .card > .list-group:last-child, .ck-content .media-library-selection .media-library-item.media-library-item--grid > .list-group:last-child, .ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .views-field-rendered-entity > .list-group:last-child {
   border-bottom-width: 0;
   border-bottom-right-radius: var(--bs-card-inner-border-radius);
   border-bottom-left-radius: var(--bs-card-inner-border-radius);
 }
-.ck-content .card > .card-header + .list-group, .ck-content .media-library-selection .media-library-item.media-library-item--grid > .card-header + .list-group, .ck-content .view-media-library .media-library-views-form .media-library-item--grid .views-field-rendered-entity > .card-header + .list-group, .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card > .views-field-media-library-select-form + .list-group, .ck-content .view-media-library .media-library-views-form .media-library-item--grid .media-library-selection .media-library-item.media-library-item--grid > .views-field-media-library-select-form + .list-group, .ck-content .media-library-selection .view-media-library .media-library-views-form .media-library-item--grid .media-library-item.media-library-item--grid > .views-field-media-library-select-form + .list-group, .ck-content .view-media-library .media-library-views-form .media-library-item--grid .views-field-rendered-entity > .views-field-media-library-select-form + .list-group,
-.ck-content .view-media-library .media-library-views-form .media-library-item--grid .card > .views-field-media-bulk-form + .list-group,
-.ck-content .view-media-library .media-library-views-form .media-library-item--grid .media-library-selection .media-library-item.media-library-item--grid > .views-field-media-bulk-form + .list-group,
-.ck-content .media-library-selection .view-media-library .media-library-views-form .media-library-item--grid .media-library-item.media-library-item--grid > .views-field-media-bulk-form + .list-group,
-.ck-content .view-media-library .media-library-views-form .media-library-item--grid .views-field-rendered-entity > .views-field-media-bulk-form + .list-group,
+.ck-content .card > .card-header + .list-group, .ck-content .media-library-selection .media-library-item.media-library-item--grid > .card-header + .list-group, .ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .views-field-rendered-entity > .card-header + .list-group,
 .ck-content .card > .list-group + .card-footer,
 .ck-content .media-library-selection .media-library-item.media-library-item--grid > .list-group + .card-footer,
-.ck-content .view-media-library .media-library-views-form .media-library-item--grid .views-field-rendered-entity > .list-group + .card-footer {
+.ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .views-field-rendered-entity > .list-group + .card-footer {
   border-top: 0;
 }
 .ck-content .card-body, .ck-content .media-library-selection .media-library-item.media-library-item--grid > div,
-.ck-content .media-library-selection .media-library-item.media-library-item--grid article, .ck-content .view-media-library .media-library-views-form .media-library-item--grid .views-field-rendered-entity {
+.ck-content .media-library-selection .media-library-item.media-library-item--grid article, .ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .views-field-rendered-entity {
   flex: 1 1 auto;
   padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
   color: var(--bs-card-color);
@@ -4273,16 +4266,14 @@ a > .ck-content code {
 .ck-content .card-link + .card-link {
   margin-left: var(--bs-card-spacer-x);
 }
-.ck-content .card-header, .ck-content .view-media-library .media-library-views-form .media-library-item--grid .views-field-media-library-select-form,
-.ck-content .view-media-library .media-library-views-form .media-library-item--grid .views-field-media-bulk-form {
+.ck-content .card-header {
   padding: var(--bs-card-cap-padding-y) var(--bs-card-cap-padding-x);
   margin-bottom: 0;
   color: var(--bs-card-cap-color);
   background-color: var(--bs-card-cap-bg);
   border-bottom: var(--bs-card-border-width) solid var(--bs-card-border-color);
 }
-.ck-content .card-header:first-child, .ck-content .view-media-library .media-library-views-form .media-library-item--grid .views-field-media-library-select-form:first-child,
-.ck-content .view-media-library .media-library-views-form .media-library-item--grid .views-field-media-bulk-form:first-child {
+.ck-content .card-header:first-child {
   border-radius: var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius) 0 0;
 }
 .ck-content .card-footer {
@@ -4332,7 +4323,7 @@ a > .ck-content code {
   border-bottom-right-radius: var(--bs-card-inner-border-radius);
   border-bottom-left-radius: var(--bs-card-inner-border-radius);
 }
-.ck-content .card-group > .card, .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid, .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity {
+.ck-content .card-group > .card, .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid, .ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .card-group > .views-field-rendered-entity {
   margin-bottom: var(--bs-card-group-margin);
 }
 @media (min-width: 576px) {
@@ -4340,60 +4331,44 @@ a > .ck-content code {
     display: flex;
     flex-flow: row wrap;
   }
-  .ck-content .card-group > .card, .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid, .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity {
+  .ck-content .card-group > .card, .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid, .ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .card-group > .views-field-rendered-entity {
     flex: 1 0 0;
     margin-bottom: 0;
   }
-  .ck-content .card-group > .card + .card, .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid + .card, .ck-content .media-library-selection .card-group > .card + .media-library-item.media-library-item--grid, .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid + .media-library-item.media-library-item--grid, .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity + .card, .ck-content .view-media-library .media-library-views-form .media-library-item--grid .media-library-selection .card-group > .views-field-rendered-entity + .media-library-item.media-library-item--grid, .ck-content .media-library-selection .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity + .media-library-item.media-library-item--grid, .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .card + .views-field-rendered-entity, .ck-content .view-media-library .media-library-views-form .media-library-item--grid .media-library-selection .card-group > .media-library-item.media-library-item--grid + .views-field-rendered-entity, .ck-content .media-library-selection .view-media-library .media-library-views-form .media-library-item--grid .card-group > .media-library-item.media-library-item--grid + .views-field-rendered-entity, .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity + .views-field-rendered-entity {
+  .ck-content .card-group > .card + .card, .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid + .card, .ck-content .media-library-selection .card-group > .card + .media-library-item.media-library-item--grid, .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid + .media-library-item.media-library-item--grid, .ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .card-group > .views-field-rendered-entity + .card, .ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .media-library-selection .card-group > .views-field-rendered-entity + .media-library-item.media-library-item--grid, .ck-content .media-library-selection .view-media-library .media-library-views-form__rows .media-library-item--grid .card-group > .views-field-rendered-entity + .media-library-item.media-library-item--grid, .ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .card-group > .card + .views-field-rendered-entity, .ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .media-library-selection .card-group > .media-library-item.media-library-item--grid + .views-field-rendered-entity, .ck-content .media-library-selection .view-media-library .media-library-views-form__rows .media-library-item--grid .card-group > .media-library-item.media-library-item--grid + .views-field-rendered-entity, .ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .card-group > .views-field-rendered-entity + .views-field-rendered-entity {
     margin-left: 0;
     border-left: 0;
   }
-  .ck-content .card-group > .card:not(:last-child), .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:last-child), .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:last-child) {
+  .ck-content .card-group > .card:not(:last-child), .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:last-child), .ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .card-group > .views-field-rendered-entity:not(:last-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
-  .ck-content .card-group > .card:not(:last-child) > .card-img-top, .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:last-child) > .card-img-top, .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:last-child) > .card-img-top,
+  .ck-content .card-group > .card:not(:last-child) > .card-img-top, .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:last-child) > .card-img-top, .ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .card-group > .views-field-rendered-entity:not(:last-child) > .card-img-top,
   .ck-content .card-group > .card:not(:last-child) > .card-header,
   .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:last-child) > .card-header,
-  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:last-child) > .card-header,
-  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .card:not(:last-child) > .views-field-media-library-select-form,
-  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:last-child) > .views-field-media-library-select-form,
-  .ck-content .media-library-selection .view-media-library .media-library-views-form .media-library-item--grid .card-group > .media-library-item.media-library-item--grid:not(:last-child) > .views-field-media-library-select-form,
-  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:last-child) > .views-field-media-library-select-form,
-  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .card:not(:last-child) > .views-field-media-bulk-form,
-  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:last-child) > .views-field-media-bulk-form,
-  .ck-content .media-library-selection .view-media-library .media-library-views-form .media-library-item--grid .card-group > .media-library-item.media-library-item--grid:not(:last-child) > .views-field-media-bulk-form,
-  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:last-child) > .views-field-media-bulk-form {
+  .ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .card-group > .views-field-rendered-entity:not(:last-child) > .card-header {
     border-top-right-radius: 0;
   }
-  .ck-content .card-group > .card:not(:last-child) > .card-img-bottom, .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:last-child) > .card-img-bottom, .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:last-child) > .card-img-bottom,
+  .ck-content .card-group > .card:not(:last-child) > .card-img-bottom, .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:last-child) > .card-img-bottom, .ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .card-group > .views-field-rendered-entity:not(:last-child) > .card-img-bottom,
   .ck-content .card-group > .card:not(:last-child) > .card-footer,
   .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:last-child) > .card-footer,
-  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:last-child) > .card-footer {
+  .ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .card-group > .views-field-rendered-entity:not(:last-child) > .card-footer {
     border-bottom-right-radius: 0;
   }
-  .ck-content .card-group > .card:not(:first-child), .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:first-child), .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:first-child) {
+  .ck-content .card-group > .card:not(:first-child), .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:first-child), .ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .card-group > .views-field-rendered-entity:not(:first-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
-  .ck-content .card-group > .card:not(:first-child) > .card-img-top, .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:first-child) > .card-img-top, .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:first-child) > .card-img-top,
+  .ck-content .card-group > .card:not(:first-child) > .card-img-top, .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:first-child) > .card-img-top, .ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .card-group > .views-field-rendered-entity:not(:first-child) > .card-img-top,
   .ck-content .card-group > .card:not(:first-child) > .card-header,
   .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:first-child) > .card-header,
-  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:first-child) > .card-header,
-  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .card:not(:first-child) > .views-field-media-library-select-form,
-  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:first-child) > .views-field-media-library-select-form,
-  .ck-content .media-library-selection .view-media-library .media-library-views-form .media-library-item--grid .card-group > .media-library-item.media-library-item--grid:not(:first-child) > .views-field-media-library-select-form,
-  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:first-child) > .views-field-media-library-select-form,
-  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .card:not(:first-child) > .views-field-media-bulk-form,
-  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:first-child) > .views-field-media-bulk-form,
-  .ck-content .media-library-selection .view-media-library .media-library-views-form .media-library-item--grid .card-group > .media-library-item.media-library-item--grid:not(:first-child) > .views-field-media-bulk-form,
-  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:first-child) > .views-field-media-bulk-form {
+  .ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .card-group > .views-field-rendered-entity:not(:first-child) > .card-header {
     border-top-left-radius: 0;
   }
-  .ck-content .card-group > .card:not(:first-child) > .card-img-bottom, .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:first-child) > .card-img-bottom, .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:first-child) > .card-img-bottom,
+  .ck-content .card-group > .card:not(:first-child) > .card-img-bottom, .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:first-child) > .card-img-bottom, .ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .card-group > .views-field-rendered-entity:not(:first-child) > .card-img-bottom,
   .ck-content .card-group > .card:not(:first-child) > .card-footer,
   .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:first-child) > .card-footer,
-  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:first-child) > .card-footer {
+  .ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .card-group > .views-field-rendered-entity:not(:first-child) > .card-footer {
     border-bottom-left-radius: 0;
   }
 }
@@ -11771,6 +11746,7 @@ a > .ck-content code {
   font-size: 0;
   border: var(--bs-border-width) solid var(--bs-border-color);
   border-radius: 0.25em;
+  background-color: var(--bs-body-bg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 0.75rem;
@@ -11783,61 +11759,71 @@ a > .ck-content code {
   background-image: url("data:image/svg+xml,%3csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2.344 2.343l11.313 11.313M2.344 13.657L13.657 2.343' stroke='%2355565B' stroke-width='3'/%3e%3c/svg%3e");
   right: 1rem;
 }
-.ck-content .view-media-library .media-library-views-form {
-  --bs-gutter-x: 0;
+.ck-content .view-media-library .media-library-views-form__rows {
+  --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--bs-gutter-y));
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
+  --bs-gutter-y: var(--bs-gutter-x);
   position: relative;
 }
-.ck-content .view-media-library .media-library-views-form .form-actions,
-.ck-content .view-media-library .media-library-views-form .form-wrapper,
-.ck-content .view-media-library .media-library-views-form .media-library-select-all {
+.ck-content .view-media-library .media-library-views-form__rows .form-actions,
+.ck-content .view-media-library .media-library-views-form__rows .form-wrapper,
+.ck-content .view-media-library .media-library-views-form__rows .media-library-select-all {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
   flex: 0 0 auto;
   width: 100%;
   margin: 1rem 0;
 }
-.ck-content .view-media-library .media-library-views-form .form-actions .form-checkbox,
-.ck-content .view-media-library .media-library-views-form .form-wrapper .form-checkbox,
-.ck-content .view-media-library .media-library-views-form .media-library-select-all .form-checkbox {
+.ck-content .view-media-library .media-library-views-form__rows .form-actions .form-checkbox,
+.ck-content .view-media-library .media-library-views-form__rows .form-wrapper .form-checkbox,
+.ck-content .view-media-library .media-library-views-form__rows .media-library-select-all .form-checkbox {
   margin-right: 1rem;
 }
-.ck-content .view-media-library .media-library-views-form .media-library-item--grid {
+.ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid {
   position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
   flex: 0 0 auto;
   width: 100%;
 }
 @media (min-width: 768px) {
-  .ck-content .view-media-library .media-library-views-form .media-library-item--grid {
+  .ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid {
     flex: 0 0 auto;
     width: 50%;
   }
 }
 @media (min-width: 992px) {
-  .ck-content .view-media-library .media-library-views-form .media-library-item--grid {
+  .ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid {
     flex: 0 0 auto;
     width: 25%;
   }
 }
-.ck-content .view-media-library .media-library-views-form .media-library-item--grid .views-field-media-library-select-form,
-.ck-content .view-media-library .media-library-views-form .media-library-item--grid .views-field-media-bulk-form {
+.ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .views-field-media-library-select-form,
+.ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .views-field-media-bulk-form {
   position: absolute;
   z-index: 1;
-  top: 0.5rem;
-  left: 0.5rem;
-  right: 0.5rem;
+  top: 1rem;
+  left: 1rem;
 }
-.ck-content .view-media-library .media-library-views-form .media-library-item--grid .views-field-media-library-select-form .form-item,
-.ck-content .view-media-library .media-library-views-form .media-library-item--grid .views-field-media-bulk-form .form-item {
+.ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .views-field-media-library-select-form .form-item,
+.ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .views-field-media-bulk-form .form-item {
   margin: 0;
 }
-.ck-content .view-media-library .media-library-views-form .media-library-item--grid .views-field-rendered-entity {
-  height: calc(100% - 1rem);
-  padding-top: 3rem;
-  margin: 0.5rem;
+.ck-content .view-media-library .media-library-views-form__rows .media-library-item--grid .views-field-rendered-entity {
+  height: 100%;
 }
 .ck-content .media-library-view--widget {
   display: flex;
@@ -11845,7 +11831,7 @@ a > .ck-content code {
 }
 .ck-content .media-library-view--widget .view-filters .form--inline,
 .ck-content .view-media-library .view-filters .form--inline {
-  --bs-gutter-x: 0;
+  --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
@@ -11856,6 +11842,12 @@ a > .ck-content code {
 }
 .ck-content .media-library-view--widget .view-filters .form--inline > div,
 .ck-content .view-media-library .view-filters .form--inline > div {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
   flex: 0 0 auto;
   width: 100%;
 }
@@ -11868,20 +11860,25 @@ a > .ck-content code {
   }
 }
 .ck-content .media-library-selection {
-  --bs-gutter-x: 0;
+  --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--bs-gutter-y));
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
+  margin: 1rem 0;
 }
 .ck-content .media-library-selection .media-library-item.media-library-item--grid {
   position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
   flex: 0 0 auto;
   width: 100%;
-  padding-top: 3rem;
-  margin: 0.5rem;
 }
 @media (min-width: 768px) {
   .ck-content .media-library-selection .media-library-item.media-library-item--grid {
@@ -11900,6 +11897,9 @@ a > .ck-content code {
 .ck-content #media-library-add-form-wrapper .item-list ul {
   padding-left: 0;
   list-style: none;
+}
+.ck-content .media-library-item__preview {
+  text-align: center;
 }
 .ck-content em.placeholder {
   display: unset;
@@ -12316,6 +12316,9 @@ a > .ck-content code {
 }
 .ck-content .header .topbar .social-links a:hover {
   color: var(--contrast-color);
+}
+.ck-content .header .topbar .gfp-banner {
+  width: 160px;
 }
 .ck-content .header .branding {
   min-height: 60px;
@@ -12841,13 +12844,6 @@ a > .ck-content code {
 }
 .ck-content .section-title p {
   margin-bottom: 0;
-}
-.ck-content .banner {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  background-color: #0a90ac;
 }
 .ck-content .hero {
   width: 100%;
