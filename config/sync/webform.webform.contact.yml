@@ -15,7 +15,7 @@ template: false
 archive: false
 id: contact
 title: Контакт
-description: 'Basic email contact webform.'
+description: 'Основная веб-форма для связи по электронной почте.'
 categories: {  }
 elements: |
   name:
