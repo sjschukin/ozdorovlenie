@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.event.field_event_time_text
     - field.field.node.event.field_number_of_places
     - field.field.node.event.field_organizer
+    - field.field.node.event.field_phone_number
     - node.type.event
   module:
     - user
@@ -30,4 +31,5 @@ hidden:
   field_event_time_text: true
   field_number_of_places: true
   field_organizer: true
+  field_phone_number: true
   langcode: true

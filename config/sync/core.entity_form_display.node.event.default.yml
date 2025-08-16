@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.event.field_event_time_text
     - field.field.node.event.field_number_of_places
     - field.field.node.event.field_organizer
+    - field.field.node.event.field_phone_number
     - node.type.event
   module:
     - datetime
@@ -57,6 +58,14 @@ content:
   field_organizer:
     type: string_textfield
     weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_phone_number:
+    type: string_textfield
+    weight: 4
     region: content
     settings:
       size: 60
