@@ -1,11 +1,9 @@
-uuid: 2d09efe6-dcff-4c85-84d8-d833cf9e4226
+uuid: 1ecac4dc-411f-4199-a71e-349a02cd421d
 langcode: ru
 status: true
 dependencies:
-  content:
-    - 'block_content:basic:bfee789d-e39e-44f5-ae13-6010753a8d51'
   module:
-    - block_content
+    - custom_blocks
     - system
   theme:
     - kind_tan
@@ -14,15 +12,12 @@ theme: kind_tan
 region: content
 weight: 0
 provider: null
-plugin: 'block_content:bfee789d-e39e-44f5-ae13-6010753a8d51'
+plugin: districts_events_block
 settings:
-  id: 'block_content:bfee789d-e39e-44f5-ae13-6010753a8d51'
+  id: districts_events_block
   label: 'Карта мероприятий'
   label_display: visible
-  provider: block_content
-  status: true
-  info: ''
-  view_mode: full
+  provider: custom_blocks
 visibility:
   request_path:
     id: request_path

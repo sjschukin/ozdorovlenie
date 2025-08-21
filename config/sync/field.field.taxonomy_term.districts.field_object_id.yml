@@ -1,0 +1,19 @@
+uuid: 627325ba-4fb3-4191-833a-5b50a2ced821
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_object_id
+    - taxonomy.vocabulary.districts
+id: taxonomy_term.districts.field_object_id
+field_name: field_object_id
+entity_type: taxonomy_term
+bundle: districts
+label: object_id
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
