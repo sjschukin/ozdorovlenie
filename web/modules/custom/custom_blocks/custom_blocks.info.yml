@@ -1,0 +1,5 @@
+name: 'Custom Blocks'
+type: module
+description: 'Provides custom blocks for this site'
+package: 'Custom'
+core_version_requirement: ^10

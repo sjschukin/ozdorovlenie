@@ -1,0 +1,144 @@
+<?php
+
+/**
+ * @file
+ * Module file for Custom Blocks.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function custom_blocks_theme() {
+  return [
+    'districts_events_block' => [
+      'variables' => [
+        'districts_data' => [],
+        'max_count' => 0,
+      ],
+      'template' => 'districts-events-block',
+    ],
+  ];
+}
+
+/**
+ * Gets data about areas and related events.
+ */
+function custom_blocks_get_districts_events_data() {
+  $data = [];
+  $result = [];
+
+  $term_storage = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
+  $query = $term_storage->getQuery()
+    ->accessCheck(FALSE)
+    ->condition('vid', 'districts')
+    ->sort('name', 'ASC');
+
+  $tids = $query->execute();
+
+  if (empty($tids)) {
+    return $data;
+  }
+
+  $terms = $term_storage->loadMultiple($tids);
+
+  $view = \Drupal::entityTypeManager()
+    ->getStorage('view')
+    ->load('future_events');
+
+  if (!$view) {
+    \Drupal::logger('custom_blocks')->error('View "future_events" not found.');
+    return $data;
+  }
+
+  foreach ($terms as $term) {
+    $count = custom_blocks_get_events_count_from_view($term->id());
+
+    $object_id = '';
+
+    if ($term->hasField('field_object_id') && !$term->get('field_object_id')->isEmpty()) {
+      $object_id = $term->get('field_object_id')->value;
+    }
+
+    $data[] = [
+      'id' => $term->id(),
+      'name' => $term->getName(),
+      'event_count' => (int)$count,
+      'object_id' => $object_id,
+    ];
+  }
+
+  $max_count = custom_blocks_get_max_events_count($data);
+
+  foreach ($data as $data_item) {
+    $result[] = [
+      'id' => $data_item['id'],
+      'name' => $data_item['name'],
+      'object_id' => $data_item['object_id'],
+      'intensity' => custom_blocks_get_intensity_index($data_item['event_count'], $max_count),
+      'count' => $data_item['event_count'],
+    ];
+  }
+
+  return $result;
+}
+
+/**
+ * Get events number from view by corresponding district.
+ */
+function custom_blocks_get_events_count_from_view($district_id) {
+  if (!\Drupal::moduleHandler()->moduleExists('views')) {
+    \Drupal::logger('custom_blocks')->error('Views module is not enabled.');
+    return 0;
+  }
+
+  try {
+    $view = \Drupal\views\Views::getView('future_events');
+
+    if (!$view) {
+      \Drupal::logger('custom_blocks')->error('View "future_events" not found.');
+      return 0;
+    }
+
+    $view->setDisplay('default');
+    $view->setArguments([$district_id]);
+    $view->execute();
+
+    return count($view->result);
+
+  } catch (\Exception $e) {
+    \Drupal::logger('custom_blocks')->error('Error loading view: @error', ['@error' => $e->getMessage()]);
+    return 0;
+  }
+}
+
+/**
+ * Gets the highest number of events among all districts.
+ */
+function custom_blocks_get_max_events_count($data) {
+  $result = 0;
+
+  foreach ($data as $item) {
+    if ($item['event_count'] > $result) {
+      $result = $item['event_count'];
+    }
+  }
+
+  return $result;
+}
+
+/**
+ * Gets intensity index (1-5).
+ */
+function custom_blocks_get_intensity_index($value, $count) {
+  if ($value <= 0 || $count <= 0) {
+    return 1;
+  }
+
+  $result = floor($value / $count * 5) + 1;
+
+  if ($result > 5) {
+    $result = 5;
+  }
+
+  return $result;
+}
