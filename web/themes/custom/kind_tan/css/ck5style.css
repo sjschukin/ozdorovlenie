@@ -13511,6 +13511,21 @@ a > .ck-content code {
   transition-duration: 200ms;
   cursor: pointer;
 }
+.ck-content .events-map #svg-map path.bg1 {
+  fill: #f8f9fa;
+}
+.ck-content .events-map #svg-map path.bg2 {
+  fill: #e9ecef;
+}
+.ck-content .events-map #svg-map path.bg3 {
+  fill: #dee2e6;
+}
+.ck-content .events-map #svg-map path.bg4 {
+  fill: #ced4da;
+}
+.ck-content .events-map #svg-map path.bg5 {
+  fill: #adb5bd;
+}
 .ck-content .events-map #svg-map path.active {
   fill: var(--accent-color);
 }

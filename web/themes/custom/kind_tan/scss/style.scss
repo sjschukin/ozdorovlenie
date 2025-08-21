@@ -1654,6 +1654,26 @@ section,
       transition-duration: 200ms;
       cursor: pointer;
 
+      &.bg1 {
+        fill: $gray-100;
+      }
+
+      &.bg2 {
+        fill: $gray-200;
+      }
+
+      &.bg3 {
+        fill: $gray-300;
+      }
+
+      &.bg4 {
+        fill: $gray-400;
+      }
+
+      &.bg5 {
+        fill: $gray-500;
+      }
+
       &.active {
         fill: var(--accent-color);
       }
