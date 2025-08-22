@@ -13511,20 +13511,23 @@ a > .ck-content code {
   transition-duration: 200ms;
   cursor: pointer;
 }
-.ck-content .events-map #svg-map path.bg1 {
-  fill: #f8f9fa;
+.ck-content .events-map #svg-map path.bg-0 {
+  fill: var(--background-color);
 }
-.ck-content .events-map #svg-map path.bg2 {
+.ck-content .events-map #svg-map path.bg-1 {
   fill: #e9ecef;
 }
-.ck-content .events-map #svg-map path.bg3 {
+.ck-content .events-map #svg-map path.bg-2 {
   fill: #dee2e6;
 }
-.ck-content .events-map #svg-map path.bg4 {
+.ck-content .events-map #svg-map path.bg-3 {
   fill: #ced4da;
 }
-.ck-content .events-map #svg-map path.bg5 {
+.ck-content .events-map #svg-map path.bg-4 {
   fill: #adb5bd;
+}
+.ck-content .events-map #svg-map path.bg-5 {
+  fill: #6c757d;
 }
 .ck-content .events-map #svg-map path.active {
   fill: var(--accent-color);

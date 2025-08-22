@@ -1654,24 +1654,28 @@ section,
       transition-duration: 200ms;
       cursor: pointer;
 
-      &.bg1 {
-        fill: $gray-100;
+      &.bg-0 {
+        fill: var(--background-color);
       }
 
-      &.bg2 {
+      &.bg-1 {
         fill: $gray-200;
       }
 
-      &.bg3 {
+      &.bg-2 {
         fill: $gray-300;
       }
 
-      &.bg4 {
+      &.bg-3 {
         fill: $gray-400;
       }
 
-      &.bg5 {
+      &.bg-4 {
         fill: $gray-500;
+      }
+
+      &.bg-5 {
+        fill: $gray-600;
       }
 
       &.active {

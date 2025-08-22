@@ -131,7 +131,7 @@ function custom_blocks_get_max_events_count($data) {
  */
 function custom_blocks_get_intensity_index($value, $count) {
   if ($value <= 0 || $count <= 0) {
-    return 1;
+    return 0;
   }
 
   $result = floor($value / $count * 5) + 1;

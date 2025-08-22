@@ -146,7 +146,7 @@
 
     paths.forEach((path) => {
       let region = regions.find(item => item.id == path.id);
-      path.classList.add("bg" + region.intensity);
+      path.classList.add("bg-" + region.intensity);
 
       path.onclick = (e) => goToRegion(region);
 

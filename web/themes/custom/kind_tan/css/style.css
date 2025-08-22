@@ -14514,20 +14514,23 @@ section,
   transition-duration: 200ms;
   cursor: pointer;
 }
-.events-map #svg-map path.bg1 {
-  fill: #f8f9fa;
+.events-map #svg-map path.bg-0 {
+  fill: var(--background-color);
 }
-.events-map #svg-map path.bg2 {
+.events-map #svg-map path.bg-1 {
   fill: #e9ecef;
 }
-.events-map #svg-map path.bg3 {
+.events-map #svg-map path.bg-2 {
   fill: #dee2e6;
 }
-.events-map #svg-map path.bg4 {
+.events-map #svg-map path.bg-3 {
   fill: #ced4da;
 }
-.events-map #svg-map path.bg5 {
+.events-map #svg-map path.bg-4 {
   fill: #adb5bd;
+}
+.events-map #svg-map path.bg-5 {
+  fill: #6c757d;
 }
 .events-map #svg-map path.active {
   fill: var(--accent-color);
