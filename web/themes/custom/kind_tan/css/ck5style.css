@@ -12232,6 +12232,10 @@ a > .ck-content code {
   --background-color: #f1f7fc;
   --surface-color: #ffffff;
 }
+.ck-content .grey-background {
+  --background-color: #c3c3c3;
+  --surface-color: #060606;
+}
 .ck-content .dark-background {
   --background-color: #060606;
   --default-color: #ffffff;
@@ -13242,11 +13246,11 @@ a > .ck-content code {
   background: color-mix(in srgb, var(--accent-color) 90%, white 15%);
 }
 .ck-content .camp-shift .camp-shift-container .camp-shift-item {
-  background-color: var(--background-color);
+  background-color: #f1f7fc;
   position: relative;
   padding: 20px;
   margin-bottom: 15px;
-  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 75%);
+  border: 1px solid #cbddf1;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -13290,29 +13294,37 @@ a > .ck-content code {
 .ck-content .camp-shift .camp-shift-container .camp-shift-item .camp-shift-toggle:hover {
   color: var(--accent-color);
 }
-.ck-content .camp-shift .camp-shift-container .camp-shift-active {
+.ck-content .camp-shift .camp-shift-container .camp-shift-item.unavailable {
+  background-color: #c3c3c3;
+  border: 1px solid #b0b0b0;
+}
+.ck-content .camp-shift .camp-shift-container .camp-shift-item.expanded {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
   color: var(--contrast-color);
 }
-.ck-content .camp-shift .camp-shift-container .camp-shift-active h3, .ck-content .camp-shift .camp-shift-container .camp-shift-active .h3 {
+.ck-content .camp-shift .camp-shift-container .camp-shift-item.expanded h3, .ck-content .camp-shift .camp-shift-container .camp-shift-item.expanded .h3 {
   color: var(--contrast-color);
 }
-.ck-content .camp-shift .camp-shift-container .camp-shift-active h3:hover, .ck-content .camp-shift .camp-shift-container .camp-shift-active .h3:hover {
+.ck-content .camp-shift .camp-shift-container .camp-shift-item.expanded h3:hover, .ck-content .camp-shift .camp-shift-container .camp-shift-item.expanded .h3:hover {
   color: var(--heading-color);
 }
-.ck-content .camp-shift .camp-shift-container .camp-shift-active .camp-shift-content {
+.ck-content .camp-shift .camp-shift-container .camp-shift-item.expanded .camp-shift-content {
   grid-template-rows: 1fr;
   visibility: visible;
   opacity: 1;
   padding-top: 10px;
 }
-.ck-content .camp-shift .camp-shift-container .camp-shift-active .camp-shift-toggle {
+.ck-content .camp-shift .camp-shift-container .camp-shift-item.expanded .camp-shift-toggle {
   transform: rotate(90deg);
   color: var(--contrast-color);
 }
-.ck-content .camp-shift .camp-shift-container .camp-shift-active .camp-shift-toggle:hover {
+.ck-content .camp-shift .camp-shift-container .camp-shift-item.expanded .camp-shift-toggle:hover {
   color: var(--heading-color);
+}
+.ck-content .camp-shift .camp-shift-container .camp-shift-item.expanded.unavailable {
+  background-color: #707b89;
+  border-color: #707b89;
 }
 .ck-content .camp-shift .camp-shift-container .camp-shift-btn {
   color: var(--contrast-color);

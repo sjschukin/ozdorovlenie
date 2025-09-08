@@ -50,6 +50,11 @@
   --surface-color: #ffffff;
 }
 
+.grey-background {
+  --background-color: #c3c3c3;
+  --surface-color: #060606;
+}
+
 .dark-background {
   --background-color: #060606;
   --default-color: #ffffff;
@@ -1316,11 +1321,11 @@ section,
 .camp-shift {
   .camp-shift-container {
     .camp-shift-item {
-      background-color: var(--background-color);
+      background-color: #f1f7fc;
       position: relative;
       padding: 20px;
       margin-bottom: 15px;
-      border: 1px solid color-mix(in srgb, var(--accent-color), transparent 75%);
+      border: 1px solid #cbddf1;
       border-radius: 5px;
       overflow: hidden;
 
@@ -1370,34 +1375,44 @@ section,
           color: var(--accent-color);
         }
       }
-    }
 
-    .camp-shift-active {
-      background-color: var(--accent-color);
-      border-color: var(--accent-color);
-      color: var(--contrast-color);
+      &.unavailable {
+        background-color: #c3c3c3;
+        border: 1px solid #b0b0b0;
+      }
 
-      h3 {
+      &.expanded {
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
         color: var(--contrast-color);
 
-        &:hover {
-          color: var(--heading-color);
+        h3 {
+          color: var(--contrast-color);
+
+          &:hover {
+            color: var(--heading-color);
+          }
         }
-      }
 
-      .camp-shift-content {
-        grid-template-rows: 1fr;
-        visibility: visible;
-        opacity: 1;
-        padding-top: 10px;
-      }
+        .camp-shift-content {
+          grid-template-rows: 1fr;
+          visibility: visible;
+          opacity: 1;
+          padding-top: 10px;
+        }
 
-      .camp-shift-toggle {
-        transform: rotate(90deg);
-        color: var(--contrast-color);
+        .camp-shift-toggle {
+          transform: rotate(90deg);
+          color: var(--contrast-color);
 
-        &:hover {
-          color: var(--heading-color);
+          &:hover {
+            color: var(--heading-color);
+          }
+        }
+
+        &.unavailable {
+          background-color: #707b89;
+          border-color: #707b89;
         }
       }
     }
