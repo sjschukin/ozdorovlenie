@@ -102,6 +102,7 @@ h6 {
   transition: all 0.5s;
   z-index: 500;
   background-color: var(--background-color);
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 
   .topbar {
     background-color: var(--accent-color);
@@ -209,8 +210,6 @@ h6 {
 
 .scrolled {
   .header {
-    box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
-
     .topbar {
       height: 0;
       visibility: hidden;
@@ -731,6 +730,12 @@ h6 {
         }
       }
     }
+  }
+}
+
+.block-page-title-block {
+  h1 {
+    margin-top: 1.5rem;
   }
 }
 

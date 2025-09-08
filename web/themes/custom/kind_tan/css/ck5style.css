@@ -12277,6 +12277,7 @@ a > .ck-content code {
   transition: all 0.5s;
   z-index: 500;
   background-color: var(--background-color);
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
 .ck-content .header .topbar {
   background-color: var(--accent-color);
@@ -12364,9 +12365,6 @@ a > .ck-content code {
   .ck-content .header .navmenu {
     order: 3;
   }
-}
-.ck-content .scrolled .header {
-  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
 .ck-content .scrolled .header .topbar {
   height: 0;
@@ -12791,6 +12789,9 @@ a > .ck-content code {
   display: inline-block;
   padding-right: 10px;
   color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+.ck-content .block-page-title-block h1, .ck-content .block-page-title-block .h1 {
+  margin-top: 1.5rem;
 }
 .ck-content section,
 .ck-content .section {
