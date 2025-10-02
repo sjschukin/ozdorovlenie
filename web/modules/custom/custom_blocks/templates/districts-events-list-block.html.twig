@@ -1,0 +1,40 @@
+{#
+/**
+ * @file
+ * Template for events map block.
+ *
+ * Available variables:
+ * - districts_data: array of districts with event counts
+ */
+#}
+<div class="row">
+  {% set total = districts_data|length %}
+  {% set cols = 2 %}
+  {% set rows = (total / cols)|round(0, 'ceil') %}
+  {% set left_column = [] %}
+  {% set right_column = [] %}
+
+  {% for key, district in districts_data %}
+    {% if key < rows %}
+      {% set left_column = left_column|merge([district]) %}
+    {% else %}
+      {% set right_column = right_column|merge([district]) %}
+    {% endif %}
+  {% endfor %}
+
+  <div class="col-md-6 text-center">
+    {% for district in left_column %}
+      <div class="district-item mb-3">
+        <a href="/events/{{ district.id }}">{{ district.name }} ({{ district.count }})</a>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="col-md-6 text-center">
+    {% for district in right_column %}
+      <div class="district-item mb-3">
+        <a href="/events/{{ district.id }}">{{ district.name }} ({{ district.count }})</a>
+      </div>
+    {% endfor %}
+  </div>
+</div>

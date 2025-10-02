@@ -17,6 +17,12 @@ function custom_blocks_theme() {
       ],
       'template' => 'districts-events-block',
     ],
+    'districts_events_list_block' => [
+      'variables' => [
+        'districts_data' => []
+      ],
+      'template' => 'districts-events-list-block',
+    ],
   ];
 }
 
