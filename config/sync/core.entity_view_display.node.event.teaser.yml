@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.event.field_number_of_places
     - field.field.node.event.field_organizer
     - field.field.node.event.field_phone_number
+    - field.field.node.event.field_website
     - node.type.event
   module:
     - user
@@ -32,4 +33,5 @@ hidden:
   field_number_of_places: true
   field_organizer: true
   field_phone_number: true
+  field_website: true
   langcode: true
