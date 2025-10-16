@@ -2,8 +2,10 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+      css/blind.css: {}
   js:
     js/main.js: {}
+    js/blind.js: {}
 aos:
   css:
     theme:

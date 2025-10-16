@@ -99,6 +99,12 @@
   /*--------------------------------------------------------------
   # Events Map Section
   --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+  # Events List Section
+  --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+  # Blind Panel
+  --------------------------------------------------------------*/
 }
 .ck-content :root,
 .ck-content [data-bs-theme=light] {
@@ -12323,7 +12329,8 @@ a > .ck-content code {
   color: var(--contrast-color);
 }
 .ck-content .header .topbar .gfp-banner {
-  width: 160px;
+  width: auto;
+  height: 30px;
 }
 .ck-content .header .branding {
   min-height: 60px;
@@ -12800,7 +12807,6 @@ a > .ck-content code {
 .ck-content section,
 .ck-content .section {
   color: var(--default-color);
-  background-color: var(--background-color);
   padding: 60px 0;
   scroll-margin-top: 72px;
   overflow: clip;
@@ -13562,5 +13568,23 @@ a > .ck-content code {
     padding-right: 6rem;
     padding-left: 6rem;
   }
+}
+.ck-content .events-list {
+  display: none;
+}
+.ck-content #to-blind-version {
+  background-color: transparent;
+  margin: 0 1rem 0 0;
+  color: var(--contrast-color);
+  text-decoration: none;
+}
+.ck-content #to-blind-version:hover {
+  text-decoration: underline;
+}
+.ck-content #to-blind-version span {
+  font-style: normal;
+}
+.ck-content .blind-panel {
+  display: none;
 }
 /*# sourceMappingURL=ck5style.css.map */

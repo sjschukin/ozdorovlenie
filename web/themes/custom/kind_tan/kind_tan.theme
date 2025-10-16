@@ -4,3 +4,12 @@
  * @file
  * Kind Tan theme file.
  */
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function kind_tan_preprocess_page(&$variables) {
+  $variables['page']['blind_button'] = [
+    '#markup' => '<a id="to-blind-version" href="#"><i class="bi bi-eyeglasses"><span class="ms-2">Версия для слабовидящих</span></i></a>'
+  ];
+}

@@ -13242,7 +13242,8 @@ h6,
   color: var(--contrast-color);
 }
 .header .topbar .gfp-banner {
-  width: 160px;
+  width: auto;
+  height: 30px;
 }
 .header .branding {
   min-height: 60px;
@@ -13749,7 +13750,6 @@ h6,
 section,
 .section {
   color: var(--default-color);
-  background-color: var(--background-color);
   padding: 60px 0;
   scroll-margin-top: 72px;
   overflow: clip;
@@ -14568,5 +14568,31 @@ section,
     padding-right: 6rem;
     padding-left: 6rem;
   }
+}
+/*--------------------------------------------------------------
+# Events List Section
+--------------------------------------------------------------*/
+.events-list {
+  display: none;
+}
+
+/*--------------------------------------------------------------
+# Blind Panel
+--------------------------------------------------------------*/
+#to-blind-version {
+  background-color: transparent;
+  margin: 0 1rem 0 0;
+  color: var(--contrast-color);
+  text-decoration: none;
+}
+#to-blind-version:hover {
+  text-decoration: underline;
+}
+#to-blind-version span {
+  font-style: normal;
+}
+
+.blind-panel {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,597 @@
+/******* blind panel *******/
+
+.css-blind {
+  .blind-panel {
+    display: inherit;
+    max-width: 1140px;
+    font: bold 20px/1.5 Arial, Helvetica sans-serif;
+  }
+
+  &.color-white .blind-panel {
+    background: #e1e1e1;
+    color: #000;
+  }
+
+  &.color-black .blind-panel {
+    color: #fff;
+    background: #000;
+  }
+
+  &.color-blue .blind-panel {
+    background: #9dd1ff;
+    color: #063462;
+  }
+}
+
+/******* toggle version panel *******/
+
+.css-blind {
+  #to-blind-version {
+    display: none;
+  }
+
+  .to-main-version {
+    display: inline-block;
+    vertical-align: middle;
+    width: 170px;
+    text-align: center;
+    text-decoration: none;
+
+    span {
+      display: inline-block;
+      width: 75px;
+      height: 47px;
+    }
+  }
+
+  &.color-white .to-main-version span {
+    background: transparent url(../images/sprite-blind.png) 0 -80px no-repeat;
+  }
+
+  &.color-black .to-main-version span {
+    background: transparent url(../images/sprite-blind.png) 0 -133px no-repeat;
+  }
+
+  &.color-blue .to-main-version span {
+    background: transparent url(../images/sprite-blind.png) 0 -184px no-repeat;
+  }
+}
+
+/******* font toggle widget *******/
+
+.css-blind {
+  .font-toggle {
+    width: 140px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 35px;
+
+    span {
+      display: inline-block;
+      vertical-align: baseline;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin: 0 5px;
+
+      &:hover, &.selected {
+        text-decoration: underline;
+      }
+    }
+
+    .a-small {
+      font: bold 30px/1 Arial, Helvetica sans-serif;
+    }
+
+    .a-normal {
+      font: bold 45px/1 Arial, Helvetica sans-serif;
+    }
+
+    .a-big {
+      font: bold 60px/1 Arial, Helvetica sans-serif;
+    }
+  }
+}
+
+/******* background toggle widget *******/
+
+.css-blind {
+  .color-toggle {
+    display: inline-block;
+    vertical-align: middle;
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      width: 71px;
+      height: 71px;
+      cursor: pointer;
+      margin: 0 3px;
+      position: relative;
+
+      &:hover:after, &.selected:after {
+        content: '\25B2';
+        position: absolute;
+        top: 70px;
+        left: 25px;
+      }
+    }
+
+    .white {
+      background: transparent url(../images/sprite-blind.png) 0 0 no-repeat;
+    }
+
+    .black {
+      background: transparent url(../images/sprite-blind.png) -77px 0 no-repeat;
+    }
+
+    .blue {
+      background: transparent url(../images/sprite-blind.png) -155px 0 no-repeat;
+    }
+  }
+}
+
+/******* images toggle widget *******/
+
+.css-blind {
+  .image-toggle {
+    display: inline-block;
+    vertical-align: middle;
+    width: 130px;
+    margin: 0 35px;
+    text-align: center;
+
+    div {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 5px;
+      text-transform: uppercase;
+
+      span {
+        display: block;
+        width: 42px;
+        height: 42px;
+        margin: 5px auto;
+      }
+    }
+  }
+
+  &.color-white .image-toggle div span {
+    background: transparent url(../images/sprite-blind.png) -85px -80px no-repeat;
+  }
+
+  &.color-white .image-toggle div.selected span {
+    background: transparent url(../images/sprite-blind.png) -133px -80px no-repeat;
+  }
+
+  &.color-black .image-toggle div span {
+    background: transparent url(../images/sprite-blind.png) -85px -132px no-repeat;
+  }
+
+  &.color-black .image-toggle div.selected span {
+    background: transparent url(../images/sprite-blind.png) -133px -132px no-repeat;
+  }
+
+  &.color-blue .image-toggle div span {
+    background: transparent url(../images/sprite-blind.png) -85px -185px no-repeat;
+  }
+
+  &.color-blue .image-toggle div.selected span {
+    background: transparent url(../images/sprite-blind.png) -133px -185px no-repeat;
+  }
+}
+
+/******************************************** global ********************************************/
+
+/* fonts */
+
+body.css-blind {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* white background */
+
+body.color-white {
+  background-color: #fff;
+}
+
+.color-white {
+  background-color: #fff;
+
+  &.css-blind {
+    color: #000;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: #000;
+    }
+
+    a, a:hover {
+      color: #000;
+      text-decoration: underline;
+    }
+
+    .header {
+      .topbar {
+        background-color: #000;
+
+        .contact-info {
+          i, span, a {
+            color: #fff;
+          }
+        }
+      }
+
+      .branding {
+        background-color: #fff;
+        border: 2px solid #000;
+
+        .logo h1 {
+          color: #000;
+        }
+      }
+
+      p.navbar-text {
+        color: #000;
+      }
+
+      #navbar {
+        .navbar-nav > li > a, .navbar-nav > li > a:hover {
+          color: #000;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .section-title h2::after {
+      background-color: #000;
+    }
+
+    .camps.section {
+      .camp-item {
+        background-color: #fff;
+        border: 2px solid #000;
+
+        .details-btn {
+          color: #000;
+          background-color: #fff;
+          border: 2px solid #000;
+        }
+      }
+    }
+
+    .camp-info.section {
+      .gallery {
+        .gallery-item {
+          border: 3px solid #fff;
+        }
+      }
+
+      .more-btn {
+        color: #000;
+        background-color: #fff;
+        border: 2px solid #000;
+      }
+    }
+
+    .view-future-events .table {
+      th, tr {
+        color: #000;
+        background-color: #fff;
+      }
+    }
+
+    footer.bg-secondary {
+      color: #fff !important;
+      background-color: #000 !important;
+    }
+  }
+}
+
+/* black background */
+
+body.color-black {
+  background-color: #000;
+}
+
+.color-black {
+  background-color: #000;
+
+  &.css-blind {
+    color: #fff;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: #fff;
+    }
+
+    a, a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .header {
+      .topbar {
+        background-color: #fff;
+
+        .contact-info {
+          i, span, a {
+            color: #000;
+          }
+        }
+      }
+
+      .branding {
+        background-color: #000;
+        border: 2px solid #fff;
+
+        .logo h1 {
+          color: #fff;
+        }
+      }
+
+      p.navbar-text {
+        color: #fff;
+      }
+
+      #navbar {
+        .navbar-nav > li > a, .navbar-nav > li > a:hover {
+          color: #fff;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .section-title h2::after {
+      background-color: #fff;
+    }
+
+    .camps.section {
+      .camp-item {
+        background-color: #000;
+        border: 2px solid #fff;
+
+        .details-btn {
+          color: #fff;
+          background-color: #000;
+          border: 2px solid #fff;
+        }
+      }
+    }
+
+    .camp-info.section {
+      .gallery {
+        .gallery-item {
+          border: 3px solid #000;
+        }
+      }
+
+      .more-btn {
+        color: #fff;
+        background-color: #000;
+        border: 2px solid #fff;
+      }
+    }
+
+    .view-future-events .table {
+      th, tr {
+        color: #fff;
+        background-color: #000;
+      }
+    }
+
+    footer.bg-secondary {
+      color: #000 !important;
+      background-color: #fff !important;
+    }
+  }
+}
+
+/* blue background */
+
+body.color-blue {
+  background-color: #9dd1ff;
+}
+
+.color-blue {
+  background-color: #9dd1ff;
+
+  &.css-blind {
+    color: #063462;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: #063462;
+    }
+
+    a, a:hover {
+      color: #063462;
+      text-decoration: underline;
+    }
+
+    .header {
+      .topbar {
+        background-color: #063462;
+
+        .contact-info {
+          i, span, a {
+            color: #9dd1ff;
+          }
+        }
+      }
+
+      .branding {
+        background-color: #9dd1ff;
+        border: 2px solid #063462;
+
+        .logo h1 {
+          color: #063462;
+        }
+      }
+
+      p.navbar-text {
+        color: #063462;
+      }
+
+      #navbar {
+        .navbar-nav > li > a, .navbar-nav > li > a:hover {
+          color: #063462;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .section-title h2::after {
+      background-color: #063462;
+    }
+
+    .camps.section {
+      .camp-item {
+        background-color: #9dd1ff;
+        border: 2px solid #063462;
+
+        .details-btn {
+          color: #063462;
+          background-color: #9dd1ff;
+          border: 2px solid #063462;
+        }
+      }
+    }
+
+    .camp-info.section {
+      .gallery {
+        .gallery-item {
+          border: 3px solid #9dd1ff;
+        }
+      }
+
+      .more-btn {
+        color: #063462;
+        background-color: #9dd1ff;
+        border: 2px solid #063462;
+      }
+    }
+
+    .view-future-events .table {
+      td {
+        color: #063462;
+        background-color: #9dd1ff;
+      }
+    }
+
+    footer.bg-secondary {
+      color: #9dd1ff !important;
+      background-color: #063462 !important;
+    }
+  }
+}
+
+/* font sizes */
+
+.fontsize-small {
+  &.css-blind {
+    article.node {
+      font-size: 110%;
+
+      h1, h2, h3, h4, h5, h6 {
+        font-size: 110%;
+      }
+    }
+
+    .camps.section {
+      .camp-item {
+        h4, span {
+          font-size: 110%;
+        }
+      }
+    }
+
+    .events-list .district-item {
+      font-size: 110%;
+    }
+
+    .view-future-events .table {
+      font-size: 110%;
+    }
+  }
+}
+
+.fontsize-middle {
+  &.css-blind {
+    article.node {
+      font-size: 130%;
+
+      h1, h2, h3, h4, h5, h6 {
+        font-size: 130%;
+      }
+    }
+
+    .camps.section {
+      .camp-item {
+        h4, span {
+          font-size: 130%;
+        }
+      }
+    }
+
+    .events-list .district-item {
+      font-size: 130%;
+    }
+
+    .view-future-events .table {
+      font-size: 130%;
+    }
+  }
+}
+
+.fontsize-large {
+  &.css-blind {
+    article.node {
+      font-size: 140%;
+
+      h1, h2, h3, h4, h5, h6 {
+        font-size: 140%;
+      }
+    }
+
+    .camps.section {
+      .camp-item {
+        h4, span {
+          font-size: 140%;
+        }
+      }
+    }
+
+    .events-list .district-item {
+      font-size: 140%;
+    }
+
+    .view-future-events .table {
+      font-size: 140%;
+    }
+  }
+}
+
+/* images */
+
+.image-off {
+  &.css-blind {
+    img {
+      display: none;
+    }
+  }
+}
+
+/* hidden elements */
+
+.css-blind {
+  #hero, #camp-map, #events-map {
+    display: none;
+  }
+
+  #events-list {
+    display: block;
+  }
+}
+
+/* toggler */
+
+.css-blind .btn {
+  background-color: transparent;
+}

@@ -1,0 +1,416 @@
+@charset "UTF-8";
+/******* blind panel *******/
+.css-blind .blind-panel {
+  display: inherit;
+  max-width: 1140px;
+  font: bold 20px/1.5 Arial, Helvetica sans-serif;
+}
+.css-blind.color-white .blind-panel {
+  background: #e1e1e1;
+  color: #000;
+}
+.css-blind.color-black .blind-panel {
+  color: #fff;
+  background: #000;
+}
+.css-blind.color-blue .blind-panel {
+  background: #9dd1ff;
+  color: #063462;
+}
+
+/******* toggle version panel *******/
+.css-blind #to-blind-version {
+  display: none;
+}
+.css-blind .to-main-version {
+  display: inline-block;
+  vertical-align: middle;
+  width: 170px;
+  text-align: center;
+  text-decoration: none;
+}
+.css-blind .to-main-version span {
+  display: inline-block;
+  width: 75px;
+  height: 47px;
+}
+.css-blind.color-white .to-main-version span {
+  background: transparent url(../images/sprite-blind.png) 0 -80px no-repeat;
+}
+.css-blind.color-black .to-main-version span {
+  background: transparent url(../images/sprite-blind.png) 0 -133px no-repeat;
+}
+.css-blind.color-blue .to-main-version span {
+  background: transparent url(../images/sprite-blind.png) 0 -184px no-repeat;
+}
+
+/******* font toggle widget *******/
+.css-blind .font-toggle {
+  width: 140px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 35px;
+}
+.css-blind .font-toggle span {
+  display: inline-block;
+  vertical-align: baseline;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 0 5px;
+}
+.css-blind .font-toggle span:hover, .css-blind .font-toggle span.selected {
+  text-decoration: underline;
+}
+.css-blind .font-toggle .a-small {
+  font: bold 30px/1 Arial, Helvetica sans-serif;
+}
+.css-blind .font-toggle .a-normal {
+  font: bold 45px/1 Arial, Helvetica sans-serif;
+}
+.css-blind .font-toggle .a-big {
+  font: bold 60px/1 Arial, Helvetica sans-serif;
+}
+
+/******* background toggle widget *******/
+.css-blind .color-toggle {
+  display: inline-block;
+  vertical-align: middle;
+}
+.css-blind .color-toggle span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 71px;
+  height: 71px;
+  cursor: pointer;
+  margin: 0 3px;
+  position: relative;
+}
+.css-blind .color-toggle span:hover:after, .css-blind .color-toggle span.selected:after {
+  content: "▲";
+  position: absolute;
+  top: 70px;
+  left: 25px;
+}
+.css-blind .color-toggle .white {
+  background: transparent url(../images/sprite-blind.png) 0 0 no-repeat;
+}
+.css-blind .color-toggle .black {
+  background: transparent url(../images/sprite-blind.png) -77px 0 no-repeat;
+}
+.css-blind .color-toggle .blue {
+  background: transparent url(../images/sprite-blind.png) -155px 0 no-repeat;
+}
+
+/******* images toggle widget *******/
+.css-blind .image-toggle {
+  display: inline-block;
+  vertical-align: middle;
+  width: 130px;
+  margin: 0 35px;
+  text-align: center;
+}
+.css-blind .image-toggle div {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 5px;
+  text-transform: uppercase;
+}
+.css-blind .image-toggle div span {
+  display: block;
+  width: 42px;
+  height: 42px;
+  margin: 5px auto;
+}
+.css-blind.color-white .image-toggle div span {
+  background: transparent url(../images/sprite-blind.png) -85px -80px no-repeat;
+}
+.css-blind.color-white .image-toggle div.selected span {
+  background: transparent url(../images/sprite-blind.png) -133px -80px no-repeat;
+}
+.css-blind.color-black .image-toggle div span {
+  background: transparent url(../images/sprite-blind.png) -85px -132px no-repeat;
+}
+.css-blind.color-black .image-toggle div.selected span {
+  background: transparent url(../images/sprite-blind.png) -133px -132px no-repeat;
+}
+.css-blind.color-blue .image-toggle div span {
+  background: transparent url(../images/sprite-blind.png) -85px -185px no-repeat;
+}
+.css-blind.color-blue .image-toggle div.selected span {
+  background: transparent url(../images/sprite-blind.png) -133px -185px no-repeat;
+}
+
+/******************************************** global ********************************************/
+/* fonts */
+body.css-blind {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* white background */
+body.color-white {
+  background-color: #fff;
+}
+
+.color-white {
+  background-color: #fff;
+}
+.color-white.css-blind {
+  color: #000;
+}
+.color-white.css-blind h1, .color-white.css-blind h2, .color-white.css-blind h3, .color-white.css-blind h4, .color-white.css-blind h5, .color-white.css-blind h6 {
+  color: #000;
+}
+.color-white.css-blind a, .color-white.css-blind a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+.color-white.css-blind .header .topbar {
+  background-color: #000;
+}
+.color-white.css-blind .header .topbar .contact-info i, .color-white.css-blind .header .topbar .contact-info span, .color-white.css-blind .header .topbar .contact-info a {
+  color: #fff;
+}
+.color-white.css-blind .header .branding {
+  background-color: #fff;
+  border: 2px solid #000;
+}
+.color-white.css-blind .header .branding .logo h1 {
+  color: #000;
+}
+.color-white.css-blind .header p.navbar-text {
+  color: #000;
+}
+.color-white.css-blind .header #navbar .navbar-nav > li > a, .color-white.css-blind .header #navbar .navbar-nav > li > a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+.color-white.css-blind .section-title h2::after {
+  background-color: #000;
+}
+.color-white.css-blind .camps.section .camp-item {
+  background-color: #fff;
+  border: 2px solid #000;
+}
+.color-white.css-blind .camps.section .camp-item .details-btn {
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #000;
+}
+.color-white.css-blind .camp-info.section .gallery .gallery-item {
+  border: 3px solid #fff;
+}
+.color-white.css-blind .camp-info.section .more-btn {
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #000;
+}
+.color-white.css-blind .view-future-events .table th, .color-white.css-blind .view-future-events .table tr {
+  color: #000;
+  background-color: #fff;
+}
+.color-white.css-blind footer.bg-secondary {
+  color: #fff !important;
+  background-color: #000 !important;
+}
+
+/* black background */
+body.color-black {
+  background-color: #000;
+}
+
+.color-black {
+  background-color: #000;
+}
+.color-black.css-blind {
+  color: #fff;
+}
+.color-black.css-blind h1, .color-black.css-blind h2, .color-black.css-blind h3, .color-black.css-blind h4, .color-black.css-blind h5, .color-black.css-blind h6 {
+  color: #fff;
+}
+.color-black.css-blind a, .color-black.css-blind a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.color-black.css-blind .header .topbar {
+  background-color: #fff;
+}
+.color-black.css-blind .header .topbar .contact-info i, .color-black.css-blind .header .topbar .contact-info span, .color-black.css-blind .header .topbar .contact-info a {
+  color: #000;
+}
+.color-black.css-blind .header .branding {
+  background-color: #000;
+  border: 2px solid #fff;
+}
+.color-black.css-blind .header .branding .logo h1 {
+  color: #fff;
+}
+.color-black.css-blind .header p.navbar-text {
+  color: #fff;
+}
+.color-black.css-blind .header #navbar .navbar-nav > li > a, .color-black.css-blind .header #navbar .navbar-nav > li > a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.color-black.css-blind .section-title h2::after {
+  background-color: #fff;
+}
+.color-black.css-blind .camps.section .camp-item {
+  background-color: #000;
+  border: 2px solid #fff;
+}
+.color-black.css-blind .camps.section .camp-item .details-btn {
+  color: #fff;
+  background-color: #000;
+  border: 2px solid #fff;
+}
+.color-black.css-blind .camp-info.section .gallery .gallery-item {
+  border: 3px solid #000;
+}
+.color-black.css-blind .camp-info.section .more-btn {
+  color: #fff;
+  background-color: #000;
+  border: 2px solid #fff;
+}
+.color-black.css-blind .view-future-events .table th, .color-black.css-blind .view-future-events .table tr {
+  color: #fff;
+  background-color: #000;
+}
+.color-black.css-blind footer.bg-secondary {
+  color: #000 !important;
+  background-color: #fff !important;
+}
+
+/* blue background */
+body.color-blue {
+  background-color: #9dd1ff;
+}
+
+.color-blue {
+  background-color: #9dd1ff;
+}
+.color-blue.css-blind {
+  color: #063462;
+}
+.color-blue.css-blind h1, .color-blue.css-blind h2, .color-blue.css-blind h3, .color-blue.css-blind h4, .color-blue.css-blind h5, .color-blue.css-blind h6 {
+  color: #063462;
+}
+.color-blue.css-blind a, .color-blue.css-blind a:hover {
+  color: #063462;
+  text-decoration: underline;
+}
+.color-blue.css-blind .header .topbar {
+  background-color: #063462;
+}
+.color-blue.css-blind .header .topbar .contact-info i, .color-blue.css-blind .header .topbar .contact-info span, .color-blue.css-blind .header .topbar .contact-info a {
+  color: #9dd1ff;
+}
+.color-blue.css-blind .header .branding {
+  background-color: #9dd1ff;
+  border: 2px solid #063462;
+}
+.color-blue.css-blind .header .branding .logo h1 {
+  color: #063462;
+}
+.color-blue.css-blind .header p.navbar-text {
+  color: #063462;
+}
+.color-blue.css-blind .header #navbar .navbar-nav > li > a, .color-blue.css-blind .header #navbar .navbar-nav > li > a:hover {
+  color: #063462;
+  text-decoration: underline;
+}
+.color-blue.css-blind .section-title h2::after {
+  background-color: #063462;
+}
+.color-blue.css-blind .camps.section .camp-item {
+  background-color: #9dd1ff;
+  border: 2px solid #063462;
+}
+.color-blue.css-blind .camps.section .camp-item .details-btn {
+  color: #063462;
+  background-color: #9dd1ff;
+  border: 2px solid #063462;
+}
+.color-blue.css-blind .camp-info.section .gallery .gallery-item {
+  border: 3px solid #9dd1ff;
+}
+.color-blue.css-blind .camp-info.section .more-btn {
+  color: #063462;
+  background-color: #9dd1ff;
+  border: 2px solid #063462;
+}
+.color-blue.css-blind .view-future-events .table td {
+  color: #063462;
+  background-color: #9dd1ff;
+}
+.color-blue.css-blind footer.bg-secondary {
+  color: #9dd1ff !important;
+  background-color: #063462 !important;
+}
+
+/* font sizes */
+.fontsize-small.css-blind article.node {
+  font-size: 110%;
+}
+.fontsize-small.css-blind article.node h1, .fontsize-small.css-blind article.node h2, .fontsize-small.css-blind article.node h3, .fontsize-small.css-blind article.node h4, .fontsize-small.css-blind article.node h5, .fontsize-small.css-blind article.node h6 {
+  font-size: 110%;
+}
+.fontsize-small.css-blind .camps.section .camp-item h4, .fontsize-small.css-blind .camps.section .camp-item span {
+  font-size: 110%;
+}
+.fontsize-small.css-blind .events-list .district-item {
+  font-size: 110%;
+}
+.fontsize-small.css-blind .view-future-events .table {
+  font-size: 110%;
+}
+
+.fontsize-middle.css-blind article.node {
+  font-size: 130%;
+}
+.fontsize-middle.css-blind article.node h1, .fontsize-middle.css-blind article.node h2, .fontsize-middle.css-blind article.node h3, .fontsize-middle.css-blind article.node h4, .fontsize-middle.css-blind article.node h5, .fontsize-middle.css-blind article.node h6 {
+  font-size: 130%;
+}
+.fontsize-middle.css-blind .camps.section .camp-item h4, .fontsize-middle.css-blind .camps.section .camp-item span {
+  font-size: 130%;
+}
+.fontsize-middle.css-blind .events-list .district-item {
+  font-size: 130%;
+}
+.fontsize-middle.css-blind .view-future-events .table {
+  font-size: 130%;
+}
+
+.fontsize-large.css-blind article.node {
+  font-size: 140%;
+}
+.fontsize-large.css-blind article.node h1, .fontsize-large.css-blind article.node h2, .fontsize-large.css-blind article.node h3, .fontsize-large.css-blind article.node h4, .fontsize-large.css-blind article.node h5, .fontsize-large.css-blind article.node h6 {
+  font-size: 140%;
+}
+.fontsize-large.css-blind .camps.section .camp-item h4, .fontsize-large.css-blind .camps.section .camp-item span {
+  font-size: 140%;
+}
+.fontsize-large.css-blind .events-list .district-item {
+  font-size: 140%;
+}
+.fontsize-large.css-blind .view-future-events .table {
+  font-size: 140%;
+}
+
+/* images */
+.image-off.css-blind img {
+  display: none;
+}
+
+/* hidden elements */
+.css-blind #hero, .css-blind #camp-map, .css-blind #events-map {
+  display: none;
+}
+.css-blind #events-list {
+  display: block;
+}
+
+/* toggler */
+.css-blind .btn {
+  background-color: transparent;
+}
+/*# sourceMappingURL=blind.css.map */
