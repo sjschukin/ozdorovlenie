@@ -15,6 +15,14 @@
       keyboard: true
     });
 
+    let settings = {
+      render: {
+        no_results: () => '<div class="no-results">Не найдено</div>'
+      }
+    };
+    new TomSelect('#edit-category', settings);
+    new TomSelect('#edit-municipality', settings);
+
     document.querySelectorAll('.camp-shift-btn').forEach((item) => {
       item.onclick = function () {
         const form = document.querySelector('.webform-submission-voucher-request-form-form');

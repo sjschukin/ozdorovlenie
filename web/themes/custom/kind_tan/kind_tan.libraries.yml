@@ -16,6 +16,12 @@ bootstrap-icons:
   css:
     theme:
       libraries/bootstrap-icons/font/bootstrap-icons.min.css: {}
+tom-select:
+  css:
+    theme:
+      libraries/tom-select/dist/css/tom-select.bootstrap5.min.css: {}
+  js:
+    libraries/tom-select/dist/js/tom-select.complete.min.js: {}
 camp-details:
   css:
     theme:

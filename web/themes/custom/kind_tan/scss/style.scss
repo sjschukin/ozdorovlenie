@@ -1483,6 +1483,29 @@ section,
     }
   }
 
+  .ts-wrapper {
+    color: var(--default-color);
+    background-color: transparent;
+    border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    padding: 10px;
+
+    &.focus {
+      border-color: var(--accent-color);
+
+      .ts-control {
+        box-shadow: none;
+      }
+    }
+
+    .ts-control {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
   .form-required::after {
     display: none;
   }

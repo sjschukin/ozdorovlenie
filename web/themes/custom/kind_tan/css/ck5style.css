@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .ck-content {
   /*!
-   * Bootstrap  v5.3.7 (https://getbootstrap.com/)
+   * Bootstrap  v5.3.8 (https://getbootstrap.com/)
    * Copyright 2011-2025 The Bootstrap Authors
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    */
@@ -586,6 +586,10 @@ a > .ck-content code {
 .ck-content [type=search] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
+}
+.ck-content [type=search]::-webkit-search-cancel-button {
+  cursor: pointer;
+  filter: grayscale(1);
 }
 .ck-content ::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -5941,6 +5945,7 @@ a > .ck-content code {
 .ck-content .spinner-grow,
 .ck-content .spinner-border {
   display: inline-block;
+  flex-shrink: 0;
   width: var(--bs-spinner-width);
   height: var(--bs-spinner-height);
   vertical-align: var(--bs-spinner-vertical-align);
@@ -13387,6 +13392,25 @@ a > .ck-content code {
 }
 .ck-content .webform-submission-voucher-request-form-form input[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color) 90%, white 15%);
+}
+.ck-content .webform-submission-voucher-request-form-form .ts-wrapper {
+  color: var(--default-color);
+  background-color: transparent;
+  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  padding: 10px;
+}
+.ck-content .webform-submission-voucher-request-form-form .ts-wrapper.focus {
+  border-color: var(--accent-color);
+}
+.ck-content .webform-submission-voucher-request-form-form .ts-wrapper.focus .ts-control {
+  box-shadow: none;
+}
+.ck-content .webform-submission-voucher-request-form-form .ts-wrapper .ts-control {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .ck-content .webform-submission-voucher-request-form-form .form-required::after {
   display: none;

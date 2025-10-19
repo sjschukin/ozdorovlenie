@@ -7,6 +7,7 @@ libraries:
   - kind_tan/global-styling
   - kind_tan/aos
   - kind_tan/bootstrap-icons
+  - kind_tan/tom-select
   - kind_tan/camp-details
   - kind_tan/request-webform
 ckeditor_stylesheets:
