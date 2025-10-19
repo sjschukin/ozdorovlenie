@@ -18,7 +18,7 @@ settings:
   default_form_close_message: 'Извините... Эта форма закрыта для новых отправлений.'
   default_form_exception_message: 'Невозможно отобразить эту веб-форму. Обратитесь к администратору сайта.'
   default_form_confidential_message: 'This form is confidential. You must <a href="[site:login-url]/logout?destination=[current-page:url:relative]">Log out</a> to submit it.'
-  default_form_access_denied_message: 'Please log in to access this form.'
+  default_form_access_denied_message: 'Войдите в систему, чтобы получить доступ к этой форме.'
   default_form_disable_remote_addr: false
   default_form_novalidate: false
   default_form_disable_inline_errors: false
@@ -66,7 +66,7 @@ settings:
       - entity.node.webform.user.drafts
       - entity.node.webform.user.submissions
   default_results_customize: false
-  default_submission_access_denied_message: 'Please log in to access this submission.'
+  default_submission_access_denied_message: 'Войдите в систему, чтобы получить доступ к этой отправке.'
   default_submission_exception_message: 'Unable to process this submission. Please contact the site administrator.'
   default_submission_locked_message: 'This submission has been locked.'
   default_previous_submission_message: 'You have already submitted this webform. <a href="#">View your previous submission</a>.'
