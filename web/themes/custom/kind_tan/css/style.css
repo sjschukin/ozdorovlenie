@@ -14305,6 +14305,29 @@ section,
   opacity: 1;
   padding-top: 10px;
 }
+.camp-shift .camp-shift-container .camp-shift-item.expanded .camp-shift-content .camp-shift-body a {
+  color: var(--contrast-color);
+  text-decoration: underline;
+}
+.camp-shift .camp-shift-container .camp-shift-item.expanded .camp-shift-content .camp-shift-body a:hover {
+  color: var(--contrast-color);
+  text-decoration: underline;
+}
+.camp-shift .camp-shift-container .camp-shift-item.expanded .camp-shift-content .camp-shift-body .camp-shift-btn {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-size: 14px;
+  padding: 8px 25px;
+  border: 3px solid var(--contrast-color);
+  border-radius: 50px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.camp-shift .camp-shift-container .camp-shift-item.expanded .camp-shift-content .camp-shift-body .camp-shift-btn:hover {
+  color: var(--accent-color);
+  background: var(--contrast-color);
+  text-decoration: none;
+}
 .camp-shift .camp-shift-container .camp-shift-item.expanded .camp-shift-toggle {
   transform: rotate(90deg);
   color: var(--contrast-color);
@@ -14315,19 +14338,6 @@ section,
 .camp-shift .camp-shift-container .camp-shift-item.expanded.unavailable {
   background-color: #707b89;
   border-color: #707b89;
-}
-.camp-shift .camp-shift-container .camp-shift-btn {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  font-size: 14px;
-  padding: 8px 25px;
-  border: 3px solid var(--contrast-color);
-  border-radius: 50px;
-  transition: 0.3s;
-}
-.camp-shift .camp-shift-container .camp-shift-btn:hover {
-  color: var(--accent-color);
-  background: var(--contrast-color);
 }
 
 /*--------------------------------------------------------------

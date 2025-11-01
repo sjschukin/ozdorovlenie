@@ -13326,6 +13326,29 @@ a > .ck-content code {
   opacity: 1;
   padding-top: 10px;
 }
+.ck-content .camp-shift .camp-shift-container .camp-shift-item.expanded .camp-shift-content .camp-shift-body a {
+  color: var(--contrast-color);
+  text-decoration: underline;
+}
+.ck-content .camp-shift .camp-shift-container .camp-shift-item.expanded .camp-shift-content .camp-shift-body a:hover {
+  color: var(--contrast-color);
+  text-decoration: underline;
+}
+.ck-content .camp-shift .camp-shift-container .camp-shift-item.expanded .camp-shift-content .camp-shift-body .camp-shift-btn {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-size: 14px;
+  padding: 8px 25px;
+  border: 3px solid var(--contrast-color);
+  border-radius: 50px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.ck-content .camp-shift .camp-shift-container .camp-shift-item.expanded .camp-shift-content .camp-shift-body .camp-shift-btn:hover {
+  color: var(--accent-color);
+  background: var(--contrast-color);
+  text-decoration: none;
+}
 .ck-content .camp-shift .camp-shift-container .camp-shift-item.expanded .camp-shift-toggle {
   transform: rotate(90deg);
   color: var(--contrast-color);
@@ -13336,19 +13359,6 @@ a > .ck-content code {
 .ck-content .camp-shift .camp-shift-container .camp-shift-item.expanded.unavailable {
   background-color: #707b89;
   border-color: #707b89;
-}
-.ck-content .camp-shift .camp-shift-container .camp-shift-btn {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  font-size: 14px;
-  padding: 8px 25px;
-  border: 3px solid var(--contrast-color);
-  border-radius: 50px;
-  transition: 0.3s;
-}
-.ck-content .camp-shift .camp-shift-container .camp-shift-btn:hover {
-  color: var(--accent-color);
-  background: var(--contrast-color);
 }
 .ck-content .webform-submission-voucher-request-form-form input[type=text],
 .ck-content .webform-submission-voucher-request-form-form input[type=email],
