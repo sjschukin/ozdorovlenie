@@ -242,7 +242,7 @@ settings:
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
   confirmation_type: url_message
-  confirmation_url: '/camps/[webform_submission:node:nid]'
+  confirmation_url: /submitted
   confirmation_title: ''
   confirmation_message: '<p>Ваша заявка успешно отправлена на обработку. Номер заявки: [webform_submission:sid]</p>'
   confirmation_attributes: {  }
