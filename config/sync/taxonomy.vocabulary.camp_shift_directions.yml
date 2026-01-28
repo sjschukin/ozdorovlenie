@@ -1,0 +1,9 @@
+uuid: 0ecf2aa9-97e7-432b-9378-986d299b6bc2
+langcode: ru
+status: true
+dependencies: {  }
+name: 'Направления смен'
+vid: camp_shift_directions
+description: null
+weight: 0
+new_revision: false

@@ -1,0 +1,11 @@
+uuid: 5d0a8185-de50-4898-87dd-5fb7590b68d1
+langcode: ru
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.camp_shift_directions
+id: taxonomy_term.camp_shift_directions
+target_entity_type_id: taxonomy_term
+target_bundle: camp_shift_directions
+default_langcode: site_default
+language_alterable: false
