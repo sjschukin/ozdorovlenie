@@ -229,7 +229,7 @@ h6 {
 --------------------------------------------------------------*/
 /* Desktop Navigation */
 @include media-breakpoint-up(xl) {
-  .menu--main {
+  #block-kind-tan-main-navigation {
     padding: 0;
 
     ul {
@@ -488,7 +488,7 @@ h6 {
       background: rgba(33, 37, 41, 0.8);
       transition: 0.3s;
 
-      .menu--main > ul {
+      #block-kind-tan-main-navigation > ul {
         display: block;
       }
     }
