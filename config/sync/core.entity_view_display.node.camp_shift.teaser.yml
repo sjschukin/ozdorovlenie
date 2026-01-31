@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.camp_shift.field_date_from
     - field.field.node.camp_shift.field_date_to
     - field.field.node.camp_shift.field_description
+    - field.field.node.camp_shift.field_direction
     - field.field.node.camp_shift.field_free_places_number
     - field.field.node.camp_shift.field_no_booking_reason
     - node.type.camp_shift
@@ -32,6 +33,7 @@ hidden:
   field_date_from: true
   field_date_to: true
   field_description: true
+  field_direction: true
   field_free_places_number: true
   field_no_booking_reason: true
   langcode: true

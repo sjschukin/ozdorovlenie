@@ -1,0 +1,29 @@
+uuid: 4b999437-2d08-4b1a-8e0f-0d317847edce
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_direction
+    - node.type.camp_shift
+    - taxonomy.vocabulary.camp_shift_directions
+id: node.camp_shift.field_direction
+field_name: field_direction
+entity_type: node
+bundle: camp_shift
+label: 'Направление смены'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      camp_shift_directions: camp_shift_directions
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
