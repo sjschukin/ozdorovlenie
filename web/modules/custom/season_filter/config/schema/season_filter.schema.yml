@@ -10,8 +10,22 @@ views.filter.season_filter:
       type: string
       label: 'Date field'
     value:
-      type: sequence
-      label: 'Seasons'
-      sequence:
-        type: string
-        label: 'Season'
+      type: views.filter_value.season_filter
+      label: 'Value'
+
+views.filter_value.season_filter:
+  type: mapping
+  label: 'Value'
+  mapping:
+    winter:
+      type: string
+      label: 'Winter'
+    spring:
+      type: string
+      label: 'Spring'
+    summer:
+      type: string
+      label: 'Summer'
+    autumn:
+      type: string
+      label: 'Autumn'
