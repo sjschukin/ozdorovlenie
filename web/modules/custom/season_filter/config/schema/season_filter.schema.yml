@@ -1,0 +1,17 @@
+# Schema for the views plugin configuration.
+views.filter.season_filter:
+  type: views_filter
+  label: 'Season filter'
+  mapping:
+    hemisphere:
+      type: string
+      label: 'Hemisphere'
+    date_field:
+      type: string
+      label: 'Date field'
+    value:
+      type: sequence
+      label: 'Seasons'
+      sequence:
+        type: string
+        label: 'Season'
