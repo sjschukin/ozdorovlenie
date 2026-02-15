@@ -144,64 +144,69 @@ class SeasonFilter extends FilterPluginBase {
     return $operators;
   }
 
-  /**
-   * {@inheritdoc}
-   */
-  public function query() {
-    $this->ensureMyTable();
+/**
+ * {@inheritdoc}
+ */
+public function query() {
+  $this->ensureMyTable();
 
-    if (empty($this->options['date_field'])) {
-      return;
-    }
+  if (empty($this->options['date_field'])) {
+    return;
+  }
 
-    // Get the selected date field
-    $date_field = $this->options['date_field'];
+  // Get the selected date field
+  $date_field = $this->options['date_field'];
 
-    // Get the table alias for this filter
-    $table_alias = $this->tableAlias ?: $this->table;
+  // Get the table alias for this filter
+  $table_alias = $this->tableAlias ?: $this->table;
 
-    // For field API fields, we need to ensure the correct table is used
-    $real_table = $this->getFieldTable($date_field);
-    if ($real_table) {
-      $table_alias = $real_table;
-    }
+  // For field API fields, we need to ensure the correct table is used
+  $real_table = $this->getFieldTable($date_field);
+  if ($real_table) {
+    $table_alias = $real_table;
+  }
 
-    // Get selected seasons
+  // Get selected seasons - с проверкой типа
+  $selected_seasons = [];
+  if (is_array($this->value)) {
     $selected_seasons = array_filter($this->value);
+  } elseif (!empty($this->value)) {
+    $selected_seasons = [$this->value];
+  }
 
-    if (empty($selected_seasons)) {
-      return;
-    }
+  if (empty($selected_seasons)) {
+    return;
+  }
 
-    $hemisphere = $this->options['hemisphere'];
-    $not_in = $this->operator === 'not in';
-    $database_type = $this->database->driver();
+  $hemisphere = $this->options['hemisphere'];
+  $not_in = $this->operator === 'not in';
+  $database_type = $this->database->driver();
 
-    // Build month expression based on database type
-    $month_expression = $this->getMonthExpression($table_alias, $date_field, $database_type);
+  // Build month expression based on database type
+  $month_expression = $this->getMonthExpression($table_alias, $date_field, $database_type);
 
-    // Build conditions for each selected season
-    $conditions = [];
-    foreach ($selected_seasons as $season) {
-      $season_condition = $this->getSeasonCondition($season, $month_expression, $hemisphere);
-      if ($season_condition) {
-        $conditions[] = $season_condition;
-      }
-    }
-
-    if (empty($conditions)) {
-      return;
-    }
-
-    // Combine conditions with OR
-    $combined_condition = implode(' OR ', $conditions);
-
-    if ($not_in) {
-      $this->query->addWhereExpression($this->options['group'], "NOT ($combined_condition)");
-    } else {
-      $this->query->addWhereExpression($this->options['group'], "($combined_condition)");
+  // Build conditions for each selected season
+  $conditions = [];
+  foreach ($selected_seasons as $season) {
+    $season_condition = $this->getSeasonCondition($season, $month_expression, $hemisphere);
+    if ($season_condition) {
+      $conditions[] = $season_condition;
     }
   }
+
+  if (empty($conditions)) {
+    return;
+  }
+
+  // Combine conditions with OR
+  $combined_condition = implode(' OR ', $conditions);
+
+  if ($not_in) {
+    $this->query->addWhereExpression($this->options['group'], "NOT ($combined_condition)");
+  } else {
+    $this->query->addWhereExpression($this->options['group'], "($combined_condition)");
+  }
+}
 
   /**
    * Get the correct table for a field.
@@ -354,15 +359,91 @@ class SeasonFilter extends FilterPluginBase {
     return $this->valueOptions;
   }
 
-  /**
-   * {@inheritdoc}
-   */
-  protected function valueForm(&$form, FormStateInterface $form_state) {
-    parent::valueForm($form, $form_state);
+/**
+ * {@inheritdoc}
+ */
+protected function valueForm(&$form, FormStateInterface $form_state) {
+  // Убеждаемся, что value имеет правильную структуру
+  $default_value = $this->value;
 
-    // Эта форма используется для выбора значений фильтра в exposed filter
-    // или при настройке значений по умолчанию
+  // Преобразуем значение в формат, подходящий для checkboxes
+  if (is_array($default_value)) {
+    // Если это массив с ключами-сезонами и булевыми значениями
+    $options = $this->getValueOptions();
+    $defaults = [];
+    foreach ($options as $key => $label) {
+      $defaults[$key] = !empty($default_value[$key]) ? $key : 0;
+    }
+    $default_value = $defaults;
   }
+
+  $form['value'] = [
+    '#type' => 'checkboxes',
+    '#title' => $this->t('Seasons'),
+    '#options' => $this->getValueOptions(),
+    '#default_value' => $default_value,
+    '#required' => TRUE,
+  ];
+}
+
+/**
+ * {@inheritdoc}
+ */
+public function validate() {
+  // Проверяем, что value является массивом перед фильтрацией
+  if (is_array($this->value)) {
+    $this->value = array_filter($this->value);
+  } else {
+    // Если это не массив (например, строка), преобразуем в массив или очищаем
+    $this->value = !empty($this->value) ? [$this->value] : [];
+  }
+  return parent::validate();
+}
+
+/**
+ * {@inheritdoc}
+ */
+public function submitOptionsForm(&$form, FormStateInterface $form_state) {
+  parent::submitOptionsForm($form, $form_state);
+
+  // Обрабатываем значения из формы настроек
+  $options = $form_state->getValue('options');
+  if (isset($options['value'])) {
+    // Убеждаемся, что value - это массив
+    if (is_array($options['value'])) {
+      // Убираем пустые значения
+      $this->options['value'] = array_filter($options['value']);
+    } else {
+      // Если это не массив, преобразуем или очищаем
+      $this->options['value'] = !empty($options['value']) ? [$options['value']] : [];
+    }
+  }
+}
+
+/**
+ * {@inheritdoc}
+ */
+public function acceptExposedInput($input) {
+  if (empty($this->options['exposed'])) {
+    return TRUE;
+  }
+
+  // Обрабатываем значения из exposed filter
+  if (isset($input[$this->options['expose']['identifier']])) {
+    $value = $input[$this->options['expose']['identifier']];
+
+    // Преобразуем значение в правильный формат
+    if (is_array($value)) {
+      // Убираем пустые значения (0)
+      $this->value = array_filter($value);
+    } else {
+      // Если это не массив (например, строка), преобразуем в массив
+      $this->value = !empty($value) ? [$value] : [];
+    }
+  }
+
+  return parent::acceptExposedInput($input);
+}
 
   /**
    * Get all date fields from the base table.
