@@ -1,0 +1,32 @@
+views.filter.season_filter:
+  type: mapping
+  label: 'Season Filter'
+  mapping:
+    value:
+      type: sequence
+      label: 'Selected seasons'
+      sequence:
+        type: string
+        label: 'Season'
+    exposed:
+      type: boolean
+      label: 'Exposed'
+    expose:
+      type: mapping
+      label: 'Exposure settings'
+      mapping:
+        identifier:
+          type: string
+          label: 'Identifier'
+        label:
+          type: label
+          label: 'Label'
+        remember:
+          type: boolean
+          label: 'Remember'
+        multiple:
+          type: boolean
+          label: 'Allow multiple'
+        required:
+          type: boolean
+          label: 'Required'

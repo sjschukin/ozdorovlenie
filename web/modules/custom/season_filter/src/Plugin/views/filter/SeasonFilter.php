@@ -106,16 +106,21 @@ class SeasonFilter extends InOperator {
   public function query() {
     $this->ensureMyTable();
 
-    if (empty($this->value)) {
+    if (empty($this->value) || !is_array($this->value)) {
+      return;
+    }
+
+    $valid_seasons = array_keys($this->getValueOptions());
+    $selected_seasons = array_filter($this->value, function ($season) use ($valid_seasons) {
+      return in_array($season, $valid_seasons);
+    });
+
+    if (empty($selected_seasons)) {
       return;
     }
 
     // Определяем таблицу для field_date_from
     $entity_type_id = $this->getEntityType();
-    if (!$entity_type_id) {
-      \Drupal::logger('season_filter')->debug('No entity type');
-      return;
-    }
 
     // Получаем выбранные сезоны из экспоузд формы
     $selected_seasons = $this->value;
@@ -123,10 +128,8 @@ class SeasonFilter extends InOperator {
     // Таблица для field_date_from
     $field_table = $entity_type_id . '__field_date_from';
     $schema = $this->database->schema();
+
     if (!$schema->tableExists($field_table)) {
-      \Drupal::logger('season_filter')->error('Table @table does not exist', [
-        '@table' => $field_table
-      ]);
       return;
     }
 
