@@ -11,23 +11,6 @@
 function season_filter_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match) {
   switch ($route_name) {
     case 'help.page.season_filter':
-      return '<p>' . t('Provides a views filter plugin for filtering entities by season based on date fields.') . '</p>';
-
-    default:
-      return NULL;
+      return '<p>' . t('Provides a views filter plugin for filtering entities by season based on field_date_from') . '</p>';
   }
-}
-
-/**
- * Implements hook_theme().
- */
-function season_filter_theme() {
-  return [
-    'season_filter_options' => [
-      'variables' => [
-        'seasons' => [],
-        'hemisphere' => 'northern',
-      ],
-    ],
-  ];
 }

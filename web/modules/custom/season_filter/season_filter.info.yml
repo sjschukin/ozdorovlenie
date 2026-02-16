@@ -1,6 +1,6 @@
 name: 'Season Filter'
 type: module
-description: 'Provides a views filter plugin for filtering entities by season based on date fields'
+description: 'Provides a views filter plugin for filtering entities by season based on field_date_from'
 package: Views
 core_version_requirement: ^10 || ^11
 dependencies:

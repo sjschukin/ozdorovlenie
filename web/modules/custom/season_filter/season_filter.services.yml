@@ -1,4 +1,0 @@
-services:
-  season_filter.season_service:
-    class: Drupal\season_filter\Services\SeasonService
-    arguments: []
