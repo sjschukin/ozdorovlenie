@@ -113,22 +113,37 @@ class SeasonFilter extends FilterPluginBase {
     if (empty($this->options['exposed'])) {
       return TRUE;
     }
-
     // Получаем значение из exposed формы
     $identifier = $this->options['expose']['identifier'];
+    \Drupal::logger('season_filter')->debug('acceptExposedInput - identifier: @id, input: @input', [
+      '@id' => $identifier,
+      '@input' => print_r($input, TRUE)
+    ]);
 
+    $selected_seasons = [];
     if (isset($input[$identifier])) {
       $value = $input[$identifier];
 
-      // Фильтруем только выбранные значения
+      // Обрабатываем как массив выбранных сезонов
       if (is_array($value)) {
-        $this->value = array_filter($value);
+        foreach ($value as $season => $v) {
+          // Если значение равно '1' или не пустое, считаем сезон выбранным
+          if ($v === '1' || $v === 1 || $v === $season) {
+            $selected_seasons[] = $season;
+          }
+        }
       } else {
-        $this->value = [];
+        // Если пришло одно значение (выбран один сезон)
+        if (!empty($value) && $value !== '0') {
+          $selected_seasons[] = $value;
+        }
       }
-    } else {
-      $this->value = [];
     }
+
+    $this->value = $selected_seasons;
+    \Drupal::logger('season_filter')->debug('acceptExposedInput - set value to: @value', [
+      '@value' => print_r($this->value, TRUE)
+    ]);
 
     return parent::acceptExposedInput($input);
   }
@@ -142,20 +157,30 @@ class SeasonFilter extends FilterPluginBase {
     // Определяем таблицу для field_date_from
     $entity_type_id = $this->getEntityType();
     if (!$entity_type_id) {
+      \Drupal::logger('season_filter')->debug('No entity type');
       return;
     }
 
     // Получаем выбранные сезоны
     $selected_seasons = $this->getSelectedSeasons();
 
+    // Отладка: логируем выбранные сезоны
+    \Drupal::logger('season_filter')->debug('Selected seasons: @seasons', [
+      '@seasons' => implode(', ', $selected_seasons)
+    ]);
+
     // Если нет выбранных сезонов и фильтр раскрытый - ничего не фильтруем
     if (empty($selected_seasons) && $this->options['exposed']) {
+      \Drupal::logger('season_filter')->debug('No seasons selected, skipping filter');
       return;
     }
 
     // Если фильтр не раскрытый и нет значений - используем стандартное поведение
     if (empty($selected_seasons) && !$this->options['exposed']) {
       $selected_seasons = ['winter', 'spring', 'summer', 'autumn'];
+      \Drupal::logger('season_filter')->debug('Using all seasons: @seasons', [
+        '@seasons' => implode(', ', $selected_seasons)
+      ]);
     }
 
     // Таблица для field_date_from
@@ -163,11 +188,16 @@ class SeasonFilter extends FilterPluginBase {
     $schema = $this->database->schema();
 
     if (!$schema->tableExists($field_table)) {
+      \Drupal::logger('season_filter')->error('Table @table does not exist', [
+        '@table' => $field_table
+      ]);
       return;
     }
 
     // Присоединяем таблицу
     $table_alias = $this->query->ensureTable($field_table, $this->relationship);
+    \Drupal::logger('season_filter')->debug('Table alias: @alias', ['@alias' => $table_alias]);
+
     $database_type = $this->database->driver();
 
     // Выражение для извлечения месяца
@@ -182,21 +212,32 @@ class SeasonFilter extends FilterPluginBase {
         $month_expression = "EXTRACT(MONTH FROM $table_alias.field_date_from_value)";
     }
 
+    \Drupal::logger('season_filter')->debug('Month expression: @expr', ['@expr' => $month_expression]);
+
     // Строим условия для выбранных сезонов
     $conditions = [];
     foreach ($selected_seasons as $season) {
       $condition = $this->getSeasonCondition($season, $month_expression);
       if ($condition) {
         $conditions[] = $condition;
+        \Drupal::logger('season_filter')->debug('Condition for @season: @cond', [
+          '@season' => $season,
+          '@cond' => $condition
+        ]);
       }
     }
 
     if (empty($conditions)) {
+      \Drupal::logger('season_filter')->debug('No conditions built');
       return;
     }
 
     $combined_condition = implode(' OR ', $conditions);
+    \Drupal::logger('season_filter')->debug('Combined condition: @cond', ['@cond' => $combined_condition]);
+
+    // Добавляем условие WHERE
     $this->query->addWhereExpression($this->options['group'], "($combined_condition)");
+    \Drupal::logger('season_filter')->debug('Added where condition to query');
   }
 
   /**
@@ -229,15 +270,21 @@ class SeasonFilter extends FilterPluginBase {
    */
   protected function getSelectedSeasons() {
     $selected = [];
+    \Drupal::logger('season_filter')->debug('Value in getSelectedSeasons: @value', [
+      '@value' => print_r($this->value, TRUE)
+    ]);
 
     if (is_array($this->value)) {
-      foreach ($this->value as $season => $value) {
-        if (!empty($value) && $value !== 0 && $value !== '0') {
+      foreach ($this->value as $season) {
+        if (in_array($season, ['winter', 'spring', 'summer', 'autumn'])) {
           $selected[] = $season;
         }
       }
     }
 
+    \Drupal::logger('season_filter')->debug('Selected seasons after processing: @seasons', [
+      '@seasons' => implode(', ', $selected)
+    ]);
     return $selected;
   }
 
