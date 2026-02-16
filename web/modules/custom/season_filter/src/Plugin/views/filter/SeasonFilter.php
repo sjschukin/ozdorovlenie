@@ -84,7 +84,7 @@ class SeasonFilter extends FilterPluginBase {
   protected function valueForm(&$form, FormStateInterface $form_state) {
     $form['value'] = [
       '#type' => 'checkboxes',
-      '#title' => $this->t('Seasons'),
+      '#title' => $this->t('Сезоны'),
       '#options' => $this->getValueOptions(),
       '#default_value' => $this->value,
       '#required' => $this->options['exposed'] ? FALSE : TRUE,
@@ -97,10 +97,10 @@ class SeasonFilter extends FilterPluginBase {
   public function getValueOptions() {
     if (!isset($this->valueOptions)) {
       $this->valueOptions = [
-        'winter' => $this->t('Winter'),
-        'spring' => $this->t('Spring'),
-        'summer' => $this->t('Summer'),
-        'autumn' => $this->t('Autumn'),
+        'winter' => $this->t('Зима'),
+        'spring' => $this->t('Весна'),
+        'summer' => $this->t('Лето'),
+        'autumn' => $this->t('Осень'),
       ];
     }
     return $this->valueOptions;
