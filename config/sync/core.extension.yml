@@ -41,6 +41,7 @@ module:
   path: 0
   path_alias: 0
   search: 0
+  season_filter: 0
   shortcut: 0
   smtp: 0
   system: 0

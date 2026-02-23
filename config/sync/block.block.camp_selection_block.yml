@@ -1,24 +1,24 @@
-uuid: 9e35de2b-91ed-4cad-9959-fd7d304cc902
+uuid: 28206a10-7ce4-457d-b6e1-113ec0957c56
 langcode: ru
 status: true
 dependencies:
   content:
-    - 'block_content:basic:670d53a1-b491-4cc4-909b-75c75db00c65'
+    - 'block_content:basic:86b3303a-e583-49df-b37c-dd4d0a98cc46'
   module:
     - block_content
     - system
   theme:
     - kind_tan
-id: hero_block
+id: camp_selection_block
 theme: kind_tan
 region: content
-weight: -5
+weight: -4
 provider: null
-plugin: 'block_content:670d53a1-b491-4cc4-909b-75c75db00c65'
+plugin: 'block_content:86b3303a-e583-49df-b37c-dd4d0a98cc46'
 settings:
-  id: 'block_content:670d53a1-b491-4cc4-909b-75c75db00c65'
-  label: 'Hero block'
-  label_display: '0'
+  id: 'block_content:86b3303a-e583-49df-b37c-dd4d0a98cc46'
+  label: 'Подбор лагеря'
+  label_display: visible
   provider: block_content
   status: true
   info: ''

@@ -14362,6 +14362,84 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Filter Form
+--------------------------------------------------------------*/
+.view-filters form {
+  background-color: var(--surface-color);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  border-radius: 5px;
+  transition: 0.5s;
+  padding: 0 30px;
+  margin-bottom: 15px;
+}
+.view-filters form input[type=text],
+.view-filters form input[type=email],
+.view-filters form textarea,
+.view-filters form select {
+  color: var(--default-color);
+  background-color: transparent;
+  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  padding: 10px;
+}
+.view-filters form input[type=text]:focus,
+.view-filters form input[type=email]:focus,
+.view-filters form textarea:focus,
+.view-filters form select:focus {
+  border-color: var(--accent-color);
+}
+.view-filters form input[type=text]::placeholder,
+.view-filters form input[type=email]::placeholder,
+.view-filters form textarea::placeholder,
+.view-filters form select::placeholder {
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+}
+.view-filters form input[type=text],
+.view-filters form input[type=email],
+.view-filters form select {
+  height: 44px;
+}
+.view-filters form textarea {
+  padding: 10px 12px;
+}
+.view-filters form input[type=submit] {
+  background: var(--accent-color);
+  border: 0;
+  padding: 10px 35px;
+  color: var(--contrast-color);
+  transition: 0.4s;
+  border-radius: 50px;
+}
+.view-filters form input[type=submit]:hover {
+  background: color-mix(in srgb, var(--accent-color) 90%, white 15%);
+}
+.view-filters form .ts-wrapper {
+  color: var(--default-color);
+  background-color: transparent;
+  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  padding: 10px;
+}
+.view-filters form .ts-wrapper.focus {
+  border-color: var(--accent-color);
+}
+.view-filters form .ts-wrapper.focus .ts-control {
+  box-shadow: none;
+}
+.view-filters form .ts-wrapper .ts-control {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.view-filters form .form-required::after {
+  display: none;
+}
+
+/*--------------------------------------------------------------
 # Voucher Request Form
 --------------------------------------------------------------*/
 .webform-submission-voucher-request-form-form input[type=text],

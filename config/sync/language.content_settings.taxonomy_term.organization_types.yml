@@ -1,0 +1,11 @@
+uuid: ee322dab-27ab-4cbf-a28b-e778a85c9835
+langcode: ru
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.organization_types
+id: taxonomy_term.organization_types
+target_entity_type_id: taxonomy_term
+target_bundle: organization_types
+default_langcode: site_default
+language_alterable: false

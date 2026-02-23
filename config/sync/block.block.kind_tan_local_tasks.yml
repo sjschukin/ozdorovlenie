@@ -9,7 +9,7 @@ _core:
 id: kind_tan_local_tasks
 theme: kind_tan
 region: content
-weight: -7
+weight: -8
 provider: null
 plugin: local_tasks_block
 settings:

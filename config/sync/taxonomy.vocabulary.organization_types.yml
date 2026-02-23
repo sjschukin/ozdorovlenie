@@ -1,0 +1,9 @@
+uuid: 4f3cdca7-83bf-4fad-b0f4-0b1d22c9d65a
+langcode: ru
+status: true
+dependencies: {  }
+name: 'Типы организаций'
+vid: organization_types
+description: null
+weight: 0
+new_revision: false

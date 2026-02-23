@@ -48,7 +48,7 @@ class SeasonFilter extends InOperator {
     $options = parent::defineOptions();
     $options['exposed'] = ['default' => TRUE]; // По умолчанию делаем раскрытым
     $options['expose']['contains']['identifier'] = ['default' => 'season'];
-    $options['expose']['contains']['label'] = ['default' => t('Season')];
+    $options['expose']['contains']['label'] = ['default' => t('Сезон')];
     return $options;
   }
 
@@ -76,10 +76,10 @@ class SeasonFilter extends InOperator {
     // Определяем варианты сезонов для выпадающего списка
     if (!isset($this->valueOptions)) {
       $this->valueOptions = [
-        'winter' => $this->t('Winter'),
-        'spring' => $this->t('Spring'),
-        'summer' => $this->t('Summer'),
-        'autumn' => $this->t('Autumn'),
+        'winter' => $this->t('Зима'),
+        'spring' => $this->t('Весна'),
+        'summer' => $this->t('Лето'),
+        'autumn' => $this->t('Осень'),
       ];
     }
     return $this->valueOptions;

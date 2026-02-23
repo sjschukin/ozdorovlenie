@@ -5,8 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.kids_camp.field_address
+    - field.field.node.kids_camp.field_camp_type
     - field.field.node.kids_camp.field_description
     - field.field.node.kids_camp.field_email
+    - field.field.node.kids_camp.field_files
     - field.field.node.kids_camp.field_logo
     - field.field.node.kids_camp.field_map
     - field.field.node.kids_camp.field_notification_email
@@ -29,8 +31,10 @@ content:
     region: content
 hidden:
   field_address: true
+  field_camp_type: true
   field_description: true
   field_email: true
+  field_files: true
   field_logo: true
   field_map: true
   field_notification_email: true

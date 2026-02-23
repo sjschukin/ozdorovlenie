@@ -85,6 +85,9 @@
   # Camp Shift Section
   --------------------------------------------------------------*/
   /*--------------------------------------------------------------
+  # Filter Form
+  --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
   # Voucher Request Form
   --------------------------------------------------------------*/
   /*--------------------------------------------------------------
@@ -13379,6 +13382,80 @@ a > .ck-content code {
 .ck-content .camp-shift .camp-shift-container .camp-shift-item.expanded.unavailable {
   background-color: #707b89;
   border-color: #707b89;
+}
+.ck-content .view-filters form {
+  background-color: var(--surface-color);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  border-radius: 5px;
+  transition: 0.5s;
+  padding: 0 30px;
+  margin-bottom: 15px;
+}
+.ck-content .view-filters form input[type=text],
+.ck-content .view-filters form input[type=email],
+.ck-content .view-filters form textarea,
+.ck-content .view-filters form select {
+  color: var(--default-color);
+  background-color: transparent;
+  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  padding: 10px;
+}
+.ck-content .view-filters form input[type=text]:focus,
+.ck-content .view-filters form input[type=email]:focus,
+.ck-content .view-filters form textarea:focus,
+.ck-content .view-filters form select:focus {
+  border-color: var(--accent-color);
+}
+.ck-content .view-filters form input[type=text]::placeholder,
+.ck-content .view-filters form input[type=email]::placeholder,
+.ck-content .view-filters form textarea::placeholder,
+.ck-content .view-filters form select::placeholder {
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+}
+.ck-content .view-filters form input[type=text],
+.ck-content .view-filters form input[type=email],
+.ck-content .view-filters form select {
+  height: 44px;
+}
+.ck-content .view-filters form textarea {
+  padding: 10px 12px;
+}
+.ck-content .view-filters form input[type=submit] {
+  background: var(--accent-color);
+  border: 0;
+  padding: 10px 35px;
+  color: var(--contrast-color);
+  transition: 0.4s;
+  border-radius: 50px;
+}
+.ck-content .view-filters form input[type=submit]:hover {
+  background: color-mix(in srgb, var(--accent-color) 90%, white 15%);
+}
+.ck-content .view-filters form .ts-wrapper {
+  color: var(--default-color);
+  background-color: transparent;
+  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  padding: 10px;
+}
+.ck-content .view-filters form .ts-wrapper.focus {
+  border-color: var(--accent-color);
+}
+.ck-content .view-filters form .ts-wrapper.focus .ts-control {
+  box-shadow: none;
+}
+.ck-content .view-filters form .ts-wrapper .ts-control {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.ck-content .view-filters form .form-required::after {
+  display: none;
 }
 .ck-content .webform-submission-voucher-request-form-form input[type=text],
 .ck-content .webform-submission-voucher-request-form-form input[type=email],
