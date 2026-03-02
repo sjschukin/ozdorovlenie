@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 86b3303a-e583-49df-b37c-dd4d0a98cc46
+  bundle: basic
+  default_langcode: ru
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Camp Selection block'
+  reusable:
+    -
+      value: true
+  body:
+    -
+      value: "<div class=\"view-filters\">\r\n  <div class=\"row justify-content-center\">\r\n    <div class=\"col-xl-6\">\r\n      <form class=\"pt-4 pb-4\" action=\"/camp_selection\" method=\"get\" id=\"views-exposed-form-camp-selection-page\">\r\n        <div class=\"col-auto\">\r\n          <label for=\"edit-season\">Желаемый сезон</label>\r\n          <select data-drupal-selector=\"edit-season\" id=\"edit-season\" name=\"season\" class=\"form-select\">\r\n            <option value=\"All\" selected=\"selected\">- Любой -</option>\r\n            <option value=\"winter\">Зима</option>\r\n            <option value=\"spring\">Весна</option>\r\n            <option value=\"summer\">Лето</option>\r\n            <option value=\"autumn\">Осень</option>\r\n          </select>\r\n        </div>\r\n        <div class=\"col-auto\">\r\n          <label for=\"edit-direction\">Направление смены</label>\r\n          <select data-drupal-selector=\"edit-direction\" id=\"edit-direction\" name=\"direction\" class=\"form-select\">\r\n            <option value=\"All\" selected=\"selected\">- Любое -</option>\r\n            <option value=\"61\">Естественнонаучная</option>\r\n            <option value=\"60\">Общеразвивающая</option>\r\n            <option value=\"62\">Социально-гуманитарная</option>\r\n            <option value=\"64\">Техническая</option>\r\n            <option value=\"66\">Туристско-краеведческая</option>\r\n            <option value=\"65\">Физкультурно-спортивная</option>\r\n            <option value=\"63\">Художественная</option>\r\n          </select>\r\n        </div>\r\n        <div class=\"col-auto\">\r\n          <label for=\"edit-free-places\">Наличие свободных мест</label>\r\n          <select data-drupal-selector=\"edit-free-places\" id=\"edit-free-places\" name=\"free_places\" class=\"form-select\">\r\n            <option value=\"All\">- Неважно -</option>\r\n            <option value=\"1\" selected=\"selected\">Да</option>\r\n            <option value=\"2\">Нет</option>\r\n          </select>\r\n        </div>\r\n        <div class=\"col-auto text-center\">\r\n          <input data-drupal-selector=\"edit-submit-camp-selection\" type=\"submit\" id=\"edit-submit-camp-selection\"\r\n                value=\"Найти\" class=\"button js-form-submit form-submit mt-4\">\r\n        </div>\r\n      </form>\r\n    </div>\r\n  </div>\r\n</div>"
+      format: full_html
+      summary: ''
