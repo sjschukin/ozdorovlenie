@@ -12201,6 +12201,32 @@ a[class=button] {
   --bs-btn-disabled-border-color: #f8f9fa;
 }
 
+.accordion details {
+  overflow: unset;
+}
+.accordion details[open] .accordion-button {
+  color: var(--bs-accordion-active-color);
+  background-color: var(--bs-accordion-active-bg);
+}
+.accordion details[open] .accordion-button::after {
+  background-image: var(--bs-accordion-btn-active-icon);
+  transform: var(--bs-accordion-btn-icon-transform);
+}
+.accordion details:not([open]) {
+  border-bottom: 0;
+}
+.accordion details:not([open]) .accordion-button {
+  color: var(--bs-accordion-btn-color);
+  background-color: var(--bs-accordion-btn-bg);
+  border: unset;
+  border-bottom-right-radius: var(--bs-accordion-border-radius);
+  border-bottom-left-radius: var(--bs-accordion-border-radius);
+}
+.accordion details:not([open]) .accordion-button::after {
+  background-image: var(--bs-accordion-btn-active-icon);
+  transform: unset;
+}
+
 .form-control.image-button {
   width: unset;
 }
@@ -12392,13 +12418,7 @@ footer.footer-dark a:hover {
 }
 footer .region-footer {
   display: flex;
-  gap: 40px;
-}
-@media screen and (max-width: 767px) {
-  footer .region-footer {
-    flex-direction: column;
-    gap: 30px;
-  }
+  flex-direction: column;
 }
 
 .region-sidebar-first,
@@ -13327,238 +13347,127 @@ h6,
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
-/* Desktop Navigation */
-@media (min-width: 1200px) {
-  #block-kind-tan-main-navigation {
-    padding: 0;
-  }
-  #block-kind-tan-main-navigation ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    list-style: none;
-    align-items: center;
-  }
-  #block-kind-tan-main-navigation li {
-    position: relative;
-  }
-  #block-kind-tan-main-navigation > ul > li {
-    white-space: nowrap;
-    padding: 15px 14px;
-  }
-  #block-kind-tan-main-navigation > ul > li:last-child {
-    padding-right: 0;
-  }
-  #block-kind-tan-main-navigation a,
-  #block-kind-tan-main-navigation a:focus {
-    color: var(--nav-color);
-    font-size: 15px;
-    padding: 0 2px;
-    font-family: var(--nav-font);
-    font-weight: 400;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    white-space: nowrap;
-    transition: 0.3s;
-    position: relative;
-  }
-  #block-kind-tan-main-navigation a i,
-  #block-kind-tan-main-navigation a:focus i {
-    font-size: 12px;
-    line-height: 0;
-    margin-left: 5px;
-    transition: 0.3s;
-  }
-  #block-kind-tan-main-navigation > ul > li > a:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: -6px;
-    left: 0;
-    background-color: var(--nav-hover-color);
-    visibility: hidden;
-    width: 0px;
-    transition: all 0.3s ease-in-out 0s;
-  }
-  #block-kind-tan-main-navigation a:hover:before,
-  #block-kind-tan-main-navigation li:hover > a:before,
-  #block-kind-tan-main-navigation .active:before,
-  #block-kind-tan-main-navigation .media-library-view--widget .view-header a.is-active:before,
-  .media-library-view--widget .view-header #block-kind-tan-main-navigation a.is-active:before {
-    visibility: visible;
-    width: 100%;
-  }
-  #block-kind-tan-main-navigation li:hover > a,
-  #block-kind-tan-main-navigation .active,
-  #block-kind-tan-main-navigation .media-library-view--widget .view-header a.is-active,
-  .media-library-view--widget .view-header #block-kind-tan-main-navigation a.is-active,
-  #block-kind-tan-main-navigation .active:focus {
-    color: var(--nav-hover-color);
-  }
-  #block-kind-tan-main-navigation .dropdown ul {
-    margin: 0;
-    padding: 10px 0;
-    background: var(--nav-dropdown-background-color);
-    display: block;
-    position: absolute;
-    visibility: hidden;
-    left: 14px;
-    top: 130%;
-    opacity: 0;
-    transition: 0.3s;
-    border-radius: 4px;
-    z-index: 99;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-  }
-  #block-kind-tan-main-navigation .dropdown ul li {
-    min-width: 200px;
-  }
-  #block-kind-tan-main-navigation .dropdown ul a {
-    padding: 10px 20px;
-    font-size: 15px;
-    text-transform: none;
-    color: var(--nav-dropdown-color);
-  }
-  #block-kind-tan-main-navigation .dropdown ul a i {
-    font-size: 12px;
-  }
-  #block-kind-tan-main-navigation .dropdown ul a:hover,
-  #block-kind-tan-main-navigation .dropdown ul .active:hover,
-  #block-kind-tan-main-navigation .dropdown ul li:hover > a {
-    color: var(--nav-dropdown-hover-color);
-  }
-  #block-kind-tan-main-navigation .dropdown:hover > ul {
-    opacity: 1;
-    top: 100%;
-    visibility: visible;
-  }
-  #block-kind-tan-main-navigation .dropdown .dropdown ul {
-    top: 0;
-    left: -90%;
-    visibility: hidden;
-  }
-  #block-kind-tan-main-navigation .dropdown .dropdown:hover > ul {
-    opacity: 1;
-    top: 0;
-    left: -100%;
-    visibility: visible;
-  }
+.mobile-nav-toggle {
+  color: var(--nav-color);
+  font-size: 28px;
+  line-height: 0;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: color 0.3s;
 }
-/* Mobile Navigation */
-@media (max-width: 1199.98px) {
-  .mobile-nav-toggle {
-    color: var(--nav-color);
-    font-size: 28px;
-    line-height: 0;
-    margin-right: 10px;
-    cursor: pointer;
-    transition: color 0.3s;
-  }
-  .navmenu {
-    padding: 0;
-    z-index: 9997;
-  }
-  .navmenu ul {
-    display: none;
-    list-style: none;
-    position: absolute;
-    inset: 60px 20px 20px 20px;
-    padding: 10px 0;
-    margin: 0;
-    border-radius: 6px;
-    background-color: var(--nav-mobile-background-color);
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-    box-shadow: none;
-    overflow-y: auto;
-    transition: 0.3s;
-    z-index: 9998;
-  }
-  .navmenu a,
-  .navmenu a:focus {
-    color: var(--nav-dropdown-color);
-    padding: 10px 20px;
-    font-family: var(--nav-font);
-    font-size: 17px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    white-space: nowrap;
-    transition: 0.3s;
-  }
-  .navmenu a i,
-  .navmenu a:focus i {
-    font-size: 12px;
-    line-height: 0;
-    margin-left: 5px;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: 0.3s;
-    background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-  }
-  .navmenu a i:hover,
-  .navmenu a:focus i:hover {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
-  }
-  .navmenu a:hover,
-  .navmenu .active,
-  .navmenu .media-library-view--widget .view-header a.is-active,
-  .media-library-view--widget .view-header .navmenu a.is-active,
-  .navmenu .active:focus {
-    color: var(--nav-dropdown-hover-color);
-  }
-  .navmenu .active i, .navmenu .media-library-view--widget .view-header a.is-active i, .media-library-view--widget .view-header .navmenu a.is-active i,
-  .navmenu .active:focus i {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
-    transform: rotate(180deg);
-  }
-  .navmenu .dropdown ul {
-    position: static;
-    display: none;
-    z-index: 99;
-    padding: 10px 0;
-    margin: 10px 20px;
-    background-color: var(--nav-dropdown-background-color);
-    transition: all 0.5s ease-in-out;
-  }
-  .navmenu .dropdown ul ul {
-    background-color: rgba(33, 37, 41, 0.1);
-  }
-  .navmenu .dropdown > .dropdown-active {
-    display: block;
-    background-color: rgba(33, 37, 41, 0.03);
-  }
-  .mobile-nav-active {
-    overflow: hidden;
-  }
-  .mobile-nav-active .mobile-nav-toggle {
-    color: #fff;
-    position: absolute;
-    font-size: 32px;
-    top: 15px;
-    right: 15px;
-    margin-right: 0;
-    z-index: 9999;
-  }
-  .mobile-nav-active .navmenu {
-    position: fixed;
-    overflow: hidden;
-    inset: 0;
-    background: rgba(33, 37, 41, 0.8);
-    transition: 0.3s;
-  }
-  .mobile-nav-active .navmenu #block-kind-tan-main-navigation > ul {
-    display: block;
-  }
+
+.navmenu {
+  padding: 0;
+  z-index: 9997;
 }
+.navmenu ul {
+  display: none;
+  list-style: none;
+  position: absolute;
+  inset: 60px 20px 20px 20px;
+  padding: 10px 0;
+  margin: 0;
+  border-radius: 6px;
+  background-color: var(--nav-mobile-background-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  box-shadow: none;
+  overflow-y: auto;
+  transition: 0.3s;
+  z-index: 9998;
+}
+.navmenu a,
+.navmenu a:focus {
+  color: var(--nav-dropdown-color);
+  padding: 10px 20px;
+  font-family: var(--nav-font);
+  font-size: 17px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+.navmenu a i,
+.navmenu a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+}
+.navmenu a i:hover,
+.navmenu a:focus i:hover {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+}
+.navmenu a:hover,
+.navmenu .active,
+.navmenu .media-library-view--widget .view-header a.is-active,
+.media-library-view--widget .view-header .navmenu a.is-active,
+.navmenu .active:focus {
+  color: var(--nav-dropdown-hover-color);
+}
+.navmenu .active i, .navmenu .media-library-view--widget .view-header a.is-active i, .media-library-view--widget .view-header .navmenu a.is-active i,
+.navmenu .active:focus i {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  transform: rotate(180deg);
+}
+.navmenu .dropdown ul {
+  position: static;
+  display: none;
+  z-index: 99;
+  padding: 10px 0;
+  margin: 10px 20px;
+  background-color: var(--nav-dropdown-background-color);
+  transition: all 0.5s ease-in-out;
+}
+.navmenu .dropdown ul ul {
+  background-color: rgba(33, 37, 41, 0.1);
+}
+.navmenu .dropdown > .dropdown-active {
+  display: block;
+  background-color: rgba(33, 37, 41, 0.03);
+}
+
+.mobile-nav-active {
+  overflow: hidden;
+}
+.mobile-nav-active .mobile-nav-toggle {
+  color: #fff;
+  position: absolute;
+  font-size: 32px;
+  top: 15px;
+  right: 15px;
+  margin-right: 0;
+  z-index: 9999;
+}
+.mobile-nav-active .navmenu {
+  position: fixed;
+  overflow: hidden;
+  inset: 0;
+  background: rgba(33, 37, 41, 0.8);
+  transition: 0.3s;
+}
+.mobile-nav-active .navmenu #block-kind-tan-main-navigation > ul {
+  display: block;
+}
+
+#block-kind-tan-main-navigation > ul {
+  display: none !important;
+}
+
+.mobile-nav-active #block-kind-tan-main-navigation > ul {
+  display: block !important;
+}
+
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
