@@ -1,0 +1,18 @@
+uuid: 2fcd66d2-8b53-4a8a-938d-4967d32d4129
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.regulatory_framework
+id: node.regulatory_framework.title
+field_name: title
+entity_type: node
+bundle: regulatory_framework
+label: Наименование
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

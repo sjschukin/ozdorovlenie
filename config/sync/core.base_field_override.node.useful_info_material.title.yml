@@ -1,0 +1,18 @@
+uuid: 27eb5052-b40c-498c-b9b1-85dfe103c486
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.useful_info_material
+id: node.useful_info_material.title
+field_name: title
+entity_type: node
+bundle: useful_info_material
+label: Наименование
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

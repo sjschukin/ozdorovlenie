@@ -1,0 +1,17 @@
+uuid: ceabf494-9312-42fe-9228-23652e828c32
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Событие для организаторов отдыха'
+type: organizers_event
+description: 'Содержит список материалов с событиями для организаторов.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

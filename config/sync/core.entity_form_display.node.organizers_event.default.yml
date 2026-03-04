@@ -1,0 +1,44 @@
+uuid: f296c0b1-0c5f-4851-bded-8d155d50c77f
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.organizers_event.field_document_file
+    - field.field.node.organizers_event.field_organizers_event_type
+    - node.type.organizers_event
+  module:
+    - file
+id: node.organizers_event.default
+targetEntityType: node
+bundle: organizers_event
+mode: default
+content:
+  field_document_file:
+    type: file_generic
+    weight: 2
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_organizers_event_type:
+    type: options_buttons
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

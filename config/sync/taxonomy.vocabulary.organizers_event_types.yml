@@ -1,0 +1,9 @@
+uuid: bac0c212-c704-4d25-b991-11bf48637d48
+langcode: ru
+status: true
+dependencies: {  }
+name: 'Типы материалов для событий организаторов отдыха'
+vid: organizers_event_types
+description: null
+weight: 0
+new_revision: false

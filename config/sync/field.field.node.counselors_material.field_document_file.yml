@@ -1,0 +1,27 @@
+uuid: bf0b1370-78c8-4172-a231-a722e5dc9106
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document_file
+    - node.type.counselors_material
+  module:
+    - file
+id: node.counselors_material.field_document_file
+field_name: field_document_file
+entity_type: node
+bundle: counselors_material
+label: Файл
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: 'files/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'pdf docx xlsx zip'
+  max_filesize: ''
+  description_field: false
+field_type: file

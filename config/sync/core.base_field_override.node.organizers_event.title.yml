@@ -1,0 +1,18 @@
+uuid: c41e7e9d-a57a-44e0-b5cf-90a4200aaf0d
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.organizers_event
+id: node.organizers_event.title
+field_name: title
+entity_type: node
+bundle: organizers_event
+label: Наименование
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

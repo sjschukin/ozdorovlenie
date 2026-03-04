@@ -1,0 +1,9 @@
+uuid: 3443c359-ecf9-4992-8423-990f408a5963
+langcode: ru
+status: true
+dependencies: {  }
+name: 'Типы методических материалов'
+vid: methodological_material_types
+description: null
+weight: 0
+new_revision: false

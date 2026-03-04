@@ -1,0 +1,29 @@
+uuid: 95e0fd60-5a58-4146-b4f6-2a3fdf428ba0
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_methodological_type
+    - node.type.methodological_material
+    - taxonomy.vocabulary.methodological_material_types
+id: node.methodological_material.field_methodological_type
+field_name: field_methodological_type
+entity_type: node
+bundle: methodological_material
+label: Тип
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      methodological_material_types: methodological_material_types
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

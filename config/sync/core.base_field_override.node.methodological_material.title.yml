@@ -1,0 +1,18 @@
+uuid: 9565d1d0-4879-40a4-984f-ada03ee7679f
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.methodological_material
+id: node.methodological_material.title
+field_name: title
+entity_type: node
+bundle: methodological_material
+label: Наименование
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

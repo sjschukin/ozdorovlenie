@@ -1,0 +1,44 @@
+uuid: fffd2e7c-7ef8-4577-a21e-4805d8cbab7d
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.counselors_material.field_counselors_material_type
+    - field.field.node.counselors_material.field_document_file
+    - node.type.counselors_material
+  module:
+    - file
+id: node.counselors_material.default
+targetEntityType: node
+bundle: counselors_material
+mode: default
+content:
+  field_counselors_material_type:
+    type: options_buttons
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_document_file:
+    type: file_generic
+    weight: 2
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

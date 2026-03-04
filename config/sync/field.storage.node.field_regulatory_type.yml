@@ -1,0 +1,20 @@
+uuid: 8b7adab0-e7e3-4781-b293-f691b8ca03a8
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_regulatory_type
+field_name: field_regulatory_type
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

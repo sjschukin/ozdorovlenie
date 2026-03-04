@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: Мероприятие
 type: event
-description: 'Мероприятие, проходящее в определенном месте в определенное время'
+description: 'Мероприятие, проходящее в определенном месте в определенное время.'
 help: null
 new_revision: false
 preview_mode: 1

@@ -1,0 +1,17 @@
+uuid: 46d10f96-67b3-4904-87f2-838c8089e451
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Полезная информация'
+type: useful_info_material
+description: 'Содержит список материалов с полезной информацией.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

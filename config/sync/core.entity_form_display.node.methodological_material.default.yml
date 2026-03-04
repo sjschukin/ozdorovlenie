@@ -1,0 +1,44 @@
+uuid: a31da4f9-0ab8-4522-9fd4-15fb31a11596
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.methodological_material.field_document_file
+    - field.field.node.methodological_material.field_methodological_type
+    - node.type.methodological_material
+  module:
+    - file
+id: node.methodological_material.default
+targetEntityType: node
+bundle: methodological_material
+mode: default
+content:
+  field_document_file:
+    type: file_generic
+    weight: 2
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_methodological_type:
+    type: options_buttons
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

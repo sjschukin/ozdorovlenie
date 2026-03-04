@@ -1,0 +1,37 @@
+uuid: b8b4bf81-ef60-4341-a7ea-51ce7e085827
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.useful_info_material.field_document_file
+    - node.type.useful_info_material
+  module:
+    - file
+id: node.useful_info_material.default
+targetEntityType: node
+bundle: useful_info_material
+mode: default
+content:
+  field_document_file:
+    type: file_generic
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

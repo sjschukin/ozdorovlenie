@@ -1,0 +1,11 @@
+uuid: 4524d92f-2559-4918-ba04-d21b0eb0d9be
+langcode: ru
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.counselors_material_types
+id: taxonomy_term.counselors_material_types
+target_entity_type_id: taxonomy_term
+target_bundle: counselors_material_types
+default_langcode: site_default
+language_alterable: false

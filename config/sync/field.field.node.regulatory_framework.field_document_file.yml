@@ -1,0 +1,27 @@
+uuid: fff7ac5f-8906-4183-a263-05092f2fb1bb
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document_file
+    - node.type.regulatory_framework
+  module:
+    - file
+id: node.regulatory_framework.field_document_file
+field_name: field_document_file
+entity_type: node
+bundle: regulatory_framework
+label: Файл
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: 'files/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'pdf docx xlsx zip'
+  max_filesize: ''
+  description_field: false
+field_type: file

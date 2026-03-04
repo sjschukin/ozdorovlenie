@@ -1,0 +1,27 @@
+uuid: 94524cc0-cf65-4d17-996c-c29c92e34893
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document_file
+    - node.type.useful_info_material
+  module:
+    - file
+id: node.useful_info_material.field_document_file
+field_name: field_document_file
+entity_type: node
+bundle: useful_info_material
+label: Файл
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: 'files/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'pdf docx xlsx zip'
+  max_filesize: ''
+  description_field: false
+field_type: file

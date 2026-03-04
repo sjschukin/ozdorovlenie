@@ -1,0 +1,9 @@
+uuid: f7206f3c-8a73-416a-bfb1-9e9c69b074cf
+langcode: ru
+status: true
+dependencies: {  }
+name: 'Типы нормативно-правовой базы'
+vid: regulatory_types
+description: null
+weight: 0
+new_revision: false

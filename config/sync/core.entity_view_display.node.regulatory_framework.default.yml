@@ -1,0 +1,53 @@
+uuid: 1c5f57b2-4e82-4e11-89fd-2d27bb0f1073
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.regulatory_framework.field_document_file
+    - field.field.node.regulatory_framework.field_document_link
+    - field.field.node.regulatory_framework.field_regulatory_type
+    - node.type.regulatory_framework
+  module:
+    - file
+    - link
+    - user
+id: node.regulatory_framework.default
+targetEntityType: node
+bundle: regulatory_framework
+mode: default
+content:
+  field_document_file:
+    type: file_default
+    label: inline
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_document_link:
+    type: link
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_regulatory_type:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

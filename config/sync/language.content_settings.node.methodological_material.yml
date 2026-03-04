@@ -1,0 +1,11 @@
+uuid: f7cc97eb-970b-4f51-99f1-849a7642b6da
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.methodological_material
+id: node.methodological_material
+target_entity_type_id: node
+target_bundle: methodological_material
+default_langcode: site_default
+language_alterable: false

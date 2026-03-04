@@ -1,0 +1,11 @@
+uuid: ebee9be4-1483-4cc7-9837-825c4831b285
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.regulatory_framework
+id: node.regulatory_framework
+target_entity_type_id: node
+target_bundle: regulatory_framework
+default_langcode: site_default
+language_alterable: false

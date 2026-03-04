@@ -1,0 +1,29 @@
+uuid: 08bc313d-4206-4853-8485-541d57cd5d0a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_counselors_material_type
+    - node.type.counselors_material
+    - taxonomy.vocabulary.counselors_material_types
+id: node.counselors_material.field_counselors_material_type
+field_name: field_counselors_material_type
+entity_type: node
+bundle: counselors_material
+label: Тип
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      counselors_material_types: counselors_material_types
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

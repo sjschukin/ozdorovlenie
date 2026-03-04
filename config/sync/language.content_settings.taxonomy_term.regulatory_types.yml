@@ -1,0 +1,11 @@
+uuid: 85545e83-39b5-4645-a2e1-661ffc43241f
+langcode: ru
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.regulatory_types
+id: taxonomy_term.regulatory_types
+target_entity_type_id: taxonomy_term
+target_bundle: regulatory_types
+default_langcode: site_default
+language_alterable: false

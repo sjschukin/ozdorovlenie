@@ -1,0 +1,23 @@
+uuid: 7cd8b732-1585-49f9-82e1-4a568a9fda62
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document_link
+    - node.type.regulatory_framework
+  module:
+    - link
+id: node.regulatory_framework.field_document_link
+field_name: field_document_link
+entity_type: node
+bundle: regulatory_framework
+label: 'Ссылка на документ'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

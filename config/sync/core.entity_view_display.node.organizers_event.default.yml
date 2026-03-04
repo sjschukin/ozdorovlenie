@@ -1,0 +1,39 @@
+uuid: 85330505-ea93-489c-aa37-c09b36e4718a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.organizers_event.field_document_file
+    - field.field.node.organizers_event.field_organizers_event_type
+    - node.type.organizers_event
+  module:
+    - file
+    - user
+id: node.organizers_event.default
+targetEntityType: node
+bundle: organizers_event
+mode: default
+content:
+  field_document_file:
+    type: file_default
+    label: inline
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_organizers_event_type:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

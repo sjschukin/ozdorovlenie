@@ -1,0 +1,11 @@
+uuid: 7a370889-7ab7-4b63-b021-cb4b82911d1a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.organizers_event
+id: node.organizers_event
+target_entity_type_id: node
+target_bundle: organizers_event
+default_langcode: site_default
+language_alterable: false

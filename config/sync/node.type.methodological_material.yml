@@ -1,0 +1,17 @@
+uuid: 9b1c7fc9-f1de-4226-8af5-eb573049a0bc
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Методический материал'
+type: methodological_material
+description: 'Содержит список методических материалов.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

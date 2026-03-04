@@ -1,0 +1,17 @@
+uuid: 19ca1630-5249-4bee-821b-1783588884ee
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Материал для вожатых'
+type: counselors_material
+description: 'Содержит список материалов для вожатых.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

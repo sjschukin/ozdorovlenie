@@ -1,0 +1,11 @@
+uuid: 225d9f76-b1a7-4ada-a8f4-f9e8dc973368
+langcode: ru
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.methodological_material_types
+id: taxonomy_term.methodological_material_types
+target_entity_type_id: taxonomy_term
+target_bundle: methodological_material_types
+default_langcode: site_default
+language_alterable: false

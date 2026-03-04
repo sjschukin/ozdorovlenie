@@ -1,0 +1,17 @@
+uuid: ada61e3d-aa2d-4a0b-bb87-630cc78fb3a6
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Нормативно-правовая база'
+type: regulatory_framework
+description: 'Содержит список нормативно-правовых документов.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

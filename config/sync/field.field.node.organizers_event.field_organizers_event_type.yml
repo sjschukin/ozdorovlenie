@@ -1,0 +1,29 @@
+uuid: 360674b7-5d04-4d48-ab59-1a1b630975f6
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organizers_event_type
+    - node.type.organizers_event
+    - taxonomy.vocabulary.organizers_event_types
+id: node.organizers_event.field_organizers_event_type
+field_name: field_organizers_event_type
+entity_type: node
+bundle: organizers_event
+label: Тип
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      organizers_event_types: organizers_event_types
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

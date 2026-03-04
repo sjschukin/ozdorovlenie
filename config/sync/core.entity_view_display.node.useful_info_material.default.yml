@@ -1,0 +1,30 @@
+uuid: 176e4bf0-4c2e-411c-94dc-b1cd20db0786
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.useful_info_material.field_document_file
+    - node.type.useful_info_material
+  module:
+    - file
+    - user
+id: node.useful_info_material.default
+targetEntityType: node
+bundle: useful_info_material
+mode: default
+content:
+  field_document_file:
+    type: file_default
+    label: inline
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

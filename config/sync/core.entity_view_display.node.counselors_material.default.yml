@@ -1,0 +1,39 @@
+uuid: 592357cd-935d-4b04-ba60-8edfd94ff3ad
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.counselors_material.field_counselors_material_type
+    - field.field.node.counselors_material.field_document_file
+    - node.type.counselors_material
+  module:
+    - file
+    - user
+id: node.counselors_material.default
+targetEntityType: node
+bundle: counselors_material
+mode: default
+content:
+  field_counselors_material_type:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_document_file:
+    type: file_default
+    label: inline
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

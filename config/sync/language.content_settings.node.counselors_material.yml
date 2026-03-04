@@ -1,0 +1,11 @@
+uuid: 18cecb96-89b9-4f98-bc90-2b565e7b25e6
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.counselors_material
+id: node.counselors_material
+target_entity_type_id: node
+target_bundle: counselors_material
+default_langcode: site_default
+language_alterable: false

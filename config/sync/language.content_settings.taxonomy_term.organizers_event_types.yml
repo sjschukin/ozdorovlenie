@@ -1,0 +1,11 @@
+uuid: 73380fcf-5648-444a-a4f5-faa8af17484a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.organizers_event_types
+id: taxonomy_term.organizers_event_types
+target_entity_type_id: taxonomy_term
+target_bundle: organizers_event_types
+default_langcode: site_default
+language_alterable: false

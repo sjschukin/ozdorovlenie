@@ -1,0 +1,9 @@
+uuid: c8809e5b-021f-41c0-b6f0-84b9d0c89a78
+langcode: ru
+status: true
+dependencies: {  }
+name: 'Типы материалов для вожатых'
+vid: counselors_material_types
+description: null
+weight: 0
+new_revision: false

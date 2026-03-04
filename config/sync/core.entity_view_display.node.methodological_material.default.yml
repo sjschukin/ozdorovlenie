@@ -1,0 +1,39 @@
+uuid: d75fd9f0-159b-49da-8891-56c13f389bbc
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.methodological_material.field_document_file
+    - field.field.node.methodological_material.field_methodological_type
+    - node.type.methodological_material
+  module:
+    - file
+    - user
+id: node.methodological_material.default
+targetEntityType: node
+bundle: methodological_material
+mode: default
+content:
+  field_document_file:
+    type: file_default
+    label: inline
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_methodological_type:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
