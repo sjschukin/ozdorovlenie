@@ -20,19 +20,31 @@
 #}
 {% import _self as menus %}
 
-{#
-We call a macro which calls itself to render the full tree.
-@see http://twig.sensiolabs.org/doc/tags/macro.html
-#}
-{{ menus.build_menu(items, attributes, 0) }}
-<i class="mobile-nav-toggle bi bi-list"></i>
+<a href="#offcanvasNavigation" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasNavigation">
+  <i class="mobile-nav-toggle bi bi-list"></i>
+</a>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavigation" aria-labelledby="offcanvasNavigationLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasNavigationLabel">Отдых и оздоровление</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    {{ menus.build_menu(items, attributes, 0) }}
+  </div>
+</div>
 
 {% macro build_menu(items, attributes, menu_level) %}
   {% import _self as menus %}
   {% if items %}
-    <ul>
+    {%
+      set ul_classes = [
+        menu_level > 0 ? 'submenu' : ''
+      ]
+    %}
+    <ul{{ attributes.addClass(ul_classes) }}>
     {% for item in items %}
-      {{ menus.add_link(item, attributes, menu_level) }}
+      {{ menus.add_link(item, attributes.removeClass(ul_classes), menu_level) }}
     {% endfor %}
     </ul>
   {% endif %}
@@ -42,24 +54,20 @@ We call a macro which calls itself to render the full tree.
   {% import _self as menus %}
   {%
     set list_item_classes = [
-      item.is_expanded or item.is_collapsed ? 'dropdown'
-    ]
-  %}
-  {%
-    set link_class = [
-      item.in_active_trail ? 'active'
-    ]
-  %}
-  {%
-    set toggle_class = [
+      item.below ? 'has-dropdown' : '',
+      item.in_active_trail ? 'active' : ''
     ]
   %}
   <li{{ item.attributes.addClass(list_item_classes) }}>
-    {% if menu_level == 0 and item.below %}
-      {{ link(item.title, item.url, { 'class': link_class, 'role': 'button', 'data-bs-toggle': 'dropdown', 'aria-expanded': 'false', 'title': ('Expand menu' | t) ~ ' ' ~ item.title }) }}
+    {% if item.below %}
+      {% if item.url is null or item.url is empty %}
+        <a href="{{ item.url }}">{{ item.title }} <i class="bi bi-chevron-down"></i></a>
+      {% else %}
+        {{ item.title }} <i class="bi bi-chevron-down"></i>
+      {% endif %}
       {{ menus.build_menu(item.below, attributes, menu_level + 1) }}
     {% else %}
-      {{ link(item.title, item.url, { 'class': link_class }) }}
+      {{ link(item.title, item.url) }}
     {% endif %}
   </li>
 {% endmacro %}
