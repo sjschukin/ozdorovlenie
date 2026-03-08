@@ -1,0 +1,24 @@
+uuid: d896228d-6cb4-4427-8bf3-6170599eae78
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - filter.format.basic_html
+    - node.type.kids_federal_camp
+  module:
+    - text
+id: node.kids_federal_camp.field_description
+field_name: field_description
+entity_type: node
+bundle: kids_federal_camp
+label: Описание
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

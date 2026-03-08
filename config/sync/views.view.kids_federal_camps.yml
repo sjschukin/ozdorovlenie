@@ -1,4 +1,4 @@
-uuid: cdc335af-86a4-4730-b2b9-0200c5a1596f
+uuid: 93ae6d9b-27b6-4701-88c9-bf77608d28ff
 langcode: ru
 status: true
 dependencies:
@@ -6,14 +6,14 @@ dependencies:
     - field.storage.node.field_address
     - field.storage.node.field_logo
     - image.style.square_300
-    - node.type.kids_camp
+    - node.type.kids_federal_camp
   module:
     - image
     - node
     - user
     - views_bootstrap
-id: kids_camps
-label: 'Детские лагеря'
+id: kids_federal_camps
+label: 'Федеральные детские центры'
 module: views
 description: ''
 tag: ''
@@ -26,7 +26,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Детские лагеря'
+      title: 'Федеральные детские центры'
       fields:
         field_logo:
           id: field_logo
@@ -344,11 +344,44 @@ display:
           id: type
           table: node_field_data
           field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          operator: in
           value:
-            kids_camp: kids_camp
+            kids_federal_camp: kids_federal_camp
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
       style:
         type: views_bootstrap_grid
         options:
@@ -393,7 +426,7 @@ display:
         - 'config:field.storage.node.field_logo'
   block_1:
     id: block_1
-    display_title: 'Block: Детские лагеря'
+    display_title: 'Block: Федеральные детские центры'
     display_plugin: block
     position: 1
     display_options:

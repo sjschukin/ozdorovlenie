@@ -1,0 +1,22 @@
+uuid: f7cdadd7-3e86-49db-b045-76ae24c9d3f0
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+id: kids_federal_camps_pathauto_template
+label: kids_federal_camps_pathauto_template
+type: 'canonical_entities:node'
+pattern: '/federal-camps/[node:nid]'
+selection_criteria:
+  a4f8980b-a612-4e55-b796-d2ec8437b622:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: a4f8980b-a612-4e55-b796-d2ec8437b622
+    context_mapping:
+      node: node
+    bundles:
+      kids_federal_camp: kids_federal_camp
+selection_logic: and
+weight: -5
+relationships: {  }

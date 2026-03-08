@@ -13,7 +13,7 @@ type: image
 settings:
   target_type: file
   display_field: false
-  display_default: false
+  display_default: true
   uri_scheme: public
   default_image:
     uuid: 8cceef32-144a-461d-8a86-d7d2cc4207cf

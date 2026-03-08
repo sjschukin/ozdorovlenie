@@ -1,29 +1,27 @@
-uuid: 29170596-15e8-4d43-9062-98a90810e4e9
+uuid: f55fc1ca-f78b-43dc-a0a4-e8e2817542bb
 langcode: ru
 status: true
 dependencies:
   config:
-    - field.field.node.kids_camp.field_address
-    - field.field.node.kids_camp.field_description
-    - field.field.node.kids_camp.field_email
-    - field.field.node.kids_camp.field_files
-    - field.field.node.kids_camp.field_logo
-    - field.field.node.kids_camp.field_map
-    - field.field.node.kids_camp.field_notification_email
-    - field.field.node.kids_camp.field_phone_number
-    - field.field.node.kids_camp.field_photo
-    - field.field.node.kids_camp.field_sort
-    - field.field.node.kids_camp.field_website
-    - node.type.kids_camp
+    - field.field.node.kids_federal_camp.field_address
+    - field.field.node.kids_federal_camp.field_description
+    - field.field.node.kids_federal_camp.field_email
+    - field.field.node.kids_federal_camp.field_files
+    - field.field.node.kids_federal_camp.field_logo
+    - field.field.node.kids_federal_camp.field_phone_number
+    - field.field.node.kids_federal_camp.field_photo
+    - field.field.node.kids_federal_camp.field_sort
+    - field.field.node.kids_federal_camp.field_website
+    - node.type.kids_federal_camp
   module:
     - file
     - image
     - link
     - text
     - user
-id: node.kids_camp.default
+id: node.kids_federal_camp.default
 targetEntityType: node
-bundle: kids_camp
+bundle: kids_federal_camp
 mode: default
 content:
   field_address:
@@ -32,21 +30,21 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 3
+    weight: 2
     region: content
   field_description:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 4
+    weight: 3
     region: content
   field_email:
     type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 6
+    weight: 5
     region: content
   field_files:
     type: file_default
@@ -54,7 +52,7 @@ content:
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
-    weight: 11
+    weight: 8
     region: content
   field_logo:
     type: image
@@ -65,21 +63,7 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 2
-    region: content
-  field_map:
-    type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 9
-    region: content
-  field_notification_email:
-    type: basic_string
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 10
+    weight: 1
     region: content
   field_phone_number:
     type: string
@@ -87,7 +71,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 5
+    weight: 4
     region: content
   field_photo:
     type: image_url
@@ -95,7 +79,7 @@ content:
     settings:
       image_style: thumbnail_800_600
     third_party_settings: {  }
-    weight: 8
+    weight: 7
     region: content
   field_sort:
     type: number_integer
@@ -104,7 +88,7 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 12
+    weight: 9
     region: content
   field_website:
     type: link
@@ -116,7 +100,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 7
+    weight: 6
     region: content
   links:
     settings: {  }

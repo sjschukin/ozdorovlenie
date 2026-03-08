@@ -1,0 +1,29 @@
+uuid: e6450c76-2629-4fcc-938a-71ec574e8521
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.kids_federal_camps
+  module:
+    - system
+    - views
+  theme:
+    - kind_tan
+id: kids_federal_camps_block
+theme: kind_tan
+region: content
+weight: -2
+provider: null
+plugin: 'views_block:kids_federal_camps-block_1'
+settings:
+  id: 'views_block:kids_federal_camps-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

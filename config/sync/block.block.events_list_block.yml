@@ -10,7 +10,7 @@ dependencies:
 id: events_list_block
 theme: kind_tan
 region: content
-weight: -1
+weight: 0
 provider: null
 plugin: districts_events_list_block
 settings:

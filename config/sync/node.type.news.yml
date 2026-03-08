@@ -1,0 +1,17 @@
+uuid: a4a2c5e7-018e-4dc8-8dfa-dd9045bd532a
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Новость
+type: news
+description: 'Содержит список новостных материалов с кратким и подробным описанием и фотографией.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: true

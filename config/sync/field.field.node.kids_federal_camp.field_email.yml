@@ -1,0 +1,19 @@
+uuid: ee3d49bf-7ef9-44ea-9e59-7d3b7beccf85
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email
+    - node.type.kids_federal_camp
+id: node.kids_federal_camp.field_email
+field_name: field_email
+entity_type: node
+bundle: kids_federal_camp
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

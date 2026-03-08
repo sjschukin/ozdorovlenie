@@ -1,0 +1,18 @@
+uuid: 483476f8-882d-444c-b4c6-c64aaa2b23bb
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.kids_federal_camp
+id: node.kids_federal_camp.title
+field_name: title
+entity_type: node
+bundle: kids_federal_camp
+label: Наименование
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

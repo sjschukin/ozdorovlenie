@@ -1,0 +1,17 @@
+uuid: ac97b0c7-6e66-459e-b6b6-e6b258695b22
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Федеральный детский центр'
+type: kids_federal_camp
+description: 'Элемент, содержащий сведения о федеральном детском центре (наименование, описание, контактные данные и т.д.)'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,11 @@
+uuid: dbcf40bb-7815-4d0f-b971-e67d5eae8dfa
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.kids_federal_camp
+id: node.kids_federal_camp
+target_entity_type_id: node
+target_bundle: kids_federal_camp
+default_langcode: site_default
+language_alterable: false
