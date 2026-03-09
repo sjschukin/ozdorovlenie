@@ -1,0 +1,17 @@
+uuid: db335689-fc2d-4225-97b1-9ccd7a008b6f
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Мнение родителей'
+type: parents_opinion
+description: 'Содержит текст с отзывами родителей.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: true

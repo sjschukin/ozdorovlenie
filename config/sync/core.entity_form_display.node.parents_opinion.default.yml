@@ -1,0 +1,56 @@
+uuid: 5e8fcba3-73d0-4712-8feb-749e1f24026f
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.parents_opinion.field_feedback_content
+    - field.field.node.parents_opinion.field_sign_text
+    - node.type.parents_opinion
+id: node.parents_opinion.default
+targetEntityType: node
+bundle: parents_opinion
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_feedback_content:
+    type: string_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 10
+      placeholder: ''
+    third_party_settings: {  }
+  field_sign_text:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true

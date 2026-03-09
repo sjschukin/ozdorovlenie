@@ -12,6 +12,7 @@ dependencies:
     - node.type.news
     - node.type.organizers_event
     - node.type.page
+    - node.type.parents_opinion
     - node.type.regulatory_framework
     - node.type.useful_info_material
   module:
@@ -39,6 +40,7 @@ permissions:
   - 'create methodological_material content'
   - 'create news content'
   - 'create organizers_event content'
+  - 'create parents_opinion content'
   - 'create regulatory_framework content'
   - 'create useful_info_material content'
   - 'delete any camp_shift content'
@@ -49,6 +51,7 @@ permissions:
   - 'delete any methodological_material content'
   - 'delete any news content'
   - 'delete any organizers_event content'
+  - 'delete any parents_opinion content'
   - 'delete any regulatory_framework content'
   - 'delete any useful_info_material content'
   - 'delete counselors_material revisions'
@@ -67,8 +70,10 @@ permissions:
   - 'delete own methodological_material content'
   - 'delete own news content'
   - 'delete own organizers_event content'
+  - 'delete own parents_opinion content'
   - 'delete own regulatory_framework content'
   - 'delete own useful_info_material content'
+  - 'delete parents_opinion revisions'
   - 'delete regulatory_framework revisions'
   - 'delete useful_info_material revisions'
   - 'edit any camp_shift content'
@@ -80,6 +85,7 @@ permissions:
   - 'edit any news content'
   - 'edit any organizers_event content'
   - 'edit any page content'
+  - 'edit any parents_opinion content'
   - 'edit any regulatory_framework content'
   - 'edit any useful_info_material content'
   - 'edit own camp_shift content'
@@ -91,6 +97,7 @@ permissions:
   - 'edit own news content'
   - 'edit own organizers_event content'
   - 'edit own page content'
+  - 'edit own parents_opinion content'
   - 'edit own regulatory_framework content'
   - 'edit own useful_info_material content'
   - 'revert counselors_material revisions'
@@ -100,6 +107,7 @@ permissions:
   - 'revert methodological_material revisions'
   - 'revert news revisions'
   - 'revert organizers_event revisions'
+  - 'revert parents_opinion revisions'
   - 'revert regulatory_framework revisions'
   - 'revert useful_info_material revisions'
   - 'view counselors_material revisions'
@@ -110,6 +118,7 @@ permissions:
   - 'view news revisions'
   - 'view organizers_event revisions'
   - 'view own unpublished content'
+  - 'view parents_opinion revisions'
   - 'view regulatory_framework revisions'
   - 'view the administration theme'
   - 'view useful_info_material revisions'

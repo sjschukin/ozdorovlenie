@@ -1,0 +1,19 @@
+uuid: 6352534e-0945-4f2e-bdc0-130da658d62b
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sign_text
+    - node.type.parents_opinion
+id: node.parents_opinion.field_sign_text
+field_name: field_sign_text
+entity_type: node
+bundle: parents_opinion
+label: Подпись
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,17 +1,17 @@
-uuid: 37b76c9e-6ec9-4b7e-85c1-16dfeade15d2
+uuid: 7a3fae63-3dd7-4929-9a6b-5126ef0ce207
 langcode: ru
 status: true
 dependencies:
   config:
-    - field.storage.node.field_document_file
-    - node.type.useful_info_material
+    - field.storage.node.field_feedback_content
+    - field.storage.node.field_sign_text
+    - node.type.parents_opinion
     - system.menu.main
   module:
-    - file
     - node
     - user
-id: useful_info_views
-label: 'Полезная информация'
+id: parents_opinion_views
+label: 'Мнения родителей'
 module: views
 description: ''
 tag: ''
@@ -24,12 +24,12 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Полезная информация'
+      title: 'Мнения родителей'
       fields:
-        field_document_file:
-          id: field_document_file
-          table: node__field_document_file
-          field: field_document_file
+        field_sign_text:
+          id: field_sign_text
+          table: node__field_sign_text
+          field: field_sign_text
           relationship: none
           group_type: group
           admin_label: ''
@@ -75,10 +75,11 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: file_url_plain
-          settings: {  }
-          group_column: ''
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -88,21 +89,19 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        title:
-          id: title
-          table: node_field_data
-          field: title
+        field_feedback_content:
+          id: field_feedback_content
+          table: node__field_feedback_content
+          field: field_feedback_content
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: title
           plugin_id: field
           label: ''
           exclude: false
           alter:
             alter_text: true
-            text: "<p>\r\n  <a href=\"{{ field_document_file }}\"><i class=\"bi bi-file-earmark-text\"></i> {{ title }}</a>\r\n</p>"
+            text: "<p>\r\n  <i class=\"bi bi-quote quote-icon-left\"></i>\r\n  <span>{{ field_feedback_content }}</span>\r\n  <i class=\"bi bi-quote quote-icon-right\"></i>\r\n</p>\r\n{% if field_sign_text %}\r\n  <h4>{{ field_sign_text }}</h4>\r\n{% endif %}\r\n<hr>"
             make_link: false
             path: ''
             absolute: false
@@ -118,8 +117,8 @@ display:
             target: ''
             nl2br: false
             max_length: 0
-            word_boundary: false
-            ellipsis: false
+            word_boundary: true
+            ellipsis: true
             more_link: false
             more_link_text: ''
             more_link_path: ''
@@ -140,9 +139,8 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
+          type: basic_string
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -158,7 +156,7 @@ display:
         options:
           offset: 0
           pagination_heading_level: h4
-          items_per_page: 30
+          items_per_page: 10
           total_pages: null
           id: 0
           tags:
@@ -200,7 +198,7 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: '<p>К сожалению здесь пока ничего нет.</p>'
+            value: '<p>К сожалению пока здесь ничего нет.</p>'
             format: full_html
           tokenize: false
       sorts:
@@ -237,102 +235,15 @@ display:
           id: type
           table: node_field_data
           field: type
-          relationship: none
-          group_type: group
-          admin_label: ''
           entity_type: node
           entity_field: type
           plugin_id: bundle
-          operator: in
           value:
-            useful_info_material: useful_info_material
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-        title:
-          id: title
-          table: node_field_data
-          field: title
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: title
-          plugin_id: string
-          operator: contains
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: title_op
-            label: Наименование
-            description: ''
-            use_operator: false
-            operator: title_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: title
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
+            parents_opinion: parents_opinion
       style:
         type: default
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: false
       row:
         type: fields
-        options:
-          default_field_elements: false
-          inline: {  }
-          separator: ''
-          hide_empty: false
       query:
         type: views_query
         options:
@@ -350,12 +261,12 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_document_file'
+        - 'config:field.storage.node.field_feedback_content'
+        - 'config:field.storage.node.field_sign_text'
   page_1:
     id: page_1
     display_title: Page
@@ -363,12 +274,12 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: to-organizers/useful-infos
+      path: opinions
       menu:
         type: normal
-        title: 'Полезная информация'
+        title: 'Мнение родителей'
         description: ''
-        weight: -48
+        weight: -47
         expanded: false
         menu_name: main
         parent: 'menu_link_content:8ed97f38-f909-41c7-be49-8c88ae511b73'
@@ -378,9 +289,9 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_document_file'
+        - 'config:field.storage.node.field_feedback_content'
+        - 'config:field.storage.node.field_sign_text'

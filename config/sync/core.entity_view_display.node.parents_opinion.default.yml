@@ -1,0 +1,37 @@
+uuid: 48a7960a-e142-4e51-8023-ddc53f7397d2
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.parents_opinion.field_feedback_content
+    - field.field.node.parents_opinion.field_sign_text
+    - node.type.parents_opinion
+  module:
+    - user
+id: node.parents_opinion.default
+targetEntityType: node
+bundle: parents_opinion
+mode: default
+content:
+  field_feedback_content:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_sign_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

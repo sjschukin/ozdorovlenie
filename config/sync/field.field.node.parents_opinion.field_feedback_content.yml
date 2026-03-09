@@ -1,0 +1,19 @@
+uuid: 215a4351-942c-45ed-8f66-2c73f3f43558
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_feedback_content
+    - node.type.parents_opinion
+id: node.parents_opinion.field_feedback_content
+field_name: field_feedback_content
+entity_type: node
+bundle: parents_opinion
+label: Содержимое
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

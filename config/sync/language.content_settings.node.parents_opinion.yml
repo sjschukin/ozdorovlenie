@@ -1,0 +1,11 @@
+uuid: d608a203-e723-4430-b046-3352fb039bf8
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.parents_opinion
+id: node.parents_opinion
+target_entity_type_id: node
+target_bundle: parents_opinion
+default_langcode: site_default
+language_alterable: false
