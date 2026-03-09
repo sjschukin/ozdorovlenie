@@ -25,6 +25,12 @@ content:
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_image:
     type: image_image
     weight: 2
@@ -35,7 +41,7 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 3
+    weight: 4
     region: content
     settings:
       display_label: true
@@ -49,7 +55,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
-  created: true
   langcode: true
   path: true
   promote: true
