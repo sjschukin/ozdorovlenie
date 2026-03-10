@@ -7,7 +7,6 @@ dependencies:
     - field.storage.node.field_document_link
     - field.storage.node.field_regulatory_type
     - node.type.regulatory_framework
-    - system.menu.main
     - taxonomy.vocabulary.regulatory_types
   module:
     - file
@@ -515,7 +514,7 @@ display:
       display_extenders: {  }
       path: to-organizers/regulatory
       menu:
-        type: normal
+        type: none
         title: 'Нормативно-правовая база'
         description: ''
         weight: -50

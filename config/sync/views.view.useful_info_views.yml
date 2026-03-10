@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.node.field_document_file
     - node.type.useful_info_material
-    - system.menu.main
   module:
     - file
     - node
@@ -363,9 +362,9 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: to-organizers/useful-infos
+      path: useful-infos
       menu:
-        type: normal
+        type: none
         title: 'Полезная информация'
         description: ''
         weight: -48

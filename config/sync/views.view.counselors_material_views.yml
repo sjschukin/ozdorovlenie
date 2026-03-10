@@ -6,7 +6,6 @@ dependencies:
     - field.storage.node.field_document_file
     - field.storage.node.field_regulatory_type
     - node.type.counselors_material
-    - system.menu.main
     - taxonomy.vocabulary.counselors_material_types
   module:
     - file
@@ -477,7 +476,7 @@ display:
       display_extenders: {  }
       path: to-organizers/counselors
       menu:
-        type: normal
+        type: none
         title: Вожатым
         description: ''
         weight: -48

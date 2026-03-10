@@ -6,7 +6,6 @@ dependencies:
     - field.storage.node.field_feedback_content
     - field.storage.node.field_sign_text
     - node.type.parents_opinion
-    - system.menu.main
   module:
     - node
     - user
@@ -276,7 +275,7 @@ display:
       display_extenders: {  }
       path: opinions
       menu:
-        type: normal
+        type: none
         title: 'Мнение родителей'
         description: ''
         weight: -47

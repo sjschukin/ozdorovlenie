@@ -6,7 +6,6 @@ dependencies:
     - field.storage.node.body
     - field.storage.node.field_image
     - node.type.news
-    - system.menu.main
   module:
     - image
     - node
@@ -483,11 +482,14 @@ display:
       display_extenders: {  }
       path: news
       menu:
-        type: normal
+        type: none
         title: 'Весточки из лагерей'
+        description: ''
         weight: -49
+        expanded: false
         menu_name: main
         parent: 'menu_link_content:8ed97f38-f909-41c7-be49-8c88ae511b73'
+        context: '0'
     cache_metadata:
       max-age: -1
       contexts:

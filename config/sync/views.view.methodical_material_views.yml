@@ -6,7 +6,6 @@ dependencies:
     - field.storage.node.field_document_file
     - field.storage.node.field_regulatory_type
     - node.type.methodological_material
-    - system.menu.main
     - taxonomy.vocabulary.methodological_material_types
   module:
     - file
@@ -477,7 +476,7 @@ display:
       display_extenders: {  }
       path: to-organizers/methodical
       menu:
-        type: normal
+        type: none
         title: 'Методические материалы'
         description: ''
         weight: -49

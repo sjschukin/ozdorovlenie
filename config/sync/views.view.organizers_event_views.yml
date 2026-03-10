@@ -6,7 +6,6 @@ dependencies:
     - field.storage.node.field_document_file
     - field.storage.node.field_regulatory_type
     - node.type.organizers_event
-    - system.menu.main
     - taxonomy.vocabulary.organizers_event_types
   module:
     - file
@@ -477,7 +476,7 @@ display:
       display_extenders: {  }
       path: to-organizers/organizers-events
       menu:
-        type: normal
+        type: none
         title: 'События для организаторов отдыха'
         description: ''
         weight: -47

@@ -8,7 +8,6 @@ dependencies:
     - field.storage.node.field_email
     - field.storage.node.field_phone_number
     - node.type.vacancy
-    - system.menu.main
     - taxonomy.vocabulary.vacancy_types
   module:
     - node
@@ -685,7 +684,7 @@ display:
       display_extenders: {  }
       path: vacancies
       menu:
-        type: normal
+        type: none
         title: 'Работа в лагере'
         description: ''
         weight: -45
