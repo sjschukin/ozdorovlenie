@@ -1,0 +1,19 @@
+uuid: a9ca1df4-23be-4299-90b6-48f417427167
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email
+    - node.type.vacancy
+id: node.vacancy.field_email
+field_name: field_email
+entity_type: node
+bundle: vacancy
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

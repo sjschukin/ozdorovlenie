@@ -1,0 +1,29 @@
+uuid: 1015986a-8be3-480c-8615-e1815a98510c
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vacancy_type
+    - node.type.vacancy
+    - taxonomy.vocabulary.vacancy_types
+id: node.vacancy.field_vacancy_type
+field_name: field_vacancy_type
+entity_type: node
+bundle: vacancy
+label: Тип
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      vacancy_types: vacancy_types
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

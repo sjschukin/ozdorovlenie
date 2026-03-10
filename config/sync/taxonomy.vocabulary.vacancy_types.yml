@@ -1,0 +1,9 @@
+uuid: f02d2dd5-8c8d-4391-aa97-988aa8761ef6
+langcode: ru
+status: true
+dependencies: {  }
+name: 'Типы вакансий'
+vid: vacancy_types
+description: null
+weight: 0
+new_revision: false

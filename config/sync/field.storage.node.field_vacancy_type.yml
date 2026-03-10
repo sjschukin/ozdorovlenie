@@ -1,0 +1,20 @@
+uuid: 98b357d0-ea50-4744-b937-e7bd79422c3c
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_vacancy_type
+field_name: field_vacancy_type
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

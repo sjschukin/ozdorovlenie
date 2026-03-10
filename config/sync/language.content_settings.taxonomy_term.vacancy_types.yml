@@ -1,0 +1,11 @@
+uuid: ad27e84c-36ad-4474-80ba-2f087be2655f
+langcode: ru
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.vacancy_types
+id: taxonomy_term.vacancy_types
+target_entity_type_id: taxonomy_term
+target_bundle: vacancy_types
+default_langcode: site_default
+language_alterable: false

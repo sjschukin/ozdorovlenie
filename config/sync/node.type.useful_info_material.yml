@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: 'Полезная информация'
 type: useful_info_material
-description: 'Содержит список материалов с полезной информацией.'
+description: 'Содержит материал с полезной информацией.'
 help: null
 new_revision: false
 preview_mode: 1

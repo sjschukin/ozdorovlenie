@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: 'Материал для вожатых'
 type: counselors_material
-description: 'Содержит список материалов для вожатых.'
+description: 'Содержит материал для вожатых.'
 help: null
 new_revision: false
 preview_mode: 1

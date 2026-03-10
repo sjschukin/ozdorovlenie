@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: 'Событие для организаторов отдыха'
 type: organizers_event
-description: 'Содержит список материалов с событиями для организаторов.'
+description: 'Содержит материал с событиями для организаторов.'
 help: null
 new_revision: false
 preview_mode: 1

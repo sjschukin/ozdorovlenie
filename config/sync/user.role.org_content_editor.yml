@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - node.type.camp_shift
+    - node.type.vacancy
   module:
     - contextual
     - node
@@ -21,9 +22,14 @@ permissions:
   - 'access toolbar'
   - 'access webform submission user'
   - 'create camp_shift content'
+  - 'create vacancy content'
   - 'delete any camp_shift content'
+  - 'delete any vacancy content'
   - 'delete own camp_shift content'
+  - 'delete own vacancy content'
   - 'edit any camp_shift content'
+  - 'edit any vacancy content'
   - 'edit own camp_shift content'
+  - 'edit own vacancy content'
   - 'view own unpublished content'
   - 'view the administration theme'

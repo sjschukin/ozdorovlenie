@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: 'Нормативно-правовая база'
 type: regulatory_framework
-description: 'Содержит список нормативно-правовых документов.'
+description: 'Содержит ссылку на файл нормативно-правового документа.'
 help: null
 new_revision: false
 preview_mode: 1

@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: Новость
 type: news
-description: 'Содержит список новостных материалов с кратким и подробным описанием и фотографией.'
+description: 'Содержит текст новостного материала с кратким и подробным описанием и фотографией.'
 help: null
 new_revision: false
 preview_mode: 1

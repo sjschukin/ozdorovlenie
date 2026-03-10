@@ -1,0 +1,73 @@
+uuid: 61e6927e-e78c-4f95-a4c4-2448a10b2c7a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.vacancy.field_address
+    - field.field.node.vacancy.field_camp_reference
+    - field.field.node.vacancy.field_description
+    - field.field.node.vacancy.field_email
+    - field.field.node.vacancy.field_phone_number
+    - field.field.node.vacancy.field_vacancy_type
+    - node.type.vacancy
+  module:
+    - text
+    - user
+id: node.vacancy.default
+targetEntityType: node
+bundle: vacancy
+mode: default
+content:
+  field_address:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_camp_reference:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_phone_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_vacancy_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

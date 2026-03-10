@@ -1,0 +1,11 @@
+uuid: cd0f5fdc-c02f-405c-aa90-cca13ec96b0b
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.vacancy
+id: node.vacancy
+target_entity_type_id: node
+target_bundle: vacancy
+default_langcode: site_default
+language_alterable: false

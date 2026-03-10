@@ -1,0 +1,19 @@
+uuid: 55b92d4d-3f68-48dc-aa87-eb9c673d542b
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_phone_number
+    - node.type.vacancy
+id: node.vacancy.field_phone_number
+field_name: field_phone_number
+entity_type: node
+bundle: vacancy
+label: Телефон
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

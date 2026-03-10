@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: 'Мнение родителей'
 type: parents_opinion
-description: 'Содержит текст с отзывами родителей.'
+description: 'Содержит текст с отзывом родителей о лагере.'
 help: null
 new_revision: false
 preview_mode: 1

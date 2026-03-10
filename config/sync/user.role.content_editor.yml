@@ -15,6 +15,7 @@ dependencies:
     - node.type.parents_opinion
     - node.type.regulatory_framework
     - node.type.useful_info_material
+    - node.type.vacancy
   module:
     - contextual
     - file
@@ -43,6 +44,7 @@ permissions:
   - 'create parents_opinion content'
   - 'create regulatory_framework content'
   - 'create useful_info_material content'
+  - 'create vacancy content'
   - 'delete any camp_shift content'
   - 'delete any counselors_material content'
   - 'delete any event content'
@@ -54,6 +56,7 @@ permissions:
   - 'delete any parents_opinion content'
   - 'delete any regulatory_framework content'
   - 'delete any useful_info_material content'
+  - 'delete any vacancy content'
   - 'delete counselors_material revisions'
   - 'delete event revisions'
   - 'delete kids_camp revisions'
@@ -73,6 +76,7 @@ permissions:
   - 'delete own parents_opinion content'
   - 'delete own regulatory_framework content'
   - 'delete own useful_info_material content'
+  - 'delete own vacancy content'
   - 'delete parents_opinion revisions'
   - 'delete regulatory_framework revisions'
   - 'delete useful_info_material revisions'
@@ -88,6 +92,7 @@ permissions:
   - 'edit any parents_opinion content'
   - 'edit any regulatory_framework content'
   - 'edit any useful_info_material content'
+  - 'edit any vacancy content'
   - 'edit own camp_shift content'
   - 'edit own counselors_material content'
   - 'edit own event content'
@@ -100,6 +105,7 @@ permissions:
   - 'edit own parents_opinion content'
   - 'edit own regulatory_framework content'
   - 'edit own useful_info_material content'
+  - 'edit own vacancy content'
   - 'revert counselors_material revisions'
   - 'revert event revisions'
   - 'revert kids_camp revisions'

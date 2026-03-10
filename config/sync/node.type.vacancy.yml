@@ -1,0 +1,17 @@
+uuid: a0ca41ec-2445-42df-be09-2493a2bf1d5e
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Вакансия
+type: vacancy
+description: 'Содержит вакансию, которая будет отображаться на странице "Работа в лагере".'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: true

@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: 'Методический материал'
 type: methodological_material
-description: 'Содержит список методических материалов.'
+description: 'Содержит методический материал.'
 help: null
 new_revision: false
 preview_mode: 1
