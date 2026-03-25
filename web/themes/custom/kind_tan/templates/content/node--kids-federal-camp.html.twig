@@ -113,22 +113,30 @@
         {% endif %}
 
         {% if node.field_phone_number is not empty or node.field_email is not empty or node.field_website is not empty %}
-        <h5 class="mt-4">Контакты</h5>
-        <p>
-          {% for key, item in node.field_phone_number %}
-            {% set phone_number = item.value %}
-            <i class="bi bi-telephone"></i>
-            <a href="tel:{{ phone_number|replace({' ': '', '-': '', '(': '', ')': ''}) }}">{{ node.field_phone_number[key].value }}</a><br>
+          <h5 class="mt-4">Контакты</h5>
+          <p>
+            {% for key, item in node.field_phone_number %}
+              {% set phone_number = item.value %}
+              <i class="bi bi-telephone"></i>
+              <a href="tel:{{ phone_number|replace({' ': '', '-': '', '(': '', ')': ''}) }}">{{ node.field_phone_number[key].value }}</a><br>
+            {% endfor %}
+
+            {% if node.field_email is not empty %}
+            <i class="bi bi-envelope-at"></i> <a href="mailto:{{ node.field_email.value }}">{{ node.field_email.value }}</a><br>
+            {% endif %}
+
+            {% if node.field_website is not empty %}
+            <i class="bi bi-globe"></i> {{ link(node.field_website.uri, node.field_website.uri, { 'target':['_blank'] } ) }}<br>
+            {% endif %}
+          </p>
+        {% endif %}
+
+        {% if node.field_files is not empty %}
+          <h5>Документы</h5>
+          {% for item in node.field_files %}
+            {% set file = item.entity %}
+            <a href="{{ file_url(file.uri.value) }}"><i class="bi bi-paperclip"></i> {{ item.description ?: file.filename.value }}</a><br>
           {% endfor %}
-
-          {% if node.field_email is not empty %}
-          <i class="bi bi-envelope-at"></i> <a href="mailto:{{ node.field_email.value }}">{{ node.field_email.value }}</a><br>
-          {% endif %}
-
-          {% if node.field_website is not empty %}
-          <i class="bi bi-globe"></i> {{ link(node.field_website.uri, node.field_website.uri, { 'target':['_blank'] } ) }}<br>
-          {% endif %}
-        </p>
         {% endif %}
       </div>
     </div>
