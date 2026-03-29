@@ -26,6 +26,7 @@
         "drupal/password_policy": "^4.0",
         "drupal/pathauto": "^1.14",
         "drupal/smtp": "^1.4",
+        "drupal/title_length": "^2.1",
         "drupal/token": "^1.16",
         "drupal/token_block": "^2.0",
         "drupal/views_bootstrap": "^5.5@RC",
